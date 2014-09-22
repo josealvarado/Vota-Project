@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Vota": {
+            "applicationId": "XdTzS20SHEjOxlgpbNMxVcXvqPyx1QJjwNdP7T0D", 
+            "masterKey": "XcW8hHf2HaWAYdr55ugP1h3kFIAhIYu2mDST9vW8"
+        }, 
+        "_default": {
+            "link": "Vota"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}
