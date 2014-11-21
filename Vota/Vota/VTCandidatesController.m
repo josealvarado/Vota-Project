@@ -67,28 +67,36 @@
     return cell;
 }
 
+#pragma mark - Table view delegate
 
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
-    
-    UIViewController *destination = segue.destinationViewController;
-    if ([destination respondsToSelector:@selector(setDelegate:)]) {
-        [destination setValue:self forKey:@"delegate"];
-    }
-    
-    if ([destination respondsToSelector:@selector(setSelection:)]) {
-        NSDictionary *selection = @{@"PFUser": [VTSettings instance].candidates[selectedIndexPath.row]};
-        
-        [segue.destinationViewController setValue:selection forKey:@"selection"];
-    }
+    PFUser *candidate = [VTSettings instance].candidates[indexPath.row];
+    NSLog(@"website %@", [candidate objectForKey:@"personalWebsite"]);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[candidate objectForKey:@"personalWebsite"]]];
 }
+
+//#pragma mark - Navigation
+//
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    
+//    NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
+//    
+//    UIViewController *destination = segue.destinationViewController;
+//    if ([destination respondsToSelector:@selector(setDelegate:)]) {
+//        [destination setValue:self forKey:@"delegate"];
+//    }
+//    
+//    if ([destination respondsToSelector:@selector(setSelection:)]) {
+//        NSDictionary *selection = @{@"PFUser": [VTSettings instance].candidates[selectedIndexPath.row]};
+//        
+//        [segue.destinationViewController setValue:selection forKey:@"selection"];
+//    }
+//}
 
 
 @end

@@ -76,29 +76,38 @@
     return cell;
 }
 
-#pragma mark - Navigation
+#pragma mark - Table view delegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
-    
-    UIViewController *destination = segue.destinationViewController;
-    if ([destination respondsToSelector:@selector(setDelegate:)]) {
-        [destination setValue:self forKey:@"delegate"];
-    }
-    
-    //    [segue.destinationViewController setValue:[VTSettings instance].candidates[selectedIndexPath.row] forKey:@"candidate"];
-    
-    if ([destination respondsToSelector:@selector(setSelection:)]) {
-        NSDictionary *selection = @{@"Ballot": [VTSettings instance].ballots[selectedIndexPath.row]};
-        
-        [segue.destinationViewController setValue:selection forKey:@"selection"];
-        
-    }
+    PFObject *ballot = [VTSettings instance].ballots[indexPath.row];
+    NSLog(@"website %@", [ballot objectForKey:@"url"]);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[ballot objectForKey:@"url"]]];
 }
+
+//#pragma mark - Navigation
+//
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    
+//    NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:sender];
+//    
+//    UIViewController *destination = segue.destinationViewController;
+//    if ([destination respondsToSelector:@selector(setDelegate:)]) {
+//        [destination setValue:self forKey:@"delegate"];
+//    }
+//    
+//    //    [segue.destinationViewController setValue:[VTSettings instance].candidates[selectedIndexPath.row] forKey:@"candidate"];
+//    
+//    if ([destination respondsToSelector:@selector(setSelection:)]) {
+//        NSDictionary *selection = @{@"Ballot": [VTSettings instance].ballots[selectedIndexPath.row]};
+//        
+//        [segue.destinationViewController setValue:selection forKey:@"selection"];
+//        
+//    }
+//}
 
 @end

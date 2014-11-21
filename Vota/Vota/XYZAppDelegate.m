@@ -40,7 +40,7 @@
     
     
 
-    [self insertNewCandidate];
+//    [self insertNewCandidate];
     
     
 //    [self testPushNotification];

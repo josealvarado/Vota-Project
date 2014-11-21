@@ -157,4 +157,29 @@
                       cancelButtonTitle:@"Ok"
                       otherButtonTitles:nil, nil] show];
 }
+
+- (IBAction)buttonSkipLogin:(id)sender {
+    [PFUser logInWithUsernameInBackground:@"josealvarado111@gmail.com" password:@"123456"
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            
+                                            // Associate the device with a user
+                                            PFInstallation *installation = [PFInstallation currentInstallation];
+                                            installation[@"user"] = [PFUser currentUser];
+                                            [installation saveInBackground];
+                                            
+                                            [self performSegueWithIdentifier:@"PushMenuController" sender:sender];
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                            NSString *errorString = [error userInfo][@"error"];
+                                            
+                                            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                        message:errorString
+                                                                       delegate:nil
+                                                              cancelButtonTitle:@"Ok"
+                                                              otherButtonTitles:nil, nil] show];
+                                        }
+                                    }];
+}
 @end
