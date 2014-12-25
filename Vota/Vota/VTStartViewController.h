@@ -16,6 +16,7 @@
 - (IBAction)buttonSignUpAction:(id)sender;
 - (IBAction)buttonSignInAction:(id)sender;
 - (IBAction)buttonResetPassword:(id)sender;
+- (IBAction)buttonSkipLogin:(id)sender;
 
 
 @end

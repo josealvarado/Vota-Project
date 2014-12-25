@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -63,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5499999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fsS-q0-Eeb">
-                                <rect key="frame" x="73" y="354" width="180" height="31"/>
+                                <rect key="frame" x="73" y="360" width="180" height="31"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="15"/>
@@ -73,6 +74,19 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonResetPassword:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g8j-1U-TtW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KNj-ml-qwK">
+                                <rect key="frame" x="73" y="398" width="180" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="15"/>
+                                <state key="normal" title="Skip Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSkipLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Lvo-H1-FfN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="-458" y="29"/>
         </scene>
-        <!--Testing This - Vota Menu-->
+        <!--Vota Menu-->
         <scene sceneID="qD6-RT-cFw">
             <objects>
                 <tableViewController id="Xei-bM-2tT" customClass="VTTestingThis" sceneMemberID="viewController">
@@ -299,7 +313,7 @@
             </objects>
             <point key="canvasLocation" x="603" y="19"/>
         </scene>
-        <!--Ballot Controller - Measures/Medidas-->
+        <!--Measures/Medidas-->
         <scene sceneID="hln-7Y-YJH">
             <objects>
                 <tableViewController id="E1g-4Y-xQd" customClass="VTBallotController" sceneMemberID="viewController">
@@ -308,16 +322,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeasureCell" id="cdB-Pq-0kT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeasureCell" id="cdB-Pq-0kT">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdB-Pq-0kT" id="I6E-Y3-bAf">
                                     <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Iqs-RT-rmu" kind="push" id="rf2-HF-Lqu"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -333,7 +344,7 @@
             </objects>
             <point key="canvasLocation" x="1471" y="1016"/>
         </scene>
-        <!--Profile Controller - Profile/Perfil-->
+        <!--Profile/Perfil-->
         <scene sceneID="x9U-IH-mkj">
             <objects>
                 <tableViewController id="cHG-wf-Or2" customClass="VTProfileController" sceneMemberID="viewController">
@@ -461,7 +472,7 @@
             </objects>
             <point key="canvasLocation" x="2113" y="813"/>
         </scene>
-        <!--Zip Code Controller - Zip code / codigo postal-->
+        <!--Zip code / codigo postal-->
         <scene sceneID="Kn6-0Y-VGY">
             <objects>
                 <viewController id="uqb-ak-sl1" customClass="VTZipCodeController" sceneMemberID="viewController">
@@ -516,7 +527,7 @@
             </objects>
             <point key="canvasLocation" x="1875" y="3147"/>
         </scene>
-        <!--Gender Controller - Gender / Genero-->
+        <!--Gender / Genero-->
         <scene sceneID="wrB-De-ReL">
             <objects>
                 <tableViewController id="2cQ-Ot-xfZ" customClass="VTGenderController" sceneMemberID="viewController">
@@ -551,7 +562,7 @@
             </objects>
             <point key="canvasLocation" x="2670" y="2043"/>
         </scene>
-        <!--Phone Number Controller - Phone number / número de teléfono-->
+        <!--Phone number / número de teléfono-->
         <scene sceneID="bhV-te-V08">
             <objects>
                 <viewController id="YeA-0o-r5e" customClass="VTPhoneNumberController" sceneMemberID="viewController">
@@ -607,7 +618,7 @@
             </objects>
             <point key="canvasLocation" x="2691" y="3851"/>
         </scene>
-        <!--Party Controller - Party / Partido-->
+        <!--Party / Partido-->
         <scene sceneID="zba-tI-gaR">
             <objects>
                 <tableViewController id="qJM-Jw-GKY" customClass="VTPartyController" sceneMemberID="viewController">
@@ -642,7 +653,7 @@
             </objects>
             <point key="canvasLocation" x="2682" y="2939"/>
         </scene>
-        <!--Candidates Controller - Candidates/Candidatos-->
+        <!--Candidates/Candidatos-->
         <scene sceneID="5LT-Un-JMl">
             <objects>
                 <tableViewController id="vhD-g3-gdZ" customClass="VTCandidatesController" sceneMemberID="viewController">
@@ -651,16 +662,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CandidateCell" id="afa-4x-mke">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CandidateCell" id="afa-4x-mke">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="afa-4x-mke" id="fae-sI-2O8">
                                     <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="763-hm-Lic" kind="push" id="3fZ-9X-sbS"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -699,7 +707,7 @@
             </objects>
             <point key="canvasLocation" x="2483" y="99"/>
         </scene>
-        <!--Contacts Controller - Friends / Amigos-->
+        <!--Friends / Amigos-->
         <scene sceneID="Wml-9q-eAh">
             <objects>
                 <tableViewController id="rug-rv-HbU" customClass="VTContactsController" sceneMemberID="viewController">
@@ -811,7 +819,7 @@
             </objects>
             <point key="canvasLocation" x="1483" y="-1751"/>
         </scene>
-        <!--Register Controller - Register/Registarse-->
+        <!--Register/Registarse-->
         <scene sceneID="SK9-od-kUK">
             <objects>
                 <viewController id="bWz-EM-kBP" customClass="VTRegisterController" sceneMemberID="viewController">
@@ -836,7 +844,7 @@
             </objects>
             <point key="canvasLocation" x="2113" y="-1546"/>
         </scene>
-        <!--Notification Controller - Notifications / Notificacion-->
+        <!--Notifications / Notificacion-->
         <scene sceneID="cD3-gm-10O">
             <objects>
                 <tableViewController id="81c-Qm-3P1" customClass="VTNotificationController" sceneMemberID="viewController">
