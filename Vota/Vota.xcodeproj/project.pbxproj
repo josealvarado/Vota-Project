@@ -16,6 +16,7 @@
 		CB29209619B427FD007937B5 /* VTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209519B427FD007937B5 /* VTRegisterController.m */; };
 		CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209819B42EE5007937B5 /* VTCandidatesController.m */; };
 		CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */; };
+		CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */; };
 		CB4C07C3197229A300F08D01 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4C07C2197229A300F08D01 /* FacebookSDK.framework */; };
 		CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E61972394B00F08D01 /* Icon-40.png */; };
 		CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E71972394B00F08D01 /* Icon-40@2x.png */; };
@@ -100,6 +101,8 @@
 		CB29209819B42EE5007937B5 /* VTCandidatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidatesController.m; sourceTree = "<group>"; };
 		CB29209A19B4395F007937B5 /* VTCandidateDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCandidateDetailController.h; sourceTree = "<group>"; };
 		CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidateDetailController.m; sourceTree = "<group>"; };
+		CB3976EE1A9A9E5600FB300E /* VTPhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPhoneNumberController.h; sourceTree = "<group>"; };
+		CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPhoneNumberController.m; sourceTree = "<group>"; };
 		CB4C07C2197229A300F08D01 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CB4C07E61972394B00F08D01 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		CB4C07E71972394B00F08D01 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -126,7 +129,6 @@
 		CB8EE81919B81FC30096926D /* VTBallotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotController.m; sourceTree = "<group>"; };
 		CB8EE81B19B822980096926D /* VTBallotDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotDetailController.h; sourceTree = "<group>"; };
 		CB8EE81C19B822980096926D /* VTBallotDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotDetailController.m; sourceTree = "<group>"; };
-		CB8EE81E19B845330096926D /* VTPhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPhoneNumberController.h; sourceTree = "<group>"; };
 		CB8EE82119B851290096926D /* VTZipCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTZipCodeController.h; sourceTree = "<group>"; };
 		CB8EE82219B851290096926D /* VTZipCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTZipCodeController.m; sourceTree = "<group>"; };
 		CBAA21AA1971F921008404F7 /* Vota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vota.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,7 +312,8 @@
 				CB29208F19B424F9007937B5 /* VTGenderController.m */,
 				CB29209119B42667007937B5 /* VTPartyController.h */,
 				CB29209219B42667007937B5 /* VTPartyController.m */,
-				CB8EE81E19B845330096926D /* VTPhoneNumberController.h */,
+				CB3976EE1A9A9E5600FB300E /* VTPhoneNumberController.h */,
+				CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */,
 				CB8EE82119B851290096926D /* VTZipCodeController.h */,
 				CB8EE82219B851290096926D /* VTZipCodeController.m */,
 				CB29209419B427FD007937B5 /* VTRegisterController.h */,
@@ -497,6 +500,7 @@
 				CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
 				CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */,
+				CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */,
 				CB29209019B424F9007937B5 /* VTGenderController.m in Sources */,
 				CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */,
 				CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */,

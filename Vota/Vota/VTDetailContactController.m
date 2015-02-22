@@ -99,6 +99,7 @@
             [pushQuery whereKey:@"user" equalTo:user];
         
             // Send push notification to query
+            _pushText = [NSString stringWithFormat:@"%@:%@",[PFUser currentUser].username, _pushText];
             [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:_pushText];
         
     
