@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KeychainItemWrapper.h"
 
 @interface VTStartViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldUsername;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPassword;
+
+@property (strong, nonatomic) KeychainItemWrapper *keychain;
+
 - (IBAction)buttonSignUpAction:(id)sender;
 - (IBAction)buttonSignInAction:(id)sender;
 - (IBAction)buttonResetPassword:(id)sender;

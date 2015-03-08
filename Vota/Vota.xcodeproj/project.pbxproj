@@ -37,6 +37,7 @@
 		CB4C2ECA19849F06000AEA3A /* ipad_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBC19849F06000AEA3A /* ipad_background.png */; };
 		CB4C2ECB19849F06000AEA3A /* iphone4_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBD19849F06000AEA3A /* iphone4_background.png */; };
 		CB4C2ECC19849F06000AEA3A /* iphone5_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBE19849F06000AEA3A /* iphone5_background.png */; };
+		CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */; };
 		CB663F0819B4731800E13376 /* URLItemSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CB663F0719B4731800E13376 /* URLItemSource.m */; };
 		CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81919B81FC30096926D /* VTBallotController.m */; };
 		CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81C19B822980096926D /* VTBallotDetailController.m */; };
@@ -123,6 +124,8 @@
 		CB4C2EBC19849F06000AEA3A /* ipad_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_background.png; sourceTree = "<group>"; };
 		CB4C2EBD19849F06000AEA3A /* iphone4_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone4_background.png; sourceTree = "<group>"; };
 		CB4C2EBE19849F06000AEA3A /* iphone5_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone5_background.png; sourceTree = "<group>"; };
+		CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		CB663F0619B4731800E13376 /* URLItemSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLItemSource.h; sourceTree = "<group>"; };
 		CB663F0719B4731800E13376 /* URLItemSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLItemSource.m; sourceTree = "<group>"; };
 		CB8EE81819B81FC30096926D /* VTBallotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotController.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 		CBAA21B31971F921008404F7 /* Vota */ = {
 			isa = PBXGroup;
 			children = (
+				CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */,
+				CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */,
 				CBAA21BC1971F921008404F7 /* XYZAppDelegate.h */,
 				CBAA21BD1971F921008404F7 /* XYZAppDelegate.m */,
 				CB663F0619B4731800E13376 /* URLItemSource.h */,
@@ -511,6 +516,7 @@
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */,
 				CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */,
+				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

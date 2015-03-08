@@ -9,6 +9,7 @@
 #import "VTStartViewController.h"
 #import "VTSettings.h"
 #import <Parse/Parse.h>
+#import "KeychainItemWrapper.h"
 
 @interface VTStartViewController ()
 
@@ -24,6 +25,9 @@
         
         NSString *backGroundImage = [[VTSettings instance] getBackGroundImage];
         NSLog(@"background image - %@", backGroundImage);
+        
+        _keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"TestUDID" accessGroup:nil];
+
     }
     return self;
 }
@@ -44,6 +48,18 @@
         [self performSegueWithIdentifier:@"PushMenuController" sender:nil];
     }
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    NSString *username = [_keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+    NSString *password = [_keychain objectForKey:(__bridge id)(kSecValueData)];
+    
+    NSLog(@"%@, %@", username, password);
+    
+    if (!(username == (id)[NSNull null] || username.length == 0 || password == (id)[NSNull null] || password.length == 0)){
+        _textFieldUsername.text = username;
+        _textFieldPassword.text = password;
+    }
 }
 
 -(void)dismissKeyboard {
@@ -92,6 +108,16 @@
             [installation saveInBackground];
             
             [self performSegueWithIdentifier:@"PushMenuController" sender:sender];
+            
+            
+//            KeychainItemWrapper *keychain =
+//            [[KeychainItemWrapper alloc] initWithIdentifier:@"MyAppLoginData" accessGroup:nil];
+//            [keychain setObject:_textFieldUsername forKey:(__bridge id)kSecAttrAccount];
+//            [keychain setObject:_textFieldPassword forKey:(__bridge id)kSecValueData];
+            
+            [_keychain setObject:_textFieldUsername forKey:(__bridge id)kSecAttrAccount];
+            [_keychain setObject:_textFieldPassword forKey:(__bridge id)kSecValueData];
+            
         } else {
             NSString *errorString = [error userInfo][@"error"];
 
@@ -126,6 +152,10 @@
                                             [installation saveInBackground];
                                             
                                             [self performSegueWithIdentifier:@"PushMenuController" sender:sender];
+                                            
+                                            [_keychain setObject:_textFieldUsername forKey:(__bridge id)kSecAttrAccount];
+                                            [_keychain setObject:_textFieldPassword forKey:(__bridge id)kSecValueData];
+                                            
                                         } else {
                                             // The login failed. Check error to see why.
                                             NSString *errorString = [error userInfo][@"error"];
