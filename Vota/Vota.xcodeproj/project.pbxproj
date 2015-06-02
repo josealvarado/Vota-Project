@@ -16,6 +16,11 @@
 		CB29209619B427FD007937B5 /* VTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209519B427FD007937B5 /* VTRegisterController.m */; };
 		CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209819B42EE5007937B5 /* VTCandidatesController.m */; };
 		CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */; };
+		CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */; };
+		CB34174F1B1C20D300CE74C1 /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */; };
+		CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */; };
+		CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */; };
+		CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417571B1C61D600CE74C1 /* VotaViewController.m */; };
 		CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */; };
 		CB4C07C3197229A300F08D01 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4C07C2197229A300F08D01 /* FacebookSDK.framework */; };
 		CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E61972394B00F08D01 /* Icon-40.png */; };
@@ -39,6 +44,7 @@
 		CB4C2ECC19849F06000AEA3A /* iphone5_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBE19849F06000AEA3A /* iphone5_background.png */; };
 		CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */; };
 		CB663F0819B4731800E13376 /* URLItemSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CB663F0719B4731800E13376 /* URLItemSource.m */; };
+		CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */; };
 		CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81919B81FC30096926D /* VTBallotController.m */; };
 		CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81C19B822980096926D /* VTBallotDetailController.m */; };
 		CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE82219B851290096926D /* VTZipCodeController.m */; };
@@ -68,6 +74,8 @@
 		CBAA21FE1972019C008404F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21FD1972019C008404F7 /* Accounts.framework */; };
 		CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */; };
 		CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBAC04B19B990120002AC1C /* VTContactsController.m */; };
+		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
+		CBD18A281B19A52E00E1911A /* Register-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A271B19A52E00E1911A /* Register-Icon.png */; };
 		CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE30B7019C0B46700C8726F /* VTNotificationController.m */; };
 		CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */ = {isa = PBXBuildFile; fileRef = CBECB09C19B3BDA50018F26C /* VTTestingThis.m */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
@@ -102,6 +110,16 @@
 		CB29209819B42EE5007937B5 /* VTCandidatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidatesController.m; sourceTree = "<group>"; };
 		CB29209A19B4395F007937B5 /* VTCandidateDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCandidateDetailController.h; sourceTree = "<group>"; };
 		CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidateDetailController.m; sourceTree = "<group>"; };
+		CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteWebpageViewController.h; sourceTree = "<group>"; };
+		CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteWebpageViewController.m; sourceTree = "<group>"; };
+		CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateTableViewController.h; sourceTree = "<group>"; };
+		CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateTableViewController.m; sourceTree = "<group>"; };
+		CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetFriendsToVoteViewController.h; sourceTree = "<group>"; };
+		CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetFriendsToVoteViewController.m; sourceTree = "<group>"; };
+		CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		CB3417561B1C61D600CE74C1 /* VotaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotaViewController.h; sourceTree = "<group>"; };
+		CB3417571B1C61D600CE74C1 /* VotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotaViewController.m; sourceTree = "<group>"; };
 		CB3976EE1A9A9E5600FB300E /* VTPhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPhoneNumberController.h; sourceTree = "<group>"; };
 		CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPhoneNumberController.m; sourceTree = "<group>"; };
 		CB4C07C2197229A300F08D01 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -128,6 +146,8 @@
 		CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		CB663F0619B4731800E13376 /* URLItemSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLItemSource.h; sourceTree = "<group>"; };
 		CB663F0719B4731800E13376 /* URLItemSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLItemSource.m; sourceTree = "<group>"; };
+		CB87395B1B1B56A600074C31 /* RegisterToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteViewController.h; sourceTree = "<group>"; };
+		CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteViewController.m; sourceTree = "<group>"; };
 		CB8EE81819B81FC30096926D /* VTBallotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotController.h; sourceTree = "<group>"; };
 		CB8EE81919B81FC30096926D /* VTBallotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotController.m; sourceTree = "<group>"; };
 		CB8EE81B19B822980096926D /* VTBallotDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotDetailController.h; sourceTree = "<group>"; };
@@ -166,6 +186,8 @@
 		CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDetailContactController.m; sourceTree = "<group>"; };
 		CBBAC04A19B990120002AC1C /* VTContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTContactsController.h; sourceTree = "<group>"; };
 		CBBAC04B19B990120002AC1C /* VTContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTContactsController.m; sourceTree = "<group>"; };
+		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
+		CBD18A271B19A52E00E1911A /* Register-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Register-Icon.png"; sourceTree = "<group>"; };
 		CBE30B6F19C0B46700C8726F /* VTNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTNotificationController.h; sourceTree = "<group>"; };
 		CBE30B7019C0B46700C8726F /* VTNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTNotificationController.m; sourceTree = "<group>"; };
 		CBECB09B19B3BDA50018F26C /* VTTestingThis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTestingThis.h; sourceTree = "<group>"; };
@@ -243,15 +265,44 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		CB3417451B1B58BB00CE74C1 /* RegisterToVote */ = {
+			isa = PBXGroup;
+			children = (
+				CB87395B1B1B56A600074C31 /* RegisterToVoteViewController.h */,
+				CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */,
+				CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */,
+				CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */,
+			);
+			name = RegisterToVote;
+			sourceTree = "<group>";
+		};
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				CB4C2EBC19849F06000AEA3A /* ipad_background.png */,
+				CBD18A271B19A52E00E1911A /* Register-Icon.png */,
 				CB4C2EBD19849F06000AEA3A /* iphone4_background.png */,
 				CB4C2EBE19849F06000AEA3A /* iphone5_background.png */,
 				CB03D3D0199B6FC6001DB0B1 /* Default Images */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		CB87395E1B1B56AF00074C31 /* New App */ = {
+			isa = PBXGroup;
+			children = (
+				CBD18A251B17F59D00E1911A /* Vota.storyboard */,
+				CB3417561B1C61D600CE74C1 /* VotaViewController.h */,
+				CB3417571B1C61D600CE74C1 /* VotaViewController.m */,
+				CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */,
+				CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */,
+				CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */,
+				CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */,
+				CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */,
+				CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */,
+				CB3417451B1B58BB00CE74C1 /* RegisterToVote */,
+			);
+			name = "New App";
 			sourceTree = "<group>";
 		};
 		CBAA21A11971F921008404F7 = {
@@ -340,6 +391,7 @@
 				CB01D87519C2757F00D8FBBD /* VTProfileController.h */,
 				CB01D87619C2757F00D8FBBD /* VTProfileController.m */,
 				CBAA21BF1971F921008404F7 /* MainStoryboard.storyboard */,
+				CB87395E1B1B56AF00074C31 /* New App */,
 				CB1DC90E197C9E89000DA1C4 /* Resources */,
 				CBAA21C81971F921008404F7 /* Images.xcassets */,
 				CB4C07E51972394B00F08D01 /* Images */,
@@ -461,7 +513,9 @@
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,
 				CB4C07FF1972394B00F08D01 /* Icon-Small-50@2x.png in Resources */,
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
+				CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */,
 				CB4C07FA1972394B00F08D01 /* Icon-72.png in Resources */,
+				CBD18A281B19A52E00E1911A /* Register-Icon.png in Resources */,
 				CBAA21C11971F921008404F7 /* MainStoryboard.storyboard in Resources */,
 				CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */,
 				CB4C08041972394B00F08D01 /* iTunesArtwork.png in Resources */,
@@ -501,6 +555,7 @@
 				CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */,
 				CB663F0819B4731800E13376 /* URLItemSource.m in Sources */,
 				CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */,
+				CB34174F1B1C20D300CE74C1 /* StateTableViewController.m in Sources */,
 				CB29209319B42667007937B5 /* VTPartyController.m in Sources */,
 				CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
@@ -515,8 +570,13 @@
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */,
+				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,
 				CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */,
+				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
+				CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */,
+				CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */,
+				CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

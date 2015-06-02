@@ -22,6 +22,8 @@
 @property (strong, nonatomic) NSMutableArray *contactsWithApp;
 @property (nonatomic) BOOL profileUpdated;
 
+@property (nonatomic) BOOL logOut;
+
 + (VTSettings *)instance;
 - (NSString *)getBackGroundImage;
 - (NSString *)getRegisterURL;
