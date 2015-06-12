@@ -37,6 +37,9 @@
     
     //Load the request in the UIWebView.
     [_webViewBallotWebsite loadRequest:requestObj];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

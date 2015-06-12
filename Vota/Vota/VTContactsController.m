@@ -194,7 +194,7 @@
                         
                         [contact setValue:objects forKeyPath:@"PFUsers"];
                     
-                        [[VTSettings instance].contactsWithApp addObject:contact];
+//                        [[VTSettings instance].contactsWithApp addObject:contact];
                         
 //                        NSLog(@"size - %lu", (unsigned long)[[VTSettings instance].contactsWithApp count]);
                         [self.tableView reloadData];

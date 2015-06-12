@@ -8,7 +8,8 @@
 
 #import "SettingsViewController.h"
 #import "VTSettings.h"
-
+#import "VTProfileController.h"
+#import <Parse/Parse.h>
 @interface SettingsViewController ()
 
 @end
@@ -29,6 +30,38 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     self.navigationController.navigationBar.hidden=YES;
+    
+    NSLog(@"%@", [PFUser currentUser]);
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    if ([VTSettings instance].profileUpdated) {
+        PFUser *user = [PFUser currentUser];
+        
+//        if ([VTSettings instance].gender) {
+//            user[@"gender"] = [VTSettings instance].gender;
+//        }
+//        if ([VTSettings instance].state) {
+//            user[@"state"] = [VTSettings instance].state;
+//        }
+//        if ([VTSettings instance].party) {
+//            user[@"party"] = [VTSettings instance].party;
+//        }
+//        if ([VTSettings instance].phoneNumber) {
+//            user[@"phone"] = [VTSettings instance].phoneNumber;
+//        }
+//        if ([VTSettings instance].city) {
+//            user[@"city"] = [VTSettings instance].city;
+//        }
+//        if ([VTSettings instance].zipCode) {
+//            user[@"zipcode"] = [VTSettings instance].zipCode;
+//        }
+        [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            [VTSettings instance].profileUpdated = NO;
+        }];
+        
+    }
 }
 
 /*
@@ -41,20 +74,32 @@
 }
 */
 
+- (IBAction)EditProfileButtonPressed:(id)sender {
+    
+//    VTProfileController *controller = [[VTProfileController alloc] init];
+    
+//    [self.navigationController pushViewController:controller animated:YES];
+
+    
+    
+}
+
 - (IBAction)logOutButtonPressed:(id)sender {
     
 //    [delegate close];
  
-    [VTSettings instance].logOut = YES;
-    [self.navigationController popViewControllerAnimated:YES];
+//    [VTSettings instance].logOut = YES;
+    
+//    [self.navigationController popViewControllerAnimated:YES];
 
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 - (IBAction)backButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-    
-    
 }
+
+
 
 @end

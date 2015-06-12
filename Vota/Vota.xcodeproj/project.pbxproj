@@ -73,6 +73,15 @@
 		CBAA21FC19720196008404F7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21FB19720196008404F7 /* Social.framework */; };
 		CBAA21FE1972019C008404F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21FD1972019C008404F7 /* Accounts.framework */; };
 		CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */; };
+		CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F99C1B2397D90054D9E9 /* EditProfileViewController.m */; };
+		CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A01B239A7E0054D9E9 /* GenderViewController.m */; };
+		CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */; };
+		CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A61B23CD700054D9E9 /* PartyViewController.m */; };
+		CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A91B23CF870054D9E9 /* PhoneNumberViewController.m */; };
+		CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */; };
+		CBB9F9AF1B23F51D0054D9E9 /* default.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */; };
+		CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */; };
+		CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */; };
 		CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBAC04B19B990120002AC1C /* VTContactsController.m */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
 		CBD18A281B19A52E00E1911A /* Register-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A271B19A52E00E1911A /* Register-Icon.png */; };
@@ -184,6 +193,23 @@
 		CBAA21FD1972019C008404F7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CBB0A35C19BF64AE00E75B2E /* VTDetailContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDetailContactController.h; sourceTree = "<group>"; };
 		CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDetailContactController.m; sourceTree = "<group>"; };
+		CBB9F99B1B2397D90054D9E9 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		CBB9F99C1B2397D90054D9E9 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
+		CBB9F99F1B239A7E0054D9E9 /* GenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderViewController.h; sourceTree = "<group>"; };
+		CBB9F9A01B239A7E0054D9E9 /* GenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderViewController.m; sourceTree = "<group>"; };
+		CBB9F9A21B23C4F60054D9E9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CBB9F9A51B23CD700054D9E9 /* PartyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartyViewController.h; sourceTree = "<group>"; };
+		CBB9F9A61B23CD700054D9E9 /* PartyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartyViewController.m; sourceTree = "<group>"; };
+		CBB9F9A81B23CF870054D9E9 /* PhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberViewController.h; sourceTree = "<group>"; };
+		CBB9F9A91B23CF870054D9E9 /* PhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberViewController.m; sourceTree = "<group>"; };
+		CBB9F9AB1B23D0A40054D9E9 /* ZipCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCodeViewController.h; sourceTree = "<group>"; };
+		CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipCodeViewController.m; sourceTree = "<group>"; };
+		CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default.jpeg; sourceTree = "<group>"; };
+		CBB9F9B11B2405730054D9E9 /* RegisteredTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredTableViewController.h; sourceTree = "<group>"; };
+		CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredTableViewController.m; sourceTree = "<group>"; };
+		CBB9F9B41B24057E0054D9E9 /* VotedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotedTableViewController.h; sourceTree = "<group>"; };
+		CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotedTableViewController.m; sourceTree = "<group>"; };
 		CBBAC04A19B990120002AC1C /* VTContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTContactsController.h; sourceTree = "<group>"; };
 		CBBAC04B19B990120002AC1C /* VTContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTContactsController.m; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
@@ -272,6 +298,8 @@
 				CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */,
 				CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */,
 				CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */,
+				CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */,
+				CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */,
 			);
 			name = RegisterToVote;
 			sourceTree = "<group>";
@@ -281,6 +309,7 @@
 			children = (
 				CB4C2EBC19849F06000AEA3A /* ipad_background.png */,
 				CBD18A271B19A52E00E1911A /* Register-Icon.png */,
+				CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */,
 				CB4C2EBD19849F06000AEA3A /* iphone4_background.png */,
 				CB4C2EBE19849F06000AEA3A /* iphone5_background.png */,
 				CB03D3D0199B6FC6001DB0B1 /* Default Images */,
@@ -292,14 +321,12 @@
 			isa = PBXGroup;
 			children = (
 				CBD18A251B17F59D00E1911A /* Vota.storyboard */,
+				CBB9F9A21B23C4F60054D9E9 /* LoginViewController.h */,
+				CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */,
 				CB3417561B1C61D600CE74C1 /* VotaViewController.h */,
 				CB3417571B1C61D600CE74C1 /* VotaViewController.m */,
-				CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */,
-				CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */,
-				CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */,
-				CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */,
-				CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */,
-				CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */,
+				CBB9F99A1B2397B70054D9E9 /* Settings */,
+				CBB9F9B01B24054A0054D9E9 /* GetFriendsToVote */,
 				CB3417451B1B58BB00CE74C1 /* RegisterToVote */,
 			);
 			name = "New App";
@@ -428,6 +455,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CBB9F99A1B2397B70054D9E9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */,
+				CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */,
+				CBB9F99E1B239A6A0054D9E9 /* Edit Profile */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		CBB9F99E1B239A6A0054D9E9 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CBB9F99B1B2397D90054D9E9 /* EditProfileViewController.h */,
+				CBB9F99C1B2397D90054D9E9 /* EditProfileViewController.m */,
+				CBB9F99F1B239A7E0054D9E9 /* GenderViewController.h */,
+				CBB9F9A01B239A7E0054D9E9 /* GenderViewController.m */,
+				CBB9F9A51B23CD700054D9E9 /* PartyViewController.h */,
+				CBB9F9A61B23CD700054D9E9 /* PartyViewController.m */,
+				CBB9F9A81B23CF870054D9E9 /* PhoneNumberViewController.h */,
+				CBB9F9A91B23CF870054D9E9 /* PhoneNumberViewController.m */,
+				CBB9F9AB1B23D0A40054D9E9 /* ZipCodeViewController.h */,
+				CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */,
+			);
+			name = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		CBB9F9B01B24054A0054D9E9 /* GetFriendsToVote */ = {
+			isa = PBXGroup;
+			children = (
+				CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */,
+				CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */,
+				CBB9F9B11B2405730054D9E9 /* RegisteredTableViewController.h */,
+				CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */,
+				CBB9F9B41B24057E0054D9E9 /* VotedTableViewController.h */,
+				CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */,
+			);
+			name = GetFriendsToVote;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +578,7 @@
 				CB4C08021972394B00F08D01 /* Icon.png in Resources */,
 				CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */,
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,
+				CBB9F9AF1B23F51D0054D9E9 /* default.jpeg in Resources */,
 				CB4C07FF1972394B00F08D01 /* Icon-Small-50@2x.png in Resources */,
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
 				CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */,
@@ -553,6 +621,9 @@
 				CB04513019B298A70096E904 /* VTStartViewController.m in Sources */,
 				CB29209619B427FD007937B5 /* VTRegisterController.m in Sources */,
 				CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */,
+				CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */,
+				CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */,
+				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
 				CB663F0819B4731800E13376 /* URLItemSource.m in Sources */,
 				CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */,
 				CB34174F1B1C20D300CE74C1 /* StateTableViewController.m in Sources */,
@@ -560,16 +631,21 @@
 				CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
 				CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */,
+				CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */,
 				CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */,
 				CB29209019B424F9007937B5 /* VTGenderController.m in Sources */,
 				CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */,
+				CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */,
 				CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */,
 				CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */,
 				CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */,
+				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
+				CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */,
+				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
 				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,
 				CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */,
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
@@ -706,8 +782,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -716,7 +792,7 @@
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c1ca2cc-c505-467b-9fb2-f07bc803ea61";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -726,8 +802,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -736,7 +812,7 @@
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca589bad-675a-4186-9b42-c5b3e7226dea";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

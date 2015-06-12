@@ -42,6 +42,14 @@
         return @"https://secure.sos.state.or.us/orestar/vr/register.do?lang=eng&source=SOS";
     } else if ([_state isEqualToString:@"California"] || [_state isEqualToString:@"CA"]){
         return @"http://registertovote.ca.gov";
+    } else if ([_state isEqualToString:@"Arizona"] || [_state isEqualToString:@"AZ"]){
+        return @"https://servicearizona.com/webapp/evoter/selectLanguage";
+    } else if ([_state isEqualToString:@"Colorado"] || [_state isEqualToString:@"CO"]){
+        return @"http://registertovote.ca.gov/";
+    } else if ([_state isEqualToString:@"Illinois"] || [_state isEqualToString:@"IL"]){
+        return @"https://ova.elections.il.gov/";
+    } else if ([_state isEqualToString:@"Washington"] || [_state isEqualToString:@"WA"]){
+        return @"https://www.sos.wa.gov/elections/myvote/";
     } else {
         return @"http://www.usa.gov/Citizen/Topics/Voting/Register.shtml";
     }

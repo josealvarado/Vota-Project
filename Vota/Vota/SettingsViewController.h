@@ -18,6 +18,7 @@
 
 @property (nonatomic, assign) id delegate;
 
+- (IBAction)EditProfileButtonPressed:(id)sender;
 
 - (IBAction)logOutButtonPressed:(id)sender;
 

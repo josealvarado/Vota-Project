@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SettingsViewController.h"
 
-@interface VotaViewController : UIViewController<SettingsDelegate>
+@interface VotaViewController : UIViewController<SettingsDelegate>{
+    
+    int numberOfContacts;
+    NSMutableArray *allPhoneNumbers;
+}
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
 
-- (IBAction)votaButtonPressed:(id)sender;
+//- (IBAction)votaButtonPressed:(id)sender;
 
 @end
