@@ -167,6 +167,14 @@
         
         [testObject saveInBackground];
         
+        [testObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    
+            if (succeeded) {
+                NSLog(@"successfully sent push");
+            } else {
+                NSLog(@"%@", error);
+            }
+        }];
     }
     
     NSString *alertMessage = [NSString stringWithFormat:@"Successfully sent %lu notification(s)", (unsigned long)[selectedFriends count]];

@@ -51,6 +51,45 @@
     if (![previousZipCode isEqualToString:zipCode]) {
         [PFUser currentUser][@"zipcode"] = zipCode;
         [VTSettings instance].profileUpdated = YES;
+        
+        NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://ziptasticapi.com/%@", zipCode]]];
+        NSURLResponse * response = nil;
+        NSError * error = nil;
+        NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest
+                                              returningResponse:&response
+                                                          error:&error];
+        
+        if (error == nil)
+        {
+            // Parse data here
+            //        NSLog(@"data %@", data);
+            
+            NSError *error = nil;
+            //        NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            
+            NSDictionary *jsonDict =[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            
+            if (error != nil) {
+                //            NSLog(@"Error parsing JSON.");
+            }
+            else {
+                //            NSLog(@"Array: %@", jsonArray);
+                //            NSLog(@"Array: %@", jsonArray[0]);
+                //            NSLog(@"Array: %@", [jsonDict objectForKey:@"city"]);
+                //            NSLog(@"Array: %@", [jsonDict objectForKey:@"country"]);
+                //            NSLog(@"Array: %@", [jsonDict objectForKey:@"state"]);
+                
+                NSString *city = [jsonDict objectForKey:@"city"];
+                NSString *state = [jsonDict objectForKey:@"state"];
+                
+                [PFUser currentUser][@"city"] = city;
+                [PFUser currentUser][@"state"] = state;
+
+                PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+                [currentInstallation addUniqueObject:[NSString stringWithFormat:@"%@", [jsonDict objectForKey:@"state"]] forKey:@"channels"];
+                [currentInstallation saveInBackground];
+            }
+        }
     }
     
     [self.navigationController popViewControllerAnimated:YES];

@@ -7,6 +7,8 @@
 //
 
 #import "VotedTableViewController.h"
+#import "VTSettings.h"
+#import <Parse/Parse.h>
 
 @interface VotedTableViewController ()
 
@@ -36,26 +38,52 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[VTSettings instance].contactsWithApp count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactWithAppCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
+    PFObject *user = [[VTSettings instance].contactsWithApp objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [user objectForKey:@"email"];
+    
     return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+        
+        
+        cell .accessoryType = UITableViewCellAccessoryNone;
+        
+        [selectedFriends removeObject:[[VTSettings instance].contactsWithApp objectAtIndex:indexPath.row]];
+        
+    } else {
+        
+        cell .accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        [selectedFriends addObject:[[VTSettings instance].contactsWithApp objectAtIndex:indexPath.row]];
+        
+    }
+    
+    
+    //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -101,4 +129,55 @@
 }
 */
 
+- (IBAction)sendButtonPressed:(id)sender {
+    NSLog(@"sending %lu push notifications", (unsigned long)[selectedFriends count]);
+    
+    for (int i = 0; i < [selectedFriends count]; i++) {
+        PFUser *user = [selectedFriends objectAtIndex:i];
+        //            NSLog(@"objectid %@", user.objectId);
+        
+        NSLog(@"User %@", user);
+        
+        // Create our Installation query
+        PFQuery *pushQuery = [PFInstallation query];
+        [pushQuery whereKey:@"user" equalTo:user];
+        
+        // Send push notification to query
+        NSString *message = [NSString stringWithFormat:@"%@: Did you vote / Ha votado?",[PFUser currentUser].username];
+        
+        [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:message];
+        
+        
+        // Saves the request
+        PFObject *testObject = [PFObject objectWithClassName:@"Request"];
+        NSLog(@"CurrentUser %@", [PFUser currentUser]);
+        testObject[@"from"] = [PFUser currentUser];
+        testObject[@"to"] = user;
+        testObject[@"question"] = @"1";
+        testObject[@"responded"] = @NO;
+        
+        PFACL *postACL = [PFACL ACLWithUser:[PFUser currentUser]];
+        [postACL setPublicReadAccess:YES];
+        [postACL setPublicWriteAccess:YES];
+        testObject.ACL = postACL;
+        
+        [testObject saveInBackground];
+        
+        [testObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            if (succeeded) {
+                NSLog(@"successfully sent push");
+            } else {
+                NSLog(@"%@", error);
+            }
+        }];
+    }
+    
+    NSString *alertMessage = [NSString stringWithFormat:@"Successfully sent %lu notification(s)", (unsigned long)[selectedFriends count]];
+    [[[UIAlertView alloc] initWithTitle:@"Success"
+                                message:alertMessage
+                               delegate:nil
+                      cancelButtonTitle:@"Ok"
+                      otherButtonTitles:nil, nil] show];
+}
 @end

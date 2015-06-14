@@ -33,13 +33,23 @@
                                consumerSecret:@"7Ye2osmxWpRB5gKjVw5GV65ur2AnLZO5CTvZmPPDcttDllosZ3"];
 
     
-    // Register for push notifications
-    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
-     UIRemoteNotificationTypeAlert|
-     UIRemoteNotificationTypeSound];
+    // ---------------------------------------------- Register for push notifications
+//    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+//     UIRemoteNotificationTypeAlert|
+//     UIRemoteNotificationTypeSound];
     
-    
+//    [application registerForRemoteNotifications];
 
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
+    // ---------------------------------------------- Test Cases
+    
 //    [self insertNewCandidate];
     
     
@@ -276,6 +286,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
+     currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackground];
 }
 

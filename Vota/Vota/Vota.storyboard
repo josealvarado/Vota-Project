@@ -398,7 +398,7 @@
             </objects>
             <point key="canvasLocation" x="1684" y="-666"/>
         </scene>
-        <!--Friends Ask To Vote-->
+        <!--Ask Friends To Vote-->
         <scene sceneID="yuJ-tL-tkp">
             <objects>
                 <tableViewController id="kio-bg-kkN" customClass="VotedTableViewController" sceneMemberID="viewController">
@@ -419,13 +419,19 @@
                             <outlet property="delegate" destination="kio-bg-kkN" id="gXH-Yf-ONH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends Ask To Vote" id="Mfo-EY-blf"/>
+                    <navigationItem key="navigationItem" title="Ask Friends To Vote" id="Mfo-EY-blf">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="jpe-1k-e0C">
+                            <connections>
+                                <action selector="sendButtonPressed:" destination="kio-bg-kkN" id="odk-6U-Gb8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJ9-M7-7Lb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2152" y="-894"/>
         </scene>
-        <!--Friends Ask To Register-->
+        <!--Ask Friends To Register-->
         <scene sceneID="Gbh-EU-cdJ">
             <objects>
                 <tableViewController id="q9R-Xa-Kes" customClass="RegisteredTableViewController" sceneMemberID="viewController">
@@ -455,7 +461,7 @@
                             <outlet property="delegate" destination="q9R-Xa-Kes" id="t9q-p4-Jbq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends Ask To Register" id="b3k-fR-JdT">
+                    <navigationItem key="navigationItem" title="Ask Friends To Register" id="b3k-fR-JdT">
                         <barButtonItem key="rightBarButtonItem" title="Send" id="TdU-sV-VXw">
                             <connections>
                                 <action selector="sendButtonPressed:" destination="q9R-Xa-Kes" id="AT9-kq-taD"/>

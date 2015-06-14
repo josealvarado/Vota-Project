@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VotedTableViewController : UITableViewController
+@interface VotedTableViewController : UITableViewController{
+    
+    NSMutableArray *selectedFriends;
+
+}
+- (IBAction)sendButtonPressed:(id)sender;
 
 @end
