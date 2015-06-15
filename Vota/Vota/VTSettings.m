@@ -45,7 +45,7 @@
     } else if ([_state isEqualToString:@"Arizona"] || [_state isEqualToString:@"AZ"]){
         return @"https://servicearizona.com/webapp/evoter/selectLanguage";
     } else if ([_state isEqualToString:@"Colorado"] || [_state isEqualToString:@"CO"]){
-        return @"http://registertovote.ca.gov/";
+        return @"https://www.sos.state.co.us/voter-classic/secuRegVoterIntro.do";
     } else if ([_state isEqualToString:@"Illinois"] || [_state isEqualToString:@"IL"]){
         return @"https://ova.elections.il.gov/";
     } else if ([_state isEqualToString:@"Washington"] || [_state isEqualToString:@"WA"]){

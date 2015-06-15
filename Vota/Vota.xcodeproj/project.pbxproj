@@ -17,7 +17,6 @@
 		CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209819B42EE5007937B5 /* VTCandidatesController.m */; };
 		CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */; };
 		CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */; };
-		CB34174F1B1C20D300CE74C1 /* StateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */; };
 		CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */; };
 		CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */; };
 		CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417571B1C61D600CE74C1 /* VotaViewController.m */; };
@@ -39,15 +38,20 @@
 		CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07F31972394B00F08D01 /* Icon@2x.png */; };
 		CB4C08041972394B00F08D01 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07F41972394B00F08D01 /* iTunesArtwork.png */; };
 		CB4C08051972394B00F08D01 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07F51972394B00F08D01 /* iTunesArtwork@2x.png */; };
-		CB4C2ECA19849F06000AEA3A /* ipad_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBC19849F06000AEA3A /* ipad_background.png */; };
-		CB4C2ECB19849F06000AEA3A /* iphone4_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBD19849F06000AEA3A /* iphone4_background.png */; };
-		CB4C2ECC19849F06000AEA3A /* iphone5_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C2EBE19849F06000AEA3A /* iphone5_background.png */; };
 		CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */; };
 		CB663F0819B4731800E13376 /* URLItemSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CB663F0719B4731800E13376 /* URLItemSource.m */; };
 		CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */; };
 		CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81919B81FC30096926D /* VTBallotController.m */; };
 		CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81C19B822980096926D /* VTBallotDetailController.m */; };
 		CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE82219B851290096926D /* VTZipCodeController.m */; };
+		CB9632701B2ED31C009C240C /* Register-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB96326F1B2ED31C009C240C /* Register-Icon.png */; };
+		CB9632721B2ED32B009C240C /* Get Friends to Vote.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9632711B2ED32B009C240C /* Get Friends to Vote.png */; };
+		CB9632741B2ED337009C240C /* Ballots and Candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9632731B2ED337009C240C /* Ballots and Candidate.png */; };
+		CB9632761B2ED343009C240C /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9632751B2ED343009C240C /* Settings.png */; };
+		CB96327C1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96327B1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m */; };
+		CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96327E1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m */; };
+		CB9632831B2EDD32009C240C /* BallotCandidateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9632821B2EDD32009C240C /* BallotCandidateTableViewController.m */; };
+		CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9632851B2EE2C3009C240C /* NotificationsTableViewController.m */; };
 		CBAA21AE1971F921008404F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21AD1971F921008404F7 /* Foundation.framework */; };
 		CBAA21B01971F921008404F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21AF1971F921008404F7 /* CoreGraphics.framework */; };
 		CBAA21B21971F921008404F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21B11971F921008404F7 /* UIKit.framework */; };
@@ -79,12 +83,10 @@
 		CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A61B23CD700054D9E9 /* PartyViewController.m */; };
 		CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A91B23CF870054D9E9 /* PhoneNumberViewController.m */; };
 		CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */; };
-		CBB9F9AF1B23F51D0054D9E9 /* default.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */; };
 		CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */; };
 		CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */; };
 		CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBAC04B19B990120002AC1C /* VTContactsController.m */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
-		CBD18A281B19A52E00E1911A /* Register-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A271B19A52E00E1911A /* Register-Icon.png */; };
 		CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE30B7019C0B46700C8726F /* VTNotificationController.m */; };
 		CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */ = {isa = PBXBuildFile; fileRef = CBECB09C19B3BDA50018F26C /* VTTestingThis.m */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
@@ -121,8 +123,6 @@
 		CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidateDetailController.m; sourceTree = "<group>"; };
 		CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteWebpageViewController.h; sourceTree = "<group>"; };
 		CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteWebpageViewController.m; sourceTree = "<group>"; };
-		CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateTableViewController.h; sourceTree = "<group>"; };
-		CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateTableViewController.m; sourceTree = "<group>"; };
 		CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetFriendsToVoteViewController.h; sourceTree = "<group>"; };
 		CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetFriendsToVoteViewController.m; sourceTree = "<group>"; };
 		CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -148,9 +148,6 @@
 		CB4C07F31972394B00F08D01 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		CB4C07F41972394B00F08D01 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		CB4C07F51972394B00F08D01 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		CB4C2EBC19849F06000AEA3A /* ipad_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_background.png; sourceTree = "<group>"; };
-		CB4C2EBD19849F06000AEA3A /* iphone4_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone4_background.png; sourceTree = "<group>"; };
-		CB4C2EBE19849F06000AEA3A /* iphone5_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone5_background.png; sourceTree = "<group>"; };
 		CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		CB663F0619B4731800E13376 /* URLItemSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLItemSource.h; sourceTree = "<group>"; };
@@ -163,6 +160,18 @@
 		CB8EE81C19B822980096926D /* VTBallotDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotDetailController.m; sourceTree = "<group>"; };
 		CB8EE82119B851290096926D /* VTZipCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTZipCodeController.h; sourceTree = "<group>"; };
 		CB8EE82219B851290096926D /* VTZipCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTZipCodeController.m; sourceTree = "<group>"; };
+		CB96326F1B2ED31C009C240C /* Register-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Register-Icon.png"; sourceTree = "<group>"; };
+		CB9632711B2ED32B009C240C /* Get Friends to Vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Get Friends to Vote.png"; sourceTree = "<group>"; };
+		CB9632731B2ED337009C240C /* Ballots and Candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ballots and Candidate.png"; sourceTree = "<group>"; };
+		CB9632751B2ED343009C240C /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		CB96327A1B2ED87D009C240C /* RegisterToVoteStateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteStateTableViewController.h; sourceTree = "<group>"; };
+		CB96327B1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteStateTableViewController.m; sourceTree = "<group>"; };
+		CB96327D1B2EDC03009C240C /* BalltotCandidateStateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalltotCandidateStateTableViewController.h; sourceTree = "<group>"; };
+		CB96327E1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalltotCandidateStateTableViewController.m; sourceTree = "<group>"; };
+		CB9632811B2EDD32009C240C /* BallotCandidateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallotCandidateTableViewController.h; sourceTree = "<group>"; };
+		CB9632821B2EDD32009C240C /* BallotCandidateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallotCandidateTableViewController.m; sourceTree = "<group>"; };
+		CB9632841B2EE2C3009C240C /* NotificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsTableViewController.h; sourceTree = "<group>"; };
+		CB9632851B2EE2C3009C240C /* NotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTableViewController.m; sourceTree = "<group>"; };
 		CBAA21AA1971F921008404F7 /* Vota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAA21AD1971F921008404F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBAA21AF1971F921008404F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -205,7 +214,6 @@
 		CBB9F9A91B23CF870054D9E9 /* PhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberViewController.m; sourceTree = "<group>"; };
 		CBB9F9AB1B23D0A40054D9E9 /* ZipCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipCodeViewController.h; sourceTree = "<group>"; };
 		CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipCodeViewController.m; sourceTree = "<group>"; };
-		CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = default.jpeg; sourceTree = "<group>"; };
 		CBB9F9B11B2405730054D9E9 /* RegisteredTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisteredTableViewController.h; sourceTree = "<group>"; };
 		CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredTableViewController.m; sourceTree = "<group>"; };
 		CBB9F9B41B24057E0054D9E9 /* VotedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotedTableViewController.h; sourceTree = "<group>"; };
@@ -213,7 +221,6 @@
 		CBBAC04A19B990120002AC1C /* VTContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTContactsController.h; sourceTree = "<group>"; };
 		CBBAC04B19B990120002AC1C /* VTContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTContactsController.m; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
-		CBD18A271B19A52E00E1911A /* Register-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Register-Icon.png"; sourceTree = "<group>"; };
 		CBE30B6F19C0B46700C8726F /* VTNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTNotificationController.h; sourceTree = "<group>"; };
 		CBE30B7019C0B46700C8726F /* VTNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTNotificationController.m; sourceTree = "<group>"; };
 		CBECB09B19B3BDA50018F26C /* VTTestingThis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTestingThis.h; sourceTree = "<group>"; };
@@ -298,8 +305,8 @@
 				CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */,
 				CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */,
 				CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */,
-				CB34174D1B1C20D300CE74C1 /* StateTableViewController.h */,
-				CB34174E1B1C20D300CE74C1 /* StateTableViewController.m */,
+				CB96327A1B2ED87D009C240C /* RegisterToVoteStateTableViewController.h */,
+				CB96327B1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m */,
 			);
 			name = RegisterToVote;
 			sourceTree = "<group>";
@@ -307,11 +314,10 @@
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CB4C2EBC19849F06000AEA3A /* ipad_background.png */,
-				CBD18A271B19A52E00E1911A /* Register-Icon.png */,
-				CBB9F9AE1B23F51D0054D9E9 /* default.jpeg */,
-				CB4C2EBD19849F06000AEA3A /* iphone4_background.png */,
-				CB4C2EBE19849F06000AEA3A /* iphone5_background.png */,
+				CB96326F1B2ED31C009C240C /* Register-Icon.png */,
+				CB9632711B2ED32B009C240C /* Get Friends to Vote.png */,
+				CB9632731B2ED337009C240C /* Ballots and Candidate.png */,
+				CB9632751B2ED343009C240C /* Settings.png */,
 				CB03D3D0199B6FC6001DB0B1 /* Default Images */,
 			);
 			path = Images;
@@ -325,11 +331,25 @@
 				CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */,
 				CB3417561B1C61D600CE74C1 /* VotaViewController.h */,
 				CB3417571B1C61D600CE74C1 /* VotaViewController.m */,
+				CB9632801B2EDC08009C240C /* Ballot/Candidate */,
 				CBB9F99A1B2397B70054D9E9 /* Settings */,
 				CBB9F9B01B24054A0054D9E9 /* GetFriendsToVote */,
 				CB3417451B1B58BB00CE74C1 /* RegisterToVote */,
 			);
 			name = "New App";
+			sourceTree = "<group>";
+		};
+		CB9632801B2EDC08009C240C /* Ballot/Candidate */ = {
+			isa = PBXGroup;
+			children = (
+				CB96327D1B2EDC03009C240C /* BalltotCandidateStateTableViewController.h */,
+				CB96327E1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m */,
+				CB9632811B2EDD32009C240C /* BallotCandidateTableViewController.h */,
+				CB9632821B2EDD32009C240C /* BallotCandidateTableViewController.m */,
+				CB9632841B2EE2C3009C240C /* NotificationsTableViewController.h */,
+				CB9632851B2EE2C3009C240C /* NotificationsTableViewController.m */,
+			);
+			name = Ballot/Candidate;
 			sourceTree = "<group>";
 		};
 		CBAA21A11971F921008404F7 = {
@@ -578,26 +598,25 @@
 				CB4C08021972394B00F08D01 /* Icon.png in Resources */,
 				CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */,
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,
-				CBB9F9AF1B23F51D0054D9E9 /* default.jpeg in Resources */,
 				CB4C07FF1972394B00F08D01 /* Icon-Small-50@2x.png in Resources */,
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
 				CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */,
+				CB9632721B2ED32B009C240C /* Get Friends to Vote.png in Resources */,
 				CB4C07FA1972394B00F08D01 /* Icon-72.png in Resources */,
-				CBD18A281B19A52E00E1911A /* Register-Icon.png in Resources */,
+				CB9632761B2ED343009C240C /* Settings.png in Resources */,
+				CB9632701B2ED31C009C240C /* Register-Icon.png in Resources */,
 				CBAA21C11971F921008404F7 /* MainStoryboard.storyboard in Resources */,
 				CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */,
 				CB4C08041972394B00F08D01 /* iTunesArtwork.png in Resources */,
 				CB4C07FC1972394B00F08D01 /* Icon-76.png in Resources */,
+				CB9632741B2ED337009C240C /* Ballots and Candidate.png in Resources */,
 				CB4C08051972394B00F08D01 /* iTunesArtwork@2x.png in Resources */,
-				CB4C2ECB19849F06000AEA3A /* iphone4_background.png in Resources */,
 				CB4C08001972394B00F08D01 /* Icon-Small.png in Resources */,
 				CBAA21B81971F921008404F7 /* InfoPlist.strings in Resources */,
 				CB4C07FE1972394B00F08D01 /* Icon-Small-50.png in Resources */,
 				CB4C07F81972394B00F08D01 /* Icon-60.png in Resources */,
-				CB4C2ECA19849F06000AEA3A /* ipad_background.png in Resources */,
 				CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */,
 				CB4C08011972394B00F08D01 /* Icon-Small@2x.png in Resources */,
-				CB4C2ECC19849F06000AEA3A /* iphone5_background.png in Resources */,
 				CB4C07FD1972394B00F08D01 /* Icon-76@2x.png in Resources */,
 				CB4C07F91972394B00F08D01 /* Icon-60@2x.png in Resources */,
 			);
@@ -626,7 +645,6 @@
 				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
 				CB663F0819B4731800E13376 /* URLItemSource.m in Sources */,
 				CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */,
-				CB34174F1B1C20D300CE74C1 /* StateTableViewController.m in Sources */,
 				CB29209319B42667007937B5 /* VTPartyController.m in Sources */,
 				CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
@@ -638,7 +656,10 @@
 				CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */,
 				CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */,
 				CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */,
+				CB9632831B2EDD32009C240C /* BallotCandidateTableViewController.m in Sources */,
 				CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */,
+				CB96327C1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m in Sources */,
+				CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */,
 				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
@@ -650,6 +671,7 @@
 				CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */,
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
+				CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */,
 				CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */,
 				CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */,
 				CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */,

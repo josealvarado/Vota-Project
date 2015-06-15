@@ -40,7 +40,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Vota</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>MainStoryboard</string>
+	<string>Vota</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

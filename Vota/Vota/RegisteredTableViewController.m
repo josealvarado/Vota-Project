@@ -159,6 +159,7 @@
         testObject[@"to"] = user;
         testObject[@"question"] = @"0";
         testObject[@"responded"] = @NO;
+        testObject[@"message"] = message;
         
         PFACL *postACL = [PFACL ACLWithUser:[PFUser currentUser]];
         [postACL setPublicReadAccess:YES];
