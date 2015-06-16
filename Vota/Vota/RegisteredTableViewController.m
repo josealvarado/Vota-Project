@@ -57,7 +57,10 @@
     
     PFObject *user = [[VTSettings instance].contactsWithApp objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [user objectForKey:@"email"];
+    NSString *phoneNumber = [user objectForKey:@"phone"];
+    
+    
+    cell.textLabel.text = [[VTSettings instance].phoneNumberToName objectForKey:phoneNumber];
     
     return cell;
 }
@@ -147,7 +150,15 @@
         [pushQuery whereKey:@"user" equalTo:user];
         
         // Send push notification to query
-        NSString *message = [NSString stringWithFormat:@"%@: Have you registered to vote / Te registraste para votar?",[PFUser currentUser].username];
+        NSString *phoneNumber = [[PFUser currentUser] objectForKey:@"phone"];
+        
+        NSLog(@"%@", [[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]);
+        
+//        cell.textLabel.text = [[VTSettings instance].phoneNumberToName objectForKey:phoneNumber];
+        
+        
+        
+        NSString *message = [NSString stringWithFormat:@"%@: Have you registered to vote / Te registraste para votar?",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
         
         [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:message];
         

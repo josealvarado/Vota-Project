@@ -27,9 +27,13 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBar.hidden=NO;
+
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Request"];
     [query whereKey:@"responded" equalTo:@NO];
     [query whereKey:@"to" equalTo:[PFUser currentUser]];
+    [query includeKey:@"from"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -83,22 +87,26 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    displayAlert = YES;
     //0 -  Have you registered to vote / Te registraste para votar?
     //1 - Did you vote / Ha votado?
     
     PFObject *info = data[indexPath.row];
+    selectedObject = info;
     
     NSString *question = [info objectForKey:@"questions"];
     NSString *message;
     if ([question isEqualToString:@"0"]) {
         message = @"Have you registered to vote / Te registraste para votar?";
     } else {
-        message = @"Did you vote / Ha votado?";
+        message = @"Did you vote / Has votado?";
     }
     
     PFUser *from = [info objectForKey:@"from"];
+    NSLog(@"from %@", from);
+    NSString *phoneNumber = [from objectForKey:@"phone"];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[from username]
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]
                                                     message:message
                                                    delegate:self
                                           cancelButtonTitle:@"Yes"
@@ -115,6 +123,55 @@
             NSLog(@"failed to save response");
         }
     }];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    
+    if (displayAlert) {
+        displayAlert = NO;
+        
+        PFUser *user = [selectedObject objectForKey:@"from"];
+        
+        // Create our Installation query
+        PFQuery *pushQuery = [PFInstallation query];
+        [pushQuery whereKey:@"user" equalTo:user];
+
+        // Send push notification to query
+        NSString *phoneNumber = [[PFUser currentUser] objectForKey:@"phone"];
+        
+        NSString *localMessage = @"";
+        NSString *pushMessage = @"";
+        NSString *question = [selectedObject objectForKey:@"questions"];
+        
+        if (buttonIndex == 0) {
+            if ([question isEqualToString:@"0"]) {
+                localMessage = @"Awesome!/ Que Bueno!";
+                pushMessage = [NSString stringWithFormat:@"%@: Yes, I have/Si, ya lo hice.",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
+            } else {
+                localMessage = @"Awesome! Tell others to vote!/Que Bueno! Dile a todos que voten!";
+                pushMessage = [NSString stringWithFormat:@"%@: Yes, I have/Si, ya lo hice.",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
+            }
+        } else {
+            if ([question isEqualToString:@"0"]) {
+                localMessage = @"Get with it!/Ponte las pilas!";
+                pushMessage = [NSString stringWithFormat:@"%@: No, I haven't/No, todavia no.",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
+            } else {
+                localMessage = @"Get with it!/Ponte las pilas! Hay que participar!";
+                pushMessage = [NSString stringWithFormat:@"%@: No, I haven't/No todavia no.",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
+            }
+        }
+        
+        [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:pushMessage];
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]
+                                                        message:localMessage
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+    }
+    
 }
 
 /*

@@ -47,6 +47,10 @@
 
 - (void)loadContacts
 {
+    if ([VTSettings instance].phoneNumberToName == nil) {
+        [VTSettings instance].phoneNumberToName = [[NSMutableDictionary alloc] init];
+    }
+    
     if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied ||
         ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusRestricted){
         //1
@@ -279,7 +283,7 @@
         NSString *lastName = (__bridge NSString *)(ABRecordCopyValue(person, kABPersonLastNameProperty));
         
         NSLog(@"Name:%@ %@", firstName, lastName);
-        
+        NSString *name = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
         if (!firstName) {
             firstName = @"";
         }
@@ -316,6 +320,15 @@
                     NSLog(@"stripped Number = %@", strippedNumber);
                     [contactNumbers2 addObject:strippedNumber];
                 }
+                
+                NSLog(@"%@", [VTSettings instance].phoneNumberToName);
+//                [VTSettings instance].phoneNumberToName[strippedNumber] = name;
+                
+//                NSMutableDictionary *temp = [VTSettings instance].phoneNumberToName;
+//                temp[@"hello"] = @"helo";
+//                temp[strippedNumber] = name;
+                
+                [[VTSettings instance].phoneNumberToName setObject:name forKey:strippedNumber];
                 
                 [allPhoneNumbers addObject:strippedNumber];
             }

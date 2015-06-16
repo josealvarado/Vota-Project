@@ -843,6 +843,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Vota.app/Vota";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -856,6 +857,7 @@
 				);
 				INFOPLIST_FILE = "VotaTests/VotaTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -865,6 +867,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Vota.app/Vota";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -874,6 +877,7 @@
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "VotaTests/VotaTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

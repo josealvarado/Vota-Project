@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface NotificationsTableViewController : UITableViewController{
     
     NSArray *data;
+    PFObject *selectedObject;
+    BOOL displayAlert;
 }
 
 @end

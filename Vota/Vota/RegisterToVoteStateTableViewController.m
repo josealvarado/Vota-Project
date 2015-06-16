@@ -67,10 +67,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [VTSettings instance].state = listOfStates[indexPath.row];
-    
-    NSString *urlAddress = [[VTSettings instance] getRegisterURL];
-
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlAddress]];
+//    
+//    NSString *urlAddress = [[VTSettings instance] getRegisterURL];
+//
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlAddress]];
 
 }
 

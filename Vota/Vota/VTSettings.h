@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSMutableArray *ballots;
 @property (strong, nonatomic) NSMutableArray *contacts;
 @property (strong, nonatomic) NSArray *contactsWithApp;
+@property (strong, nonatomic) NSMutableDictionary *phoneNumberToName;
 @property (nonatomic) BOOL profileUpdated;
 
 @property (nonatomic) BOOL logOut;

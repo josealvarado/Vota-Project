@@ -24,6 +24,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    selectedFriends = [[NSMutableArray alloc] init];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +58,9 @@
     
     PFObject *user = [[VTSettings instance].contactsWithApp objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [user objectForKey:@"email"];
+    NSString *phoneNumber = [user objectForKey:@"phone"];
+    
+    cell.textLabel.text = [[VTSettings instance].phoneNumberToName objectForKey:phoneNumber];
     
     return cell;
 }
@@ -143,7 +148,11 @@
         [pushQuery whereKey:@"user" equalTo:user];
         
         // Send push notification to query
-        NSString *message = [NSString stringWithFormat:@"%@: Did you vote / Ha votado?",[PFUser currentUser].username];
+        NSString *phoneNumber = [[PFUser currentUser] objectForKey:@"phone"];
+        
+        NSLog(@"%@", [[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]);
+        
+        NSString *message = [NSString stringWithFormat:@"%@: Did you vote / Has votado?",[[VTSettings instance].phoneNumberToName objectForKey:phoneNumber]];
         
         [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:message];
         
@@ -155,6 +164,7 @@
         testObject[@"to"] = user;
         testObject[@"question"] = @"1";
         testObject[@"responded"] = @NO;
+        testObject[@"message"] = message;
         
         PFACL *postACL = [PFACL ACLWithUser:[PFUser currentUser]];
         [postACL setPublicReadAccess:YES];
