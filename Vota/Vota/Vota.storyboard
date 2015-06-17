@@ -260,7 +260,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iod-Gb-j1n">
-                                <rect key="frame" x="204" y="493" width="79" height="43"/>
+                                <rect key="frame" x="197" y="493" width="79" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="cLU-yL-kcx"/>
                                     <constraint firstAttribute="width" constant="79" id="wdK-ql-Saw"/>
@@ -314,7 +314,7 @@
                             <constraint firstItem="Aet-Ew-KRY" firstAttribute="leading" secondItem="1D8-sh-I2K" secondAttribute="leading" constant="37" id="5Tf-th-uvi"/>
                             <constraint firstItem="Iod-Gb-j1n" firstAttribute="top" secondItem="5As-aJ-Bc3" secondAttribute="bottom" constant="28" id="68F-r7-qNq"/>
                             <constraint firstItem="zFb-Cy-tI3" firstAttribute="top" secondItem="kQ3-B7-RKK" secondAttribute="bottom" constant="28" id="7MC-v7-Xzb"/>
-                            <constraint firstAttribute="trailing" secondItem="Iod-Gb-j1n" secondAttribute="trailing" constant="37" id="8RL-WU-rZd"/>
+                            <constraint firstAttribute="trailing" secondItem="Iod-Gb-j1n" secondAttribute="trailing" constant="44" id="8RL-WU-rZd"/>
                             <constraint firstItem="kQ3-B7-RKK" firstAttribute="leading" secondItem="1D8-sh-I2K" secondAttribute="leading" constant="16" id="A6P-xV-P4b"/>
                             <constraint firstAttribute="centerY" secondItem="Mos-Md-fuV" secondAttribute="centerY" id="D4U-d5-nPk"/>
                             <constraint firstItem="YKv-hl-pe8" firstAttribute="leading" secondItem="1D8-sh-I2K" secondAttribute="leading" constant="16" id="Het-ve-Ojd"/>
