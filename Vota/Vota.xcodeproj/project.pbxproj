@@ -52,6 +52,7 @@
 		CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB96327E1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m */; };
 		CB9632831B2EDD32009C240C /* BallotCandidateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9632821B2EDD32009C240C /* BallotCandidateTableViewController.m */; };
 		CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9632851B2EE2C3009C240C /* NotificationsTableViewController.m */; };
+		CB9632AD1B3178FB009C240C /* AboutThisAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9632AC1B3178FB009C240C /* AboutThisAppViewController.m */; };
 		CBAA21AE1971F921008404F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21AD1971F921008404F7 /* Foundation.framework */; };
 		CBAA21B01971F921008404F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21AF1971F921008404F7 /* CoreGraphics.framework */; };
 		CBAA21B21971F921008404F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21B11971F921008404F7 /* UIKit.framework */; };
@@ -172,6 +173,8 @@
 		CB9632821B2EDD32009C240C /* BallotCandidateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallotCandidateTableViewController.m; sourceTree = "<group>"; };
 		CB9632841B2EE2C3009C240C /* NotificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsTableViewController.h; sourceTree = "<group>"; };
 		CB9632851B2EE2C3009C240C /* NotificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsTableViewController.m; sourceTree = "<group>"; };
+		CB9632AB1B3178FB009C240C /* AboutThisAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutThisAppViewController.h; sourceTree = "<group>"; };
+		CB9632AC1B3178FB009C240C /* AboutThisAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutThisAppViewController.m; sourceTree = "<group>"; };
 		CBAA21AA1971F921008404F7 /* Vota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAA21AD1971F921008404F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CBAA21AF1971F921008404F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -479,6 +482,8 @@
 			isa = PBXGroup;
 			children = (
 				CB3417531B1C5FC400CE74C1 /* SettingsViewController.h */,
+				CB9632AB1B3178FB009C240C /* AboutThisAppViewController.h */,
+				CB9632AC1B3178FB009C240C /* AboutThisAppViewController.m */,
 				CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */,
 				CBB9F99E1B239A6A0054D9E9 /* Edit Profile */,
 			);
@@ -673,6 +678,7 @@
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 				CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */,
 				CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */,
+				CB9632AD1B3178FB009C240C /* AboutThisAppViewController.m in Sources */,
 				CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */,
 				CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */,
 			);
