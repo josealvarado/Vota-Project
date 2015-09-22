@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gv5-ck-9wo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gv5-ck-9wo">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -577,11 +577,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactWithAppCell" textLabel="b2L-ub-IFW" style="IBUITableViewCellStyleDefault" id="LCL-Cf-AbV">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LCL-Cf-AbV" id="dEr-Ej-EMq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2L-ub-IFW">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686274509807" green="0.58431372549019611" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -620,11 +623,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactWithAppCell" textLabel="qWe-Lp-EKc" style="IBUITableViewCellStyleDefault" id="Z6T-dG-Dju">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6T-dG-Dju" id="0uJ-3y-dzZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWe-Lp-EKc">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1017,11 +1023,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" textLabel="ShU-1e-u9a" style="IBUITableViewCellStyleDefault" id="DBX-k8-jty">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DBX-k8-jty" id="KjJ-Dh-673">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ShU-1e-u9a">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1307,11 +1316,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="notificationCell" textLabel="Ouy-2a-tAI" style="IBUITableViewCellStyleDefault" id="Dey-Fl-Jps">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dey-Fl-Jps" id="J7V-pE-Oyy">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ouy-2a-tAI">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1362,7 +1374,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="360" id="OQR-4g-WUU"/>
                                 </constraints>
-                                <mutableString key="text">Vota is a partisan app made by Latino millennials to help candidates and causes across the country. Vota was created to increase Latino interest and participation in the 2014 midterm elections and beyond. 
+                                <string key="text">Vota is a partisan app made by Latino millennials to help candidates and causes across the country. Vota was created to increase Latino interest and participation in the 2014 midterm elections and beyond. 
 
 Help awake the sleeping giant that is the Latino voting bloc and make sure your friends are registered and send them reminders to vote on Election Day. 
 
@@ -1372,7 +1384,7 @@ Vota es una aplicación partidista hecha por latinos para ayudar a los candidato
 
 Ayude a despertar al gigante dormido que es el bloque de votantes latinos y asegurase de que sus amigos se registren y envíalos recordatorios para votar el día de las elecciones.     
 
-¡Juntos, podemos asegurar que nuestros políticos sean responsables por el demográfico más grande del país!</mutableString>
+¡Juntos, podemos asegurar que nuestros políticos sean responsables por el demográfico más grande del país!</string>
                                 <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1940,8 +1952,8 @@ Ayude a despertar al gigante dormido que es el bloque de votantes latinos y aseg
                                     <action selector="partyButtonPressed:" destination="Tk9-HB-3et" eventType="touchUpInside" id="EJf-Pf-91E"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Your Party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvL-qe-mbn">
-                                <rect key="frame" x="-1" y="0.0" width="321" height="146"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Party" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvL-qe-mbn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="146" id="bbo-xE-Mqv"/>
@@ -2026,11 +2038,14 @@ Ayude a despertar al gigante dormido que es el bloque de votantes latinos y aseg
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" textLabel="WsB-cX-7Vk" style="IBUITableViewCellStyleDefault" id="cp4-SW-5J2">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cp4-SW-5J2" id="Dat-bx-AQM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WsB-cX-7Vk">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2066,11 +2081,14 @@ Ayude a despertar al gigante dormido que es el bloque de votantes latinos y aseg
                         <color key="backgroundColor" red="0.98431372549999996" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ballotCell" textLabel="qUS-S3-BHY" style="IBUITableViewCellStyleDefault" id="if2-LN-02n">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="if2-LN-02n" id="mzW-Rf-ISF">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qUS-S3-BHY">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.99215686270000003" green="0.58431372550000005" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

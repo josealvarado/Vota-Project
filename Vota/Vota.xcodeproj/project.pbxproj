@@ -565,7 +565,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XYZ;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "___Jose-Alvarado___";
 				TargetAttributes = {
 					CBAA21A91971F921008404F7 = {
@@ -748,6 +748,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -764,7 +765,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -798,7 +799,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -819,8 +820,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -839,8 +841,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -862,8 +865,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "VotaTests/VotaTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jose-Alvarado.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -882,8 +886,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "VotaTests/VotaTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Jose-Alvarado.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
