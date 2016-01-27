@@ -8,7 +8,6 @@
 
 #import "SettingsViewController.h"
 #import "VTSettings.h"
-#import "VTProfileController.h"
 #import <Parse/Parse.h>
 @interface SettingsViewController ()
 

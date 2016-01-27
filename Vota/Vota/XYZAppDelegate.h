@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VTStartViewController.h"
 
 @interface XYZAppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) VTStartViewController *startController;
 
 @end

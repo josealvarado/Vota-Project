@@ -7,20 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB01D87619C2757F00D8FBBD /* VTProfileController.m */; };
-		CB04513019B298A70096E904 /* VTStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04512E19B298A70096E904 /* VTStartViewController.m */; };
 		CB04513419B29DBF0096E904 /* VTSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04513319B29DBF0096E904 /* VTSettings.m */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
-		CB29209019B424F9007937B5 /* VTGenderController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29208F19B424F9007937B5 /* VTGenderController.m */; };
-		CB29209319B42667007937B5 /* VTPartyController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209219B42667007937B5 /* VTPartyController.m */; };
-		CB29209619B427FD007937B5 /* VTRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209519B427FD007937B5 /* VTRegisterController.m */; };
-		CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209819B42EE5007937B5 /* VTCandidatesController.m */; };
-		CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */; };
 		CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */; };
 		CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */; };
 		CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */; };
 		CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417571B1C61D600CE74C1 /* VotaViewController.m */; };
-		CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */; };
 		CB4C07C3197229A300F08D01 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4C07C2197229A300F08D01 /* FacebookSDK.framework */; };
 		CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E61972394B00F08D01 /* Icon-40.png */; };
 		CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E71972394B00F08D01 /* Icon-40@2x.png */; };
@@ -39,11 +31,12 @@
 		CB4C08041972394B00F08D01 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07F41972394B00F08D01 /* iTunesArtwork.png */; };
 		CB4C08051972394B00F08D01 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07F51972394B00F08D01 /* iTunesArtwork@2x.png */; };
 		CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */; };
-		CB663F0819B4731800E13376 /* URLItemSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CB663F0719B4731800E13376 /* URLItemSource.m */; };
 		CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */; };
-		CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81919B81FC30096926D /* VTBallotController.m */; };
-		CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE81C19B822980096926D /* VTBallotDetailController.m */; };
-		CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8EE82219B851290096926D /* VTZipCodeController.m */; };
+		CB927D791C5552450069AE50 /* VTALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB927D781C5552450069AE50 /* VTALoginViewController.swift */; };
+		CB927D7B1C55A8900069AE50 /* VTASignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */; };
+		CB927D951C589E770069AE50 /* VTAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB927D941C589E760069AE50 /* VTAWebViewController.swift */; };
+		CB927D991C58A4B60069AE50 /* VTASignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB927D981C58A4B60069AE50 /* VTASignUpController.swift */; };
+		CB927D9C1C58B18C0069AE50 /* VTAProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB927D9B1C58B18C0069AE50 /* VTAProfileController.swift */; };
 		CB9632701B2ED31C009C240C /* Register-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB96326F1B2ED31C009C240C /* Register-Icon.png */; };
 		CB9632721B2ED32B009C240C /* Get Friends to Vote.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9632711B2ED32B009C240C /* Get Friends to Vote.png */; };
 		CB9632741B2ED337009C240C /* Ballots and Candidate.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9632731B2ED337009C240C /* Ballots and Candidate.png */; };
@@ -77,7 +70,6 @@
 		CBAA21FA197200A5008404F7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21F9197200A5008404F7 /* Parse.framework */; };
 		CBAA21FC19720196008404F7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21FB19720196008404F7 /* Social.framework */; };
 		CBAA21FE1972019C008404F7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBAA21FD1972019C008404F7 /* Accounts.framework */; };
-		CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */; };
 		CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F99C1B2397D90054D9E9 /* EditProfileViewController.m */; };
 		CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A01B239A7E0054D9E9 /* GenderViewController.m */; };
 		CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */; };
@@ -86,10 +78,7 @@
 		CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9AC1B23D0A40054D9E9 /* ZipCodeViewController.m */; };
 		CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */; };
 		CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */; };
-		CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBAC04B19B990120002AC1C /* VTContactsController.m */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
-		CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE30B7019C0B46700C8726F /* VTNotificationController.m */; };
-		CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */ = {isa = PBXBuildFile; fileRef = CBECB09C19B3BDA50018F26C /* VTTestingThis.m */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,24 +93,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB01D87519C2757F00D8FBBD /* VTProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTProfileController.h; sourceTree = "<group>"; };
-		CB01D87619C2757F00D8FBBD /* VTProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTProfileController.m; sourceTree = "<group>"; };
-		CB04512D19B298A70096E904 /* VTStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTStartViewController.h; sourceTree = "<group>"; };
-		CB04512E19B298A70096E904 /* VTStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTStartViewController.m; sourceTree = "<group>"; };
 		CB04513219B29DBF0096E904 /* VTSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTSettings.h; sourceTree = "<group>"; };
 		CB04513319B29DBF0096E904 /* VTSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTSettings.m; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
-		CB29208E19B424F9007937B5 /* VTGenderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTGenderController.h; sourceTree = "<group>"; };
-		CB29208F19B424F9007937B5 /* VTGenderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTGenderController.m; sourceTree = "<group>"; };
-		CB29209119B42667007937B5 /* VTPartyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPartyController.h; sourceTree = "<group>"; };
-		CB29209219B42667007937B5 /* VTPartyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPartyController.m; sourceTree = "<group>"; };
-		CB29209419B427FD007937B5 /* VTRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTRegisterController.h; sourceTree = "<group>"; };
-		CB29209519B427FD007937B5 /* VTRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTRegisterController.m; sourceTree = "<group>"; };
-		CB29209719B42EE5007937B5 /* VTCandidatesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCandidatesController.h; sourceTree = "<group>"; };
-		CB29209819B42EE5007937B5 /* VTCandidatesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidatesController.m; sourceTree = "<group>"; };
-		CB29209A19B4395F007937B5 /* VTCandidateDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTCandidateDetailController.h; sourceTree = "<group>"; };
-		CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTCandidateDetailController.m; sourceTree = "<group>"; };
 		CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteWebpageViewController.h; sourceTree = "<group>"; };
 		CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteWebpageViewController.m; sourceTree = "<group>"; };
 		CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetFriendsToVoteViewController.h; sourceTree = "<group>"; };
@@ -130,8 +105,6 @@
 		CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		CB3417561B1C61D600CE74C1 /* VotaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotaViewController.h; sourceTree = "<group>"; };
 		CB3417571B1C61D600CE74C1 /* VotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotaViewController.m; sourceTree = "<group>"; };
-		CB3976EE1A9A9E5600FB300E /* VTPhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPhoneNumberController.h; sourceTree = "<group>"; };
-		CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPhoneNumberController.m; sourceTree = "<group>"; };
 		CB4C07C2197229A300F08D01 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CB4C07E61972394B00F08D01 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		CB4C07E71972394B00F08D01 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -151,16 +124,14 @@
 		CB4C07F51972394B00F08D01 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
-		CB663F0619B4731800E13376 /* URLItemSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLItemSource.h; sourceTree = "<group>"; };
-		CB663F0719B4731800E13376 /* URLItemSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLItemSource.m; sourceTree = "<group>"; };
 		CB87395B1B1B56A600074C31 /* RegisterToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteViewController.h; sourceTree = "<group>"; };
 		CB87395C1B1B56A600074C31 /* RegisterToVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteViewController.m; sourceTree = "<group>"; };
-		CB8EE81819B81FC30096926D /* VTBallotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotController.h; sourceTree = "<group>"; };
-		CB8EE81919B81FC30096926D /* VTBallotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotController.m; sourceTree = "<group>"; };
-		CB8EE81B19B822980096926D /* VTBallotDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBallotDetailController.h; sourceTree = "<group>"; };
-		CB8EE81C19B822980096926D /* VTBallotDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBallotDetailController.m; sourceTree = "<group>"; };
-		CB8EE82119B851290096926D /* VTZipCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTZipCodeController.h; sourceTree = "<group>"; };
-		CB8EE82219B851290096926D /* VTZipCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTZipCodeController.m; sourceTree = "<group>"; };
+		CB927D771C5552450069AE50 /* Vota-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vota-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB927D781C5552450069AE50 /* VTALoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTALoginViewController.swift; sourceTree = "<group>"; };
+		CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASignUpViewController.swift; sourceTree = "<group>"; };
+		CB927D941C589E760069AE50 /* VTAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAWebViewController.swift; sourceTree = "<group>"; };
+		CB927D981C58A4B60069AE50 /* VTASignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASignUpController.swift; sourceTree = "<group>"; };
+		CB927D9B1C58B18C0069AE50 /* VTAProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAProfileController.swift; sourceTree = "<group>"; };
 		CB96326F1B2ED31C009C240C /* Register-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Register-Icon.png"; sourceTree = "<group>"; };
 		CB9632711B2ED32B009C240C /* Get Friends to Vote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Get Friends to Vote.png"; sourceTree = "<group>"; };
 		CB9632731B2ED337009C240C /* Ballots and Candidate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ballots and Candidate.png"; sourceTree = "<group>"; };
@@ -203,8 +174,6 @@
 		CBAA21F9197200A5008404F7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CBAA21FB19720196008404F7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CBAA21FD1972019C008404F7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		CBB0A35C19BF64AE00E75B2E /* VTDetailContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTDetailContactController.h; sourceTree = "<group>"; };
-		CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTDetailContactController.m; sourceTree = "<group>"; };
 		CBB9F99B1B2397D90054D9E9 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		CBB9F99C1B2397D90054D9E9 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		CBB9F99F1B239A7E0054D9E9 /* GenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderViewController.h; sourceTree = "<group>"; };
@@ -221,13 +190,7 @@
 		CBB9F9B21B2405730054D9E9 /* RegisteredTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisteredTableViewController.m; sourceTree = "<group>"; };
 		CBB9F9B41B24057E0054D9E9 /* VotedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotedTableViewController.h; sourceTree = "<group>"; };
 		CBB9F9B51B24057E0054D9E9 /* VotedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotedTableViewController.m; sourceTree = "<group>"; };
-		CBBAC04A19B990120002AC1C /* VTContactsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTContactsController.h; sourceTree = "<group>"; };
-		CBBAC04B19B990120002AC1C /* VTContactsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTContactsController.m; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
-		CBE30B6F19C0B46700C8726F /* VTNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTNotificationController.h; sourceTree = "<group>"; };
-		CBE30B7019C0B46700C8726F /* VTNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTNotificationController.m; sourceTree = "<group>"; };
-		CBECB09B19B3BDA50018F26C /* VTTestingThis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTTestingThis.h; sourceTree = "<group>"; };
-		CBECB09C19B3BDA50018F26C /* VTTestingThis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTTestingThis.m; sourceTree = "<group>"; };
 		CBF3707A19780D8F00157BBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -326,9 +289,11 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		CB87395E1B1B56AF00074C31 /* New App */ = {
+		CB87395E1B1B56AF00074C31 /* Old App */ = {
 			isa = PBXGroup;
 			children = (
+				CB04513219B29DBF0096E904 /* VTSettings.h */,
+				CB04513319B29DBF0096E904 /* VTSettings.m */,
 				CBD18A251B17F59D00E1911A /* Vota.storyboard */,
 				CBB9F9A21B23C4F60054D9E9 /* LoginViewController.h */,
 				CBB9F9A31B23C4F60054D9E9 /* LoginViewController.m */,
@@ -339,7 +304,27 @@
 				CBB9F9B01B24054A0054D9E9 /* GetFriendsToVote */,
 				CB3417451B1B58BB00CE74C1 /* RegisterToVote */,
 			);
-			name = "New App";
+			name = "Old App";
+			sourceTree = "<group>";
+		};
+		CB927D971C58A3FC0069AE50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBAA21BF1971F921008404F7 /* MainStoryboard.storyboard */,
+				CB927D941C589E760069AE50 /* VTAWebViewController.swift */,
+				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
+				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CB927D9A1C58A4BF0069AE50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB927D981C58A4B60069AE50 /* VTASignUpController.swift */,
+				CB927D9B1C58B18C0069AE50 /* VTAProfileController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		CB9632801B2EDC08009C240C /* Ballot/Candidate */ = {
@@ -404,44 +389,12 @@
 			children = (
 				CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */,
 				CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */,
+				CB927D771C5552450069AE50 /* Vota-Bridging-Header.h */,
 				CBAA21BC1971F921008404F7 /* XYZAppDelegate.h */,
 				CBAA21BD1971F921008404F7 /* XYZAppDelegate.m */,
-				CB663F0619B4731800E13376 /* URLItemSource.h */,
-				CB663F0719B4731800E13376 /* URLItemSource.m */,
-				CB04513219B29DBF0096E904 /* VTSettings.h */,
-				CB04513319B29DBF0096E904 /* VTSettings.m */,
-				CBECB09B19B3BDA50018F26C /* VTTestingThis.h */,
-				CBECB09C19B3BDA50018F26C /* VTTestingThis.m */,
-				CB04512D19B298A70096E904 /* VTStartViewController.h */,
-				CB04512E19B298A70096E904 /* VTStartViewController.m */,
-				CB29208E19B424F9007937B5 /* VTGenderController.h */,
-				CB29208F19B424F9007937B5 /* VTGenderController.m */,
-				CB29209119B42667007937B5 /* VTPartyController.h */,
-				CB29209219B42667007937B5 /* VTPartyController.m */,
-				CB3976EE1A9A9E5600FB300E /* VTPhoneNumberController.h */,
-				CB3976EF1A9A9E5600FB300E /* VTPhoneNumberController.m */,
-				CB8EE82119B851290096926D /* VTZipCodeController.h */,
-				CB8EE82219B851290096926D /* VTZipCodeController.m */,
-				CB29209419B427FD007937B5 /* VTRegisterController.h */,
-				CB29209519B427FD007937B5 /* VTRegisterController.m */,
-				CB29209719B42EE5007937B5 /* VTCandidatesController.h */,
-				CB29209819B42EE5007937B5 /* VTCandidatesController.m */,
-				CB29209A19B4395F007937B5 /* VTCandidateDetailController.h */,
-				CB29209B19B4395F007937B5 /* VTCandidateDetailController.m */,
-				CB8EE81819B81FC30096926D /* VTBallotController.h */,
-				CB8EE81919B81FC30096926D /* VTBallotController.m */,
-				CB8EE81B19B822980096926D /* VTBallotDetailController.h */,
-				CB8EE81C19B822980096926D /* VTBallotDetailController.m */,
-				CBBAC04A19B990120002AC1C /* VTContactsController.h */,
-				CBBAC04B19B990120002AC1C /* VTContactsController.m */,
-				CBB0A35C19BF64AE00E75B2E /* VTDetailContactController.h */,
-				CBB0A35D19BF64AE00E75B2E /* VTDetailContactController.m */,
-				CBE30B6F19C0B46700C8726F /* VTNotificationController.h */,
-				CBE30B7019C0B46700C8726F /* VTNotificationController.m */,
-				CB01D87519C2757F00D8FBBD /* VTProfileController.h */,
-				CB01D87619C2757F00D8FBBD /* VTProfileController.m */,
-				CBAA21BF1971F921008404F7 /* MainStoryboard.storyboard */,
-				CB87395E1B1B56AF00074C31 /* New App */,
+				CB927D971C58A3FC0069AE50 /* View */,
+				CB927D9A1C58A4BF0069AE50 /* Controller */,
+				CB87395E1B1B56AF00074C31 /* Old App */,
 				CB1DC90E197C9E89000DA1C4 /* Resources */,
 				CBAA21C81971F921008404F7 /* Images.xcassets */,
 				CB4C07E51972394B00F08D01 /* Images */,
@@ -565,6 +518,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XYZ;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "___Jose-Alvarado___";
 				TargetAttributes = {
@@ -642,38 +596,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB04513019B298A70096E904 /* VTStartViewController.m in Sources */,
-				CB29209619B427FD007937B5 /* VTRegisterController.m in Sources */,
-				CBECB09D19B3BDA50018F26C /* VTTestingThis.m in Sources */,
 				CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */,
 				CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */,
 				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
-				CB663F0819B4731800E13376 /* URLItemSource.m in Sources */,
-				CB8EE81D19B822980096926D /* VTBallotDetailController.m in Sources */,
-				CB29209319B42667007937B5 /* VTPartyController.m in Sources */,
-				CBE30B7119C0B46800C8726F /* VTNotificationController.m in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
-				CB8EE81A19B81FC30096926D /* VTBallotController.m in Sources */,
 				CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */,
-				CB3976F01A9A9E5600FB300E /* VTPhoneNumberController.m in Sources */,
-				CB29209019B424F9007937B5 /* VTGenderController.m in Sources */,
-				CB8EE82319B851290096926D /* VTZipCodeController.m in Sources */,
+				CB927D9C1C58B18C0069AE50 /* VTAProfileController.swift in Sources */,
+				CB927D951C589E770069AE50 /* VTAWebViewController.swift in Sources */,
 				CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */,
-				CBBAC04C19B990120002AC1C /* VTContactsController.m in Sources */,
-				CB29209C19B4395F007937B5 /* VTCandidateDetailController.m in Sources */,
 				CB9632831B2EDD32009C240C /* BallotCandidateTableViewController.m in Sources */,
-				CB29209919B42EE5007937B5 /* VTCandidatesController.m in Sources */,
+				CB927D991C58A4B60069AE50 /* VTASignUpController.swift in Sources */,
 				CB96327C1B2ED87D009C240C /* RegisterToVoteStateTableViewController.m in Sources */,
 				CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */,
 				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
+				CB927D791C5552450069AE50 /* VTALoginViewController.swift in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
 				CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
-				CBB0A35E19BF64AE00E75B2E /* VTDetailContactController.m in Sources */,
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
 				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,
-				CB01D87719C2757F00D8FBBD /* VTProfileController.m in Sources */,
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 				CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */,
@@ -681,6 +623,7 @@
 				CB9632AD1B3178FB009C240C /* AboutThisAppViewController.m in Sources */,
 				CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */,
 				CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */,
+				CB927D7B1C55A8900069AE50 /* VTASignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,7 +708,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -799,7 +742,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -811,6 +754,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -820,9 +764,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vota/Vota-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -832,6 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -841,9 +789,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "37f4491e-fba1-41ff-bec9-e1812875d658";
+				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vota/Vota-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

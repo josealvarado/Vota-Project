@@ -30,6 +30,25 @@
     }
     
     _keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"TestUDID" accessGroup:nil];
+    
+    
+//    NSArray *states = @[@"Alabama", @"Alaska", @"Arizona", @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Delaware", @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas", @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachusetts", @"Michigan", @"Minnesota", @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire", @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio", @"Oklahoma", @"Oregon", @"Pennsylvania", @"Rhode Island", @"South Carolina", @"South Dakota", @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia", @"Wisconsin", @"Wyoming"];
+//    
+//    for (NSString *state in states) {
+//        PFObject *ballotCandidate = [PFObject objectWithClassName:@"BallotCandidate"];
+//        ballotCandidate[@"active"] = @YES;
+//        ballotCandidate[@"name"] = @"Hillary Clinton";
+//        ballotCandidate[@"state"] = state;
+//        ballotCandidate[@"url"] = @"https://www.hillaryclinton.com/";
+//        [ballotCandidate saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            if (succeeded) {
+//                // The object has been saved.
+//            } else {
+//                // There was a problem, check error.description
+//            }
+//        }];
+//
+//    }
 
 }
 
