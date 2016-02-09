@@ -1,15 +1,15 @@
 //
-//  VTASignUpViewController.swift
+//  VTAOrganizationSignUpViewController.swift
 //  Vota
 //
-//  Created by Jose Alvarado on 1/24/16.
+//  Created by Jose Alvarado on 2/8/16.
 //  Copyright © 2016 ___Jose-Alvarado___. All rights reserved.
 //
 
 import UIKit
 
-class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-    
+class VTAOrganizationSignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate  {
+
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet var inputViews: [UIView]!
@@ -17,19 +17,16 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var birthdayTextField: UITextField!
-    @IBOutlet weak var pronounTextField: UITextField!
     @IBOutlet weak var partyTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var retypePasswordTextField: UITextField!
-    @IBOutlet weak var referralKeyTextField: UITextField!
     
     var activeTextField: UITextField!
-
+    
     var activeInputArray: [String] = []
     var party : [String] = ["Democrat","Republican","Independent"];
     var pronouns : [String] = ["Man","Women","Trans*"];
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +37,7 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
         // Setup notifications
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:UIKeyboardWillHideNotification, object: nil)
-
+        
         // Setup dissmiss keyboard tap getsture
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         self.view.addGestureRecognizer(tap)
@@ -88,23 +85,11 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func setupPickerViews() {
-        let datePickerView  : UIDatePicker = UIDatePicker()
-        datePickerView.datePickerMode = UIDatePickerMode.Date
-        birthdayTextField.inputView = datePickerView
-        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-        
         let picker = UIPickerView()
         picker.delegate   = self
         picker.dataSource = self
         
         partyTextField.inputView = picker
-        pronounTextField.inputView = picker
-    }
-    
-    func handleDatePicker(sender: UIDatePicker) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        birthdayTextField.text = dateFormatter.stringFromDate(sender.date)
     }
     
     // MARK: - User interactions
@@ -112,17 +97,16 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBAction func backButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     @IBAction func signUpButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        
-        VTAProfileController.registerNewIndividual(nameTextField.text, email: emailTextField.text, phoneNumber: phoneNumberTextField.text, birthday: birthdayTextField.text, gender: pronounTextField.text, party: partyTextField.text, password: passwordTextField.text, passwordCopy: retypePasswordTextField.text, referralKey: referralKeyTextField.text, success: { () -> Void in
+        VTAProfileController.registerNewOrganization(nameTextField.text, email: emailTextField.text, phoneNumber: phoneNumberTextField.text, party: partyTextField.text, password: passwordTextField.text, passwordCopy: retypePasswordTextField.text, success: { () -> Void in
             
             
             
-        }) { (error) -> Void in
-            print("Error \(error)")
+            }) { (error) -> Void in
+                print("Error \(error)")
         }
     }
     
@@ -156,10 +140,7 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
     // MARK: - UITextField delegate
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if textField.tag == 5 {
-            activeInputArray = pronouns
-            activeTextField = pronounTextField
-        } else if textField.tag == 6 {
+        if textField.tag == 6 {
             activeInputArray = party
             activeTextField = partyTextField
         }
@@ -171,7 +152,7 @@ class VTASignUpViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     // MARK: - Navigation
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "webView" {
             let webViewController = segue.destinationViewController as? VTAWebViewController

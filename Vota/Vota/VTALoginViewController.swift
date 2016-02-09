@@ -28,18 +28,9 @@ class VTALoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func SignUpButtonPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("Sign Up", sender: sender.tag)
-    }
-
-    
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Sign Up" {
-
-        }
     }
-
 
 }

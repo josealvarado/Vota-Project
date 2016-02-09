@@ -29,20 +29,45 @@ class VTAProfileController: NSObject {
         return true
     }
     
-    class func registerNewOrganization(name:String, email:String, phoneNumber:String, birthday:String, gender:String, party:String, password:String, passwordCopy:String, referralKey:String, success: () -> Void, failure: (error: String) -> Void) {
+    class func registerNewIndividual(name:String?, email:String?, phoneNumber:String?, birthday:String?, gender:String?, party:String?, password:String?, passwordCopy:String?, referralKey:String?, success: () -> Void, failure: (error: String) -> Void) {
         
         
         let user = PFUser()
-        user.username = email.lowercaseString
+        user.username = email!.lowercaseString
         user.password = password
-        user.email = email.lowercaseString
+        user.email = email!.lowercaseString
         user["name"] = name
         user["private"] = false
         user["linkedFB"] = false
         user.signUpInBackgroundWithBlock {
             (successful: Bool, error: NSError?) -> Void in
             if successful {
-                print("successfully created Parse account")
+                print("successfully created an individual Parse account")
+                return success()
+            }
+            
+            if let error = error {
+                return failure(error: error.localizedDescription)
+            } else {
+                return failure(error: "Failed to create user. Please try again later")
+            }
+        }
+    }
+    
+    class func registerNewOrganization(name:String?, email:String?, phoneNumber:String?, party:String?, password:String?, passwordCopy:String?, success: () -> Void, failure: (error: String) -> Void) {
+        
+        
+        let user = PFUser()
+        user.username = email!.lowercaseString
+        user.password = password
+        user.email = email!.lowercaseString
+        user["name"] = name
+        user["private"] = false
+        user["linkedFB"] = false
+        user.signUpInBackgroundWithBlock {
+            (successful: Bool, error: NSError?) -> Void in
+            if successful {
+                print("successfully created an organization Parse account")
                 return success()
             }
             

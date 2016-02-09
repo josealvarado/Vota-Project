@@ -13,6 +13,7 @@
 		CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */; };
 		CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */; };
 		CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417571B1C61D600CE74C1 /* VotaViewController.m */; };
+		CB4438181C69CF520073D42E /* VTAOrganizationSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */; };
 		CB4C07C3197229A300F08D01 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4C07C2197229A300F08D01 /* FacebookSDK.framework */; };
 		CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E61972394B00F08D01 /* Icon-40.png */; };
 		CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4C07E71972394B00F08D01 /* Icon-40@2x.png */; };
@@ -105,6 +106,7 @@
 		CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		CB3417561B1C61D600CE74C1 /* VotaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VotaViewController.h; sourceTree = "<group>"; };
 		CB3417571B1C61D600CE74C1 /* VotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VotaViewController.m; sourceTree = "<group>"; };
+		CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAOrganizationSignUpViewController.swift; sourceTree = "<group>"; };
 		CB4C07C2197229A300F08D01 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		CB4C07E61972394B00F08D01 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		CB4C07E71972394B00F08D01 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				CB927D941C589E760069AE50 /* VTAWebViewController.swift */,
 				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
 				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
+				CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4438181C69CF520073D42E /* VTAOrganizationSignUpViewController.swift in Sources */,
 				CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */,
 				CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */,
 				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
