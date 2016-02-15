@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CB04513419B29DBF0096E904 /* VTSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04513319B29DBF0096E904 /* VTSettings.m */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
+		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
+		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
+		CB27B76F1C6DBAB9001736A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB27B76E1C6DBAB9001736A5 /* Launch Screen.storyboard */; };
 		CB3417481B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */; };
 		CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417511B1C270E00CE74C1 /* GetFriendsToVoteViewController.m */; };
 		CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3417541B1C5FC400CE74C1 /* SettingsViewController.m */; };
@@ -98,6 +101,9 @@
 		CB04513319B29DBF0096E904 /* VTSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTSettings.m; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
+		CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAProfileViewController.swift; sourceTree = "<group>"; };
+		CB27B76E1C6DBAB9001736A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CB3417461B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterToVoteWebpageViewController.h; sourceTree = "<group>"; };
 		CB3417471B1B58E700CE74C1 /* RegisterToVoteWebpageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterToVoteWebpageViewController.m; sourceTree = "<group>"; };
 		CB3417501B1C270E00CE74C1 /* GetFriendsToVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetFriendsToVoteViewController.h; sourceTree = "<group>"; };
@@ -313,6 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				CBAA21BF1971F921008404F7 /* MainStoryboard.storyboard */,
+				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
+				CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */,
 				CB927D941C589E760069AE50 /* VTAWebViewController.swift */,
 				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
 				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
@@ -390,6 +398,7 @@
 		CBAA21B31971F921008404F7 /* Vota */ = {
 			isa = PBXGroup;
 			children = (
+				CB27B76E1C6DBAB9001736A5 /* Launch Screen.storyboard */,
 				CB529B001AACDAF600C02E9F /* KeychainItemWrapper.h */,
 				CB529B011AACDAF600C02E9F /* KeychainItemWrapper.m */,
 				CB927D771C5552450069AE50 /* Vota-Bridging-Header.h */,
@@ -520,7 +529,7 @@
 		CBAA21A21971F921008404F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = XYZ;
+				CLASSPREFIX = VTA;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "___Jose-Alvarado___";
@@ -570,6 +579,7 @@
 				CBAA21C11971F921008404F7 /* MainStoryboard.storyboard in Resources */,
 				CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */,
 				CB4C08041972394B00F08D01 /* iTunesArtwork.png in Resources */,
+				CB27B76F1C6DBAB9001736A5 /* Launch Screen.storyboard in Resources */,
 				CB4C07FC1972394B00F08D01 /* Icon-76.png in Resources */,
 				CB9632741B2ED337009C240C /* Ballots and Candidate.png in Resources */,
 				CB4C08051972394B00F08D01 /* iTunesArtwork@2x.png in Resources */,
@@ -607,6 +617,7 @@
 				CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */,
 				CB927D9C1C58B18C0069AE50 /* VTAProfileController.swift in Sources */,
 				CB927D951C589E770069AE50 /* VTAWebViewController.swift in Sources */,
+				CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */,
 				CBB9F9A41B23C4F60054D9E9 /* LoginViewController.m in Sources */,
 				CB9632831B2EDD32009C240C /* BallotCandidateTableViewController.m in Sources */,
 				CB927D991C58A4B60069AE50 /* VTASignUpController.swift in Sources */,
@@ -614,6 +625,7 @@
 				CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */,
 				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
 				CB927D791C5552450069AE50 /* VTALoginViewController.swift in Sources */,
+				CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
 				CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */,
@@ -710,7 +722,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				SDKROOT = iphoneos;
@@ -745,7 +757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PROVISIONING_PROFILE = "47b1d2a8-caf8-4d38-bded-548e826e9934";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -761,6 +773,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -768,6 +781,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -786,6 +800,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jose Alvarado (GC7Z5R6UH5)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -793,6 +808,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Vota/Vota-Prefix.pch";
 				INFOPLIST_FILE = "Vota/Vota-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jose-alvarado.vota";
 				PRODUCT_NAME = "$(TARGET_NAME)";

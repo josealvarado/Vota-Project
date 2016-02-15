@@ -54,6 +54,7 @@ class VTAOrganizationSignUpViewController: UIViewController, UIPickerViewDataSou
     }
     
     override func viewWillAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func keyboardWillShow(notification:NSNotification){
@@ -99,14 +100,16 @@ class VTAOrganizationSignUpViewController: UIViewController, UIPickerViewDataSou
     }
     
     @IBAction func signUpButtonPressed(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
         
-        VTAProfileController.registerNewOrganization(nameTextField.text, email: emailTextField.text, phoneNumber: phoneNumberTextField.text, party: partyTextField.text, password: passwordTextField.text, passwordCopy: retypePasswordTextField.text, success: { () -> Void in
+        VTAProfileController.registerNewOrganization(nameTextField.text, email: emailTextField.text, phoneNumber: phoneNumberTextField.text, party: partyTextField.text, password: passwordTextField.text, passwordCopy: retypePasswordTextField.text,
+            success: { () -> Void in
             
-            
+                self.dismissViewControllerAnimated(true, completion: nil)
             
             }) { (error) -> Void in
-                print("Error \(error)")
+                let alertController = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     

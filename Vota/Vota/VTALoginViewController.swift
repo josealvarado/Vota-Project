@@ -21,11 +21,27 @@ class VTALoginViewController: UIViewController {
         
         passwordView.layer.borderColor = UIColor.grayColor().CGColor
         passwordView.layer.borderWidth = 1
+        
+        // Setup dissmiss keyboard tap getsture
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        self.view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     // MARK: - Navigation
