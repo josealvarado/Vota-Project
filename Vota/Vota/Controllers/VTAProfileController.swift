@@ -106,4 +106,42 @@ class VTAProfileController: NSObject {
             }
         }
     }
+    
+    class func parseLogin(email: String, password: String, success: () -> Void, failure: (error: NSString) -> Void) {
+        let query = PFUser.query()
+        query?.whereKey("email", equalTo: email)
+        query?.getFirstObjectInBackgroundWithBlock({ (userObject : PFObject?, error : NSError?) -> Void in
+            if let userObject = userObject {
+                let user = userObject as! PFUser
+                let username = user.username
+                
+                self.login(username!, password: password, success: { () -> Void in
+                    success()
+                    }, failure: { (error) -> Void in
+                        failure(error: error)
+                })
+            }
+            else {
+                self.login(email, password: password, success: { () -> Void in
+                    success()
+                    }, failure: { (error) -> Void in
+                        failure(error: error)
+                })
+            }
+        })
+    }
+    
+    class func login(username : String, password : String, success: () -> Void, failure: (error: NSString) -> Void) {
+        PFUser.logInWithUsernameInBackground(username, password:password) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let _ = user {
+                success()
+            }
+            else {
+                if let error = error {
+                    failure(error: error.localizedDescription)
+                }
+            }
+        }
+    }
 }
