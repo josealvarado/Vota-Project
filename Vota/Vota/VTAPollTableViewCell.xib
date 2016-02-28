@@ -222,6 +222,12 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QCi-sx-oVQ">
+                        <rect key="frame" x="0.0" y="37" width="320" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="RzV-SY-lxh"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="aog-bK-ESV" secondAttribute="bottom" constant="8" id="1zy-hU-KeU"/>
@@ -230,22 +236,31 @@
                     <constraint firstItem="aog-bK-ESV" firstAttribute="leading" secondItem="rYA-N9-OLa" secondAttribute="trailing" constant="3" id="6v3-ox-xml"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="PM4-Sg-qyB" secondAttribute="bottom" id="8PU-5x-paC"/>
                     <constraint firstItem="PM4-Sg-qyB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gfa-6c-8Xb"/>
+                    <constraint firstAttribute="trailing" secondItem="QCi-sx-oVQ" secondAttribute="trailing" id="Gt5-l0-rxT"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="ANu-QT-sLy" secondAttribute="bottom" constant="8" id="Hs3-9j-QdP"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="wIp-cH-pXY" secondAttribute="bottom" constant="10" id="JPw-BC-8IP"/>
                     <constraint firstItem="wIp-cH-pXY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="M6Q-kb-j1O"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Obq-QQ-VLp"/>
                     <constraint firstItem="QbA-Xl-f8S" firstAttribute="leading" secondItem="aog-bK-ESV" secondAttribute="trailing" constant="3" id="QZK-7s-eHn"/>
+                    <constraint firstItem="wIp-cH-pXY" firstAttribute="top" secondItem="QCi-sx-oVQ" secondAttribute="bottom" constant="6" id="Scf-cv-N24"/>
                     <constraint firstAttribute="trailing" secondItem="wIp-cH-pXY" secondAttribute="trailing" constant="15" id="VlS-4V-hs4"/>
                     <constraint firstAttribute="trailing" secondItem="tz3-x7-4fG" secondAttribute="trailing" id="VnS-C2-fPT"/>
+                    <constraint firstItem="QCi-sx-oVQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XAC-e4-Nh1"/>
                     <constraint firstItem="wIp-cH-pXY" firstAttribute="top" secondItem="4Np-Xr-ac4" secondAttribute="bottom" constant="8" id="ak9-mL-w5q"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="rYA-N9-OLa" secondAttribute="bottom" constant="4" id="ePE-7Y-8SK"/>
                     <constraint firstAttribute="bottom" secondItem="tz3-x7-4fG" secondAttribute="bottom" id="fXs-Wj-CHW"/>
                     <constraint firstItem="tz3-x7-4fG" firstAttribute="top" secondItem="QbA-Xl-f8S" secondAttribute="bottom" constant="4" id="hFo-nr-gS3"/>
+                    <constraint firstItem="QCi-sx-oVQ" firstAttribute="top" secondItem="4Np-Xr-ac4" secondAttribute="bottom" constant="1" id="j4P-dq-Mfn"/>
                     <constraint firstAttribute="trailing" secondItem="PM4-Sg-qyB" secondAttribute="trailing" id="jeG-S1-rOo"/>
                     <constraint firstItem="4Np-Xr-ac4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="tZw-qQ-u0x"/>
                     <constraint firstItem="4Np-Xr-ac4" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wRS-3n-ciL"/>
                     <constraint firstItem="ANu-QT-sLy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="zOu-Eg-LPN"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ak9-mL-w5q"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="agreeLabel" destination="maE-fg-vYS" id="czH-CC-WCL"/>
@@ -256,6 +271,8 @@
                 <outlet property="issueLabel" destination="4Np-Xr-ac4" id="KKE-dr-rYC"/>
                 <outlet property="numberOfCommentsLabel" destination="QbA-Xl-f8S" id="ysd-E7-TYt"/>
                 <outlet property="numberOfVotesLabel" destination="rYA-N9-OLa" id="0yt-Ur-QhH"/>
+                <outlet property="pollImageHeightConstraint" destination="RzV-SY-lxh" id="raT-9U-bjd"/>
+                <outlet property="pollImageView" destination="QCi-sx-oVQ" id="tJm-px-bTY"/>
                 <outlet property="questionLabel" destination="wIp-cH-pXY" id="mvU-BY-Xm6"/>
                 <outlet property="unsureLabel" destination="rPI-5W-COv" id="7sy-YK-Rya"/>
                 <outlet property="unsureView" destination="Qcv-xk-aAk" id="Y56-Bk-ZXa"/>

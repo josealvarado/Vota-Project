@@ -1315,7 +1315,7 @@
                     <navigationItem key="navigationItem" title="Vota" id="Dn3-rp-fCO">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Jws-dT-hur">
                             <connections>
-                                <segue destination="qTh-xp-Lg6" kind="show" id="L3y-4f-O2Y"/>
+                                <segue destination="qTh-xp-Lg6" kind="show" identifier="VTANewPollViewController" id="L3y-4f-O2Y"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1391,14 +1391,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-Nq-cgx">
+                                <rect key="frame" x="0.0" y="204" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="b3W-M9-UhM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Optional: Include an image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="includeImageButtonPressed:" destination="qTh-xp-Lg6" eventType="touchUpInside" id="w44-Ko-hB8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOi-eA-lpX">
+                                <rect key="frame" x="8" y="256" width="304" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="jwX-A0-4Bp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FQS-Nq-cgx" firstAttribute="leading" secondItem="jxw-nM-3LC" secondAttribute="leading" id="1nd-PE-NwU"/>
+                            <constraint firstItem="FQS-Nq-cgx" firstAttribute="top" secondItem="8Hr-MS-dI2" secondAttribute="bottom" constant="8" id="4IT-cJ-ygK"/>
                             <constraint firstAttribute="trailing" secondItem="8Hr-MS-dI2" secondAttribute="trailing" constant="7" id="A8K-F0-huK"/>
                             <constraint firstItem="gq2-Zd-HwQ" firstAttribute="top" secondItem="Kcd-7e-qdb" secondAttribute="bottom" constant="8" id="BfX-sb-BNn"/>
                             <constraint firstItem="Kcd-7e-qdb" firstAttribute="top" secondItem="DtC-ij-kX6" secondAttribute="bottom" constant="5" id="C32-K7-W7e"/>
                             <constraint firstItem="8Hr-MS-dI2" firstAttribute="top" secondItem="DtC-ij-kX6" secondAttribute="bottom" constant="111" id="DV7-pJ-BSk"/>
+                            <constraint firstItem="vOi-eA-lpX" firstAttribute="leading" secondItem="jxw-nM-3LC" secondAttribute="leading" constant="8" id="Gld-lC-9fI"/>
+                            <constraint firstItem="vOi-eA-lpX" firstAttribute="top" secondItem="FQS-Nq-cgx" secondAttribute="bottom" constant="8" id="KiF-Fs-4mS"/>
                             <constraint firstItem="Kcd-7e-qdb" firstAttribute="leading" secondItem="7rA-RY-U6m" secondAttribute="trailing" constant="8" id="POV-eS-FQu"/>
+                            <constraint firstAttribute="trailing" secondItem="FQS-Nq-cgx" secondAttribute="trailing" id="R9W-L0-DVh"/>
+                            <constraint firstAttribute="trailing" secondItem="vOi-eA-lpX" secondAttribute="trailing" constant="8" id="SQm-kz-Foa"/>
                             <constraint firstItem="7rA-RY-U6m" firstAttribute="top" secondItem="DtC-ij-kX6" secondAttribute="bottom" constant="8" id="Zxg-CF-TQa"/>
                             <constraint firstItem="ijk-Nh-iZD" firstAttribute="leading" secondItem="jxw-nM-3LC" secondAttribute="leading" constant="40" id="ajO-5F-bjO"/>
                             <constraint firstAttribute="trailing" secondItem="ijk-Nh-iZD" secondAttribute="trailing" constant="40" id="g7s-g5-Pqp"/>
@@ -1419,7 +1445,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="imageView" destination="vOi-eA-lpX" id="4Tt-2V-Gd3"/>
                         <outlet property="issueTextField" destination="Kcd-7e-qdb" id="ZDa-id-Bz7"/>
                         <outlet property="questionTextView" destination="ijk-Nh-iZD" id="DT0-D4-e74"/>
                         <outlet property="wordCountLabel" destination="8Hr-MS-dI2" id="4v4-aj-qAr"/>

@@ -59,7 +59,12 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 170.0;
+        let poll = polls[indexPath.row] as PFObject
+
+        if let _ = poll["image"] as? PFFile {
+            return 294
+        }
+        return 170.0
     }
 
     /*
@@ -71,5 +76,13 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "VTANewPollViewController"{
+            let bottomBar = segue.destinationViewController as! VTANewPollViewController
+            bottomBar.hidesBottomBarWhenPushed = true
+            bottomBar.navigationItem.hidesBackButton = true
+        }
+    }
 
 }

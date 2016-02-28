@@ -11,6 +11,10 @@ import UIKit
 class VTAPollTableViewCell: UITableViewCell {
 
     @IBOutlet weak var issueLabel: UILabel!
+
+    @IBOutlet weak var pollImageView: UIImageView!
+    @IBOutlet weak var pollImageHeightConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numberOfVotesLabel: UILabel!
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
@@ -83,6 +87,7 @@ class VTAPollTableViewCell: UITableViewCell {
     }
     
     func configureWithPollObject(poll: PFObject) {
+        self.pollImageHeightConstraint.constant = 1
         self.poll = poll
         
         VTAPollController.votedOptionOnPoll(poll) { (option) -> Void in
@@ -93,6 +98,19 @@ class VTAPollTableViewCell: UITableViewCell {
             } else if option == PollOption.Unsure {
                 self.unsureLabel.textColor = UIColor.blueColor()
             }
+        }
+        
+        if let imageFile = poll["image"] as? PFFile {
+            imageFile.getDataInBackgroundWithBlock({
+                (imageData: NSData?, error: NSError?) -> Void in
+                if (error == nil) {
+                    self.pollImageHeightConstraint.constant = 124
+                    let image = UIImage(data:imageData!)
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.pollImageView.image = image
+                    })
+                }
+            })
         }
         
         if let issue = poll["issue_type"] as? String {

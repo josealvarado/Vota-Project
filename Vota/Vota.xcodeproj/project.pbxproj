@@ -281,6 +281,18 @@
 			name = "Default Images";
 			sourceTree = "<group>";
 		};
+		CB138D461C82CA290046CF12 /* Login/Registration */ = {
+			isa = PBXGroup;
+			children = (
+				CB927D941C589E760069AE50 /* VTAWebViewController.swift */,
+				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
+				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
+				CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */,
+				CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */,
+			);
+			name = Login/Registration;
+			sourceTree = "<group>";
+		};
 		CB1DC90E197C9E89000DA1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -522,15 +534,11 @@
 		CBBE9FB71C729933006B9FD4 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB138D461C82CA290046CF12 /* Login/Registration */,
 				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
 				CBBE9FCA1C7303C2006B9FD4 /* VTANewPollViewController.swift */,
 				CBBE9FAF1C729850006B9FD4 /* VTAHomeViewController.swift */,
 				CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */,
-				CB927D941C589E760069AE50 /* VTAWebViewController.swift */,
-				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
-				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
-				CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */,
-				CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
