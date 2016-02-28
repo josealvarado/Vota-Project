@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CB04513419B29DBF0096E904 /* VTSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04513319B29DBF0096E904 /* VTSettings.m */; };
+		CB138D411C82BFD30046CF12 /* VTAPollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D401C82BFD30046CF12 /* VTAPollController.swift */; };
+		CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -87,7 +89,8 @@
 		CBBE9FBB1C72A3FB006B9FD4 /* VTAPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9FBA1C72A3FB006B9FD4 /* VTAPostClient.swift */; };
 		CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9FCA1C7303C2006B9FD4 /* VTANewPollViewController.swift */; };
 		CBBE9FCD1C74544C006B9FD4 /* VTAIssueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */; };
-		CBBE9FD01C745E05006B9FD4 /* VTAPollViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9FCF1C745E05006B9FD4 /* VTAPollViewModel.swift */; };
+		CBBE9FD41C77007B006B9FD4 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9FD31C77007B006B9FD4 /* comments.png */; };
+		CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9FD51C7700EB006B9FD4 /* votes.png */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +108,8 @@
 /* Begin PBXFileReference section */
 		CB04513219B29DBF0096E904 /* VTSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTSettings.h; sourceTree = "<group>"; };
 		CB04513319B29DBF0096E904 /* VTSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTSettings.m; sourceTree = "<group>"; };
+		CB138D401C82BFD30046CF12 /* VTAPollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollController.swift; sourceTree = "<group>"; };
+		CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -209,7 +214,8 @@
 		CBBE9FBA1C72A3FB006B9FD4 /* VTAPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPostClient.swift; sourceTree = "<group>"; };
 		CBBE9FCA1C7303C2006B9FD4 /* VTANewPollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTANewPollViewController.swift; sourceTree = "<group>"; };
 		CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAIssueClient.swift; sourceTree = "<group>"; };
-		CBBE9FCF1C745E05006B9FD4 /* VTAPollViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollViewModel.swift; sourceTree = "<group>"; };
+		CBBE9FD31C77007B006B9FD4 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
+		CBBE9FD51C7700EB006B9FD4 /* votes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votes.png; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
 		CBF3707A19780D8F00157BBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -300,6 +306,8 @@
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CBBE9FD51C7700EB006B9FD4 /* votes.png */,
+				CBBE9FD31C77007B006B9FD4 /* comments.png */,
 				CB96326F1B2ED31C009C240C /* Register-Icon.png */,
 				CB9632711B2ED32B009C240C /* Get Friends to Vote.png */,
 				CB9632731B2ED337009C240C /* Ballots and Candidate.png */,
@@ -341,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				CB927D9B1C58B18C0069AE50 /* VTAProfileController.swift */,
+				CB138D401C82BFD30046CF12 /* VTAPollController.swift */,
 				CBBE9FB91C72A39F006B9FD4 /* Clients */,
 			);
 			path = Controllers;
@@ -412,7 +421,6 @@
 				CB927D771C5552450069AE50 /* Vota-Bridging-Header.h */,
 				CBAA21BC1971F921008404F7 /* XYZAppDelegate.h */,
 				CBAA21BD1971F921008404F7 /* XYZAppDelegate.m */,
-				CBBE9FCE1C745DF3006B9FD4 /* ViewModels */,
 				CB927D971C58A3FC0069AE50 /* Views */,
 				CB927D9A1C58A4BF0069AE50 /* Controllers */,
 				CB87395E1B1B56AF00074C31 /* Old App */,
@@ -522,6 +530,7 @@
 				CB927D781C5552450069AE50 /* VTALoginViewController.swift */,
 				CB927D7A1C55A8900069AE50 /* VTASignUpViewController.swift */,
 				CB4438171C69CF520073D42E /* VTAOrganizationSignUpViewController.swift */,
+				CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -541,14 +550,6 @@
 				CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */,
 			);
 			path = Clients;
-			sourceTree = "<group>";
-		};
-		CBBE9FCE1C745DF3006B9FD4 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CBBE9FCF1C745E05006B9FD4 /* VTAPollViewModel.swift */,
-			);
-			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +636,7 @@
 				CB4C08021972394B00F08D01 /* Icon.png in Resources */,
 				CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */,
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,
+				CBBE9FD41C77007B006B9FD4 /* comments.png in Resources */,
 				CB4C07FF1972394B00F08D01 /* Icon-Small-50@2x.png in Resources */,
 				CBBE9FB51C729918006B9FD4 /* VTAPollTableViewCell.xib in Resources */,
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
@@ -656,6 +658,7 @@
 				CB4C07F81972394B00F08D01 /* Icon-60.png in Resources */,
 				CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */,
 				CB4C08011972394B00F08D01 /* Icon-Small@2x.png in Resources */,
+				CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */,
 				CB4C07FD1972394B00F08D01 /* Icon-76@2x.png in Resources */,
 				CB4C07F91972394B00F08D01 /* Icon-60@2x.png in Resources */,
 			);
@@ -700,10 +703,12 @@
 				CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
+				CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */,
 				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 				CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */,
+				CB138D411C82BFD30046CF12 /* VTAPollController.swift in Sources */,
 				CB3417581B1C61D600CE74C1 /* VotaViewController.m in Sources */,
 				CBBE9FB41C729918006B9FD4 /* VTAPollTableViewCell.swift in Sources */,
 				CB9632AD1B3178FB009C240C /* AboutThisAppViewController.m in Sources */,
@@ -711,7 +716,6 @@
 				CB3417551B1C5FC400CE74C1 /* SettingsViewController.m in Sources */,
 				CB927D7B1C55A8900069AE50 /* VTASignUpViewController.swift in Sources */,
 				CBBE9FB01C729850006B9FD4 /* VTAHomeViewController.swift in Sources */,
-				CBBE9FD01C745E05006B9FD4 /* VTAPollViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

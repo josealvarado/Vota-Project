@@ -15,6 +15,11 @@ class VTAPollTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfVotesLabel: UILabel!
     @IBOutlet weak var numberOfCommentsLabel: UILabel!
     
+    @IBOutlet weak var agreeView: UIView!
+    @IBOutlet weak var disagreeView: UIView!
+    @IBOutlet weak var unsureView: UIView!
+    
+    
     @IBOutlet weak var agreeLabel: UILabel!
     @IBOutlet weak var disagreeLabel: UILabel!
     @IBOutlet weak var unsureLabel: UILabel!
@@ -29,6 +34,15 @@ class VTAPollTableViewCell: UITableViewCell {
         
         bottomView.layer.borderWidth = 1.0
         bottomView.layer.borderColor = UIColor.grayColor().CGColor
+        
+        agreeView.layer.borderWidth = 1.0
+        agreeView.layer.borderColor = UIColor.grayColor().CGColor
+        
+        disagreeView.layer.borderWidth = 1.0
+        disagreeView.layer.borderColor = UIColor.grayColor().CGColor
+        
+        unsureView.layer.borderWidth = 1.0
+        unsureView.layer.borderColor = UIColor.grayColor().CGColor
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -39,18 +53,30 @@ class VTAPollTableViewCell: UITableViewCell {
     
     
     @IBAction func agreeButtonPressed(sender: AnyObject) {
-        VTAPollViewModel.votesAgreedOnPoll(poll, success: { () -> Void in
-            print("success")
+        VTAPollController.votesOnPollWithOption(poll, option: PollOption.Agreed, success: { () -> Void in
+            print("Successfully voted disagree")
             self.updateVotes()
             }) { () -> Void in
-                print("failure")
+                print("Failed to vote disagree")
         }
     }
     
     @IBAction func disagreeButtonPressed(sender: AnyObject) {
+        VTAPollController.votesOnPollWithOption(poll, option: PollOption.Disagree, success: { () -> Void in
+            print("Successfully voted disagree")
+            self.updateVotes()
+            }) { () -> Void in
+                print("Failed to vote disagree")
+        }
     }
     
     @IBAction func unsureButtonPressed(sender: AnyObject) {
+        VTAPollController.votesOnPollWithOption(poll, option: PollOption.Unsure, success: { () -> Void in
+            print("Successfully voted disagree")
+            self.updateVotes()
+            }) { () -> Void in
+                print("Failed to vote disagree")
+        }
     }
     
     @IBAction func detailButtonPressed(sender: AnyObject) {
@@ -58,6 +84,16 @@ class VTAPollTableViewCell: UITableViewCell {
     
     func configureWithPollObject(poll: PFObject) {
         self.poll = poll
+        
+        VTAPollController.votedOptionOnPoll(poll) { (option) -> Void in
+            if option == PollOption.Agreed {
+                self.agreeLabel.textColor = UIColor.blueColor()
+            } else if option == PollOption.Disagree {
+                self.disagreeLabel.textColor = UIColor.blueColor()
+            } else if option == PollOption.Unsure {
+                self.unsureLabel.textColor = UIColor.blueColor()
+            }
+        }
         
         if let issue = poll["issue_type"] as? String {
             issueLabel.text = issue

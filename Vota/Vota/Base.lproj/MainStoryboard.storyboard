@@ -122,6 +122,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Forgot Password?"/>
+                                <connections>
+                                    <segue destination="t9R-vS-R8Q" kind="show" id="X3Z-20-sm9"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-At-RsU">
                                 <rect key="frame" x="0.0" y="218" width="320" height="44"/>
@@ -252,7 +255,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhM-Hp-hSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="492"/>
+            <point key="canvasLocation" x="714" y="372"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="itw-q9-cGC">
+            <objects>
+                <viewController id="t9R-vS-R8Q" customClass="VTAForgotPasswordViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u5B-dO-YJw"/>
+                        <viewControllerLayoutGuide type="bottom" id="8vD-41-Qe2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o3M-Wl-rhN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8B-TF-62D">
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87m-o9-6ra">
+                                        <rect key="frame" x="8" y="12" width="150" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="YgY-ha-AyN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIK-m6-IZE">
+                                        <rect key="frame" x="168" y="8" width="142" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="87m-o9-6ra" firstAttribute="leading" secondItem="t8B-TF-62D" secondAttribute="leading" constant="8" id="PoV-GE-UGy"/>
+                                    <constraint firstAttribute="trailing" secondItem="zIK-m6-IZE" secondAttribute="trailing" constant="10" id="aaf-qw-0wv"/>
+                                    <constraint firstItem="87m-o9-6ra" firstAttribute="top" secondItem="t8B-TF-62D" secondAttribute="top" constant="12" id="cXC-3y-Xb3"/>
+                                    <constraint firstItem="zIK-m6-IZE" firstAttribute="top" secondItem="t8B-TF-62D" secondAttribute="top" constant="8" id="eFc-61-h2P"/>
+                                    <constraint firstItem="zIK-m6-IZE" firstAttribute="leading" secondItem="87m-o9-6ra" secondAttribute="trailing" constant="10" id="shu-5n-da3"/>
+                                    <constraint firstAttribute="height" constant="44" id="ufv-JA-9QW"/>
+                                    <constraint firstAttribute="bottom" secondItem="87m-o9-6ra" secondAttribute="bottom" constant="12" id="xcC-4J-9Ja"/>
+                                    <constraint firstAttribute="bottom" secondItem="zIK-m6-IZE" secondAttribute="bottom" constant="8" id="yD8-mN-Bfl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81f-9N-OBC">
+                                <rect key="frame" x="0.0" y="124" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Xc8-bN-t44"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Send Email">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="t9R-vS-R8Q" eventType="touchUpInside" id="Zv2-rF-GgU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t8B-TF-62D" firstAttribute="top" secondItem="u5B-dO-YJw" secondAttribute="bottom" constant="8" id="3Lm-08-uh2"/>
+                            <constraint firstItem="81f-9N-OBC" firstAttribute="top" secondItem="t8B-TF-62D" secondAttribute="bottom" constant="8" id="63c-AS-Syj"/>
+                            <constraint firstItem="t8B-TF-62D" firstAttribute="leading" secondItem="o3M-Wl-rhN" secondAttribute="leading" id="RfF-5W-5gF"/>
+                            <constraint firstItem="81f-9N-OBC" firstAttribute="leading" secondItem="o3M-Wl-rhN" secondAttribute="leading" id="S9I-EQ-dqf"/>
+                            <constraint firstAttribute="trailing" secondItem="t8B-TF-62D" secondAttribute="trailing" id="SJm-He-rNZ"/>
+                            <constraint firstAttribute="trailing" secondItem="81f-9N-OBC" secondAttribute="trailing" id="w5K-1A-hc5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="rlY-fF-G98">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lt2-Kl-wmf">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="t9R-vS-R8Q" id="qQT-vL-PJu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="zIK-m6-IZE" id="NWx-E7-Cxn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EG8-Nu-jig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="-852"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="DTd-n6-QGM">
@@ -698,7 +783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7F-TG-O8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="57.5"/>
+            <point key="canvasLocation" x="1412" y="-134.5"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="hKw-XQ-0Y4">
@@ -756,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vob-QZ-nuV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2144" y="544"/>
+            <point key="canvasLocation" x="2148" y="288"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="EQ5-UX-0w4">
@@ -1093,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzs-OL-v4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960" y="723"/>
+            <point key="canvasLocation" x="1400" y="599"/>
         </scene>
         <!--Profile-->
         <scene sceneID="gFQ-wT-YO1">
@@ -1123,7 +1208,7 @@
             </objects>
             <point key="canvasLocation" x="162" y="3984"/>
         </scene>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="efZ-yt-uDn">
             <objects>
                 <viewController id="5jz-WF-HJX" sceneMemberID="viewController">
@@ -1142,13 +1227,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="CeS-1f-Dq3"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="CeS-1f-Dq3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRE-5c-3EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192" y="1893"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="UIq-EE-vts">
             <objects>
                 <viewController id="8z1-Te-Hbf" sceneMemberID="viewController">
@@ -1167,13 +1252,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5ij-hU-SGu"/>
+                    <tabBarItem key="tabBarItem" title="Info" id="5ij-hU-SGu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeX-sm-Ure" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192" y="2594"/>
         </scene>
-        <!--Item-->
+        <!--Notifications-->
         <scene sceneID="3uf-pT-Nyl">
             <objects>
                 <viewController id="qiG-hh-TsB" sceneMemberID="viewController">
@@ -1192,7 +1277,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ykl-JY-qoM"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" id="ykl-JY-qoM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nD3-Ir-w1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1391,11 +1476,11 @@
             </objects>
             <point key="canvasLocation" x="-169" y="492"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="dQP-z6-Piq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="olr-Ou-PZK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="FaV-XF-aEK"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="FaV-XF-aEK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SQB-UP-w0C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
