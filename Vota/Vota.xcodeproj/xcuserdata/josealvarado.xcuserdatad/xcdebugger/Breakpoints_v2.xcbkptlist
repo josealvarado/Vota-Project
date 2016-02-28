@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vota/VTAPollTableViewCell.swift"
-            timestampString = "478339029.897034"
+            timestampString = "478376919.394875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "updateVotes()"
             landmarkType = "5">
          </BreakpointContent>

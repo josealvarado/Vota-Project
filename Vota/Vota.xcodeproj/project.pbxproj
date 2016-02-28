@@ -10,6 +10,8 @@
 		CB04513419B29DBF0096E904 /* VTSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = CB04513319B29DBF0096E904 /* VTSettings.m */; };
 		CB138D411C82BFD30046CF12 /* VTAPollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D401C82BFD30046CF12 /* VTAPollController.swift */; };
 		CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */; };
+		CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D491C8371300046CF12 /* VTAPollDetailViewController.swift */; };
+		CB138D4C1C83781B0046CF12 /* VTACommentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -110,6 +112,8 @@
 		CB04513319B29DBF0096E904 /* VTSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTSettings.m; sourceTree = "<group>"; };
 		CB138D401C82BFD30046CF12 /* VTAPollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollController.swift; sourceTree = "<group>"; };
 		CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		CB138D491C8371300046CF12 /* VTAPollDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollDetailViewController.swift; sourceTree = "<group>"; };
+		CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VTACommentClient.swift; path = ../VTACommentClient.swift; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +295,24 @@
 				CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */,
 			);
 			name = Login/Registration;
+			sourceTree = "<group>";
+		};
+		CB138D471C8370F80046CF12 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE9FCA1C7303C2006B9FD4 /* VTANewPollViewController.swift */,
+				CBBE9FAF1C729850006B9FD4 /* VTAHomeViewController.swift */,
+				CB138D491C8371300046CF12 /* VTAPollDetailViewController.swift */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
+		CB138D481C83710A0046CF12 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		CB1DC90E197C9E89000DA1C4 /* Resources */ = {
@@ -534,11 +556,10 @@
 		CBBE9FB71C729933006B9FD4 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB138D461C82CA290046CF12 /* Login/Registration */,
-				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
-				CBBE9FCA1C7303C2006B9FD4 /* VTANewPollViewController.swift */,
-				CBBE9FAF1C729850006B9FD4 /* VTAHomeViewController.swift */,
 				CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */,
+				CB138D461C82CA290046CF12 /* Login/Registration */,
+				CB138D471C8370F80046CF12 /* Timeline */,
+				CB138D481C83710A0046CF12 /* Profile */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -554,6 +575,7 @@
 		CBBE9FB91C72A39F006B9FD4 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */,
 				CBBE9FBA1C72A3FB006B9FD4 /* VTAPostClient.swift */,
 				CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */,
 			);
@@ -707,8 +729,10 @@
 				CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
+				CB138D4C1C83781B0046CF12 /* VTACommentClient.swift in Sources */,
 				CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */,
 				CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */,
+				CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
 				CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */,

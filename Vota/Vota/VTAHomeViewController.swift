@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, VTAPollTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -54,7 +54,7 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         let pollCell = tableView.dequeueReusableCellWithIdentifier("VTAPollTableViewCell", forIndexPath: indexPath) as! VTAPollTableViewCell
         pollCell.configureWithPollObject(poll)
-        
+        pollCell.delegate = self
         return pollCell
     }
     
@@ -66,23 +66,26 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return 170.0
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "VTANewPollViewController"{
+        if segue.identifier == "VTANewPollViewController" {
             let bottomBar = segue.destinationViewController as! VTANewPollViewController
             bottomBar.hidesBottomBarWhenPushed = true
             bottomBar.navigationItem.hidesBackButton = true
+        } else if segue.identifier == "VTAPollDetailViewController" {
+            let controller = segue.destinationViewController as! VTAPollDetailViewController
+            controller.hidesBottomBarWhenPushed = true
+            controller.navigationItem.hidesBackButton = true
+            controller.poll = sender as! PFObject
         }
     }
-
+    
+    // MARK: - VTAPollTableViewCellDelegate
+    func pollSelected(dict: [String: AnyObject]) {
+        if let type = dict["type"] as? String where type == "detail", let poll = dict["poll"] as? PFObject {
+            performSegueWithIdentifier("VTAPollDetailViewController", sender: poll)
+        }
+    }
 }

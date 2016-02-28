@@ -1321,6 +1321,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="VKf-M1-Gmg" id="bYU-Wc-7mD"/>
+                        <segue destination="nFK-cP-1Du" kind="show" identifier="VTAPollDetailViewController" id="2qt-mj-KEU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oau-DQ-rP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1456,6 +1457,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxb-Eg-2dY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1127" y="1238"/>
+        </scene>
+        <!--Poll-->
+        <scene sceneID="m7f-R1-hFg">
+            <objects>
+                <viewController id="nFK-cP-1Du" customClass="VTAPollDetailViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q0d-kh-q6G"/>
+                        <viewControllerLayoutGuide type="bottom" id="HCt-Pl-tPp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qjc-B3-jTn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOU-uo-kz6">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter comment here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hso-XR-4zc">
+                                        <rect key="frame" x="8" y="8" width="244" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbk-LJ-Eci">
+                                        <rect key="frame" x="260" y="8" width="52" height="34"/>
+                                        <color key="backgroundColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Sbk-LJ-Eci" secondAttribute="height" multiplier="23:15" id="SHr-dF-gCb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="nFK-cP-1Du" eventType="touchUpInside" id="D7j-eX-dWO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hso-XR-4zc" firstAttribute="top" secondItem="iOU-uo-kz6" secondAttribute="top" constant="8" id="AOD-aS-IbM"/>
+                                    <constraint firstAttribute="width" secondItem="iOU-uo-kz6" secondAttribute="height" multiplier="32:5" id="Bgd-kn-8Vx"/>
+                                    <constraint firstItem="hso-XR-4zc" firstAttribute="leading" secondItem="iOU-uo-kz6" secondAttribute="leading" constant="8" id="YMg-MM-7My"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sbk-LJ-Eci" secondAttribute="bottom" constant="8" id="cil-Wx-pgn"/>
+                                    <constraint firstItem="Sbk-LJ-Eci" firstAttribute="top" secondItem="iOU-uo-kz6" secondAttribute="top" constant="8" id="mBi-ol-d8i"/>
+                                    <constraint firstItem="Sbk-LJ-Eci" firstAttribute="leading" secondItem="hso-XR-4zc" secondAttribute="trailing" constant="8" id="meb-uu-zFf"/>
+                                    <constraint firstAttribute="bottom" secondItem="hso-XR-4zc" secondAttribute="bottom" constant="8" id="r0O-jQ-aeA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sbk-LJ-Eci" secondAttribute="trailing" constant="8" id="z6W-9X-5bx"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7cs-tH-h4o">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nFK-cP-1Du" id="13w-Qh-1jY"/>
+                                    <outlet property="delegate" destination="nFK-cP-1Du" id="fsP-62-N94"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7cs-tH-h4o" secondAttribute="trailing" id="7o3-RV-WFB"/>
+                            <constraint firstItem="HCt-Pl-tPp" firstAttribute="top" secondItem="iOU-uo-kz6" secondAttribute="bottom" id="8gD-8f-jH7"/>
+                            <constraint firstItem="7cs-tH-h4o" firstAttribute="top" secondItem="Q0d-kh-q6G" secondAttribute="bottom" id="Ldh-zk-Q54"/>
+                            <constraint firstItem="iOU-uo-kz6" firstAttribute="leading" secondItem="qjc-B3-jTn" secondAttribute="leading" id="LuK-Mj-rOM"/>
+                            <constraint firstItem="iOU-uo-kz6" firstAttribute="top" secondItem="7cs-tH-h4o" secondAttribute="bottom" id="Ugb-uf-7sV"/>
+                            <constraint firstAttribute="trailing" secondItem="iOU-uo-kz6" secondAttribute="trailing" id="i2o-6q-b3r"/>
+                            <constraint firstItem="7cs-tH-h4o" firstAttribute="leading" secondItem="qjc-B3-jTn" secondAttribute="leading" id="tNK-1N-11f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Poll" id="yE2-pJ-Dgd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ox1-bc-NNr">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="nFK-cP-1Du" id="MY7-k8-1RJ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="6oF-sq-XDN">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="nFK-cP-1Du" id="9ah-f7-l1q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="7cs-tH-h4o" id="mbv-gz-d6f"/>
+                        <outlet property="textField" destination="hso-XR-4zc" id="5w5-5G-dCG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TS-mP-bgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="1238"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n2o-U9-Ih4">

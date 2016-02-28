@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol VTAPollTableViewCellDelegate: class {
+    func pollSelected(dict: [String: AnyObject])
+}
+
 class VTAPollTableViewCell: UITableViewCell {
 
     @IBOutlet weak var issueLabel: UILabel!
@@ -29,6 +33,8 @@ class VTAPollTableViewCell: UITableViewCell {
     @IBOutlet weak var unsureLabel: UILabel!
     
     @IBOutlet weak var bottomView: UIView!
+    
+    weak var delegate: VTAPollTableViewCellDelegate?
     
     var poll: PFObject!
     
@@ -84,6 +90,8 @@ class VTAPollTableViewCell: UITableViewCell {
     }
     
     @IBAction func detailButtonPressed(sender: AnyObject) {
+        let dict = ["type": "detail", "poll": poll]
+        delegate?.pollSelected(dict)
     }
     
     func configureWithPollObject(poll: PFObject) {
