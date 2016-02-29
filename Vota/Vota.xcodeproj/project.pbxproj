@@ -12,6 +12,8 @@
 		CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */; };
 		CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D491C8371300046CF12 /* VTAPollDetailViewController.swift */; };
 		CB138D4C1C83781B0046CF12 /* VTACommentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */; };
+		CB138D551C83E3D10046CF12 /* VTACommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D531C83E3D10046CF12 /* VTACommentTableViewCell.swift */; };
+		CB138D561C83E3D10046CF12 /* VTACommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB138D541C83E3D10046CF12 /* VTACommentTableViewCell.xib */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -114,6 +116,8 @@
 		CB138D421C82C0600046CF12 /* VTAForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		CB138D491C8371300046CF12 /* VTAPollDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollDetailViewController.swift; sourceTree = "<group>"; };
 		CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VTACommentClient.swift; path = ../VTACommentClient.swift; sourceTree = "<group>"; };
+		CB138D531C83E3D10046CF12 /* VTACommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTACommentTableViewCell.swift; sourceTree = "<group>"; };
+		CB138D541C83E3D10046CF12 /* VTACommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTACommentTableViewCell.xib; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -549,6 +553,7 @@
 			children = (
 				CBBE9FB81C729FBC006B9FD4 /* XIBs */,
 				CBBE9FB21C729918006B9FD4 /* VTAPollTableViewCell.swift */,
+				CB138D531C83E3D10046CF12 /* VTACommentTableViewCell.swift */,
 			);
 			name = UITableViewCells;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				CBBE9FB31C729918006B9FD4 /* VTAPollTableViewCell.xib */,
+				CB138D541C83E3D10046CF12 /* VTACommentTableViewCell.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -667,6 +673,7 @@
 				CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */,
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,
 				CBBE9FD41C77007B006B9FD4 /* comments.png in Resources */,
+				CB138D561C83E3D10046CF12 /* VTACommentTableViewCell.xib in Resources */,
 				CB4C07FF1972394B00F08D01 /* Icon-Small-50@2x.png in Resources */,
 				CBBE9FB51C729918006B9FD4 /* VTAPollTableViewCell.xib in Resources */,
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
@@ -734,6 +741,7 @@
 				CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */,
 				CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
+				CB138D551C83E3D10046CF12 /* VTACommentTableViewCell.swift in Sources */,
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
 				CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */,
 				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,

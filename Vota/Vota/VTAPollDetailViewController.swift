@@ -22,6 +22,7 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
         // Do any additional setup after loading the view.
         
         tableView.registerNib(UINib(nibName: "VTAPollTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAPollTableViewCell")
+        tableView.registerNib(UINib(nibName: "VTACommentTableViewCell", bundle: nil), forCellReuseIdentifier: "VTACommentTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +50,7 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
             self.textField.text = ""
 
             if success {
+                self.tableView.reloadData()
             } else if let error = error {
                 print("ERROR, VTAPollDetailViewController: \(error)")
             }
@@ -58,7 +60,7 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
     override func viewWillAppear(animated: Bool) {
         VTACommentClient.commentObjectsForPoll(poll, success: { (comments) -> Void in
             print("number of comments \(comments.count)")
-//            self.comments = comments
+            self.comments = comments
             self.tableView.reloadData()
         }) { (error) -> Void in
             print("ERROR, VTAPollDetailViewController, \(error)")
@@ -78,20 +80,29 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         if indexPath.row == 0 {
-            
+            let pollCell = tableView.dequeueReusableCellWithIdentifier("VTAPollTableViewCell", forIndexPath: indexPath) as! VTAPollTableViewCell
+            pollCell.configureWithPollObject(poll)
+            return pollCell
         }
         
-        let pollCell = tableView.dequeueReusableCellWithIdentifier("VTAPollTableViewCell", forIndexPath: indexPath) as! VTAPollTableViewCell
-        pollCell.configureWithPollObject(poll)
-        return pollCell
+        let comment = comments[indexPath.row - 1]
+        let comentCell = tableView.dequeueReusableCellWithIdentifier("VTACommentTableViewCell", forIndexPath: indexPath) as! VTACommentTableViewCell
+        comentCell.configureCellWithCommentObject(comment)
+        return comentCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        if let _ = poll["image"] as? PFFile {
-            return 294
+        if indexPath.row == 0 {
+            if let _ = poll["image"] as? PFFile {
+                return 294
+            }
+            return 170.0
         }
-        return 170.0
+        
+        let comment = self.comments[indexPath.row - 1]
+        let text = comment["text"] as! String!
+        let h = heightForView(text, font: UIFont.systemFontOfSize(14.0), width: 250.0)
+        return 90.0 + h - 50.0;
     }
     
     /*
@@ -103,5 +114,13 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UITextView = UITextView(frame: CGRectMake(0, 0, width, CGFloat.max))
+        label.font = font
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
 
 }

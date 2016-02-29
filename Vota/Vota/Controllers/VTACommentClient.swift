@@ -14,6 +14,7 @@ class VTACommentClient: NSObject {
         let query = PFQuery(className:"Comment")
         query.orderByDescending("createdAt")
         query.whereKey("poll", equalTo: poll)
+        query.includeKey("user")
         query.findObjectsInBackgroundWithBlock {
             (commentObjects: [AnyObject]?, error: NSError?) -> Void in
             if let commentObjects = commentObjects {
