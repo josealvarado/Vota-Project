@@ -20,6 +20,7 @@
 		CB138D5E1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB138D5C1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.xib */; };
 		CB138D601C8566B10046CF12 /* VTASearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D5F1C8566B10046CF12 /* VTASearchViewController.swift */; };
 		CB138D621C8568090046CF12 /* VTAStyleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D611C8568090046CF12 /* VTAStyleClass.swift */; };
+		CB138D641C857C7A0046CF12 /* VTAFilteredSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D631C857C7A0046CF12 /* VTAFilteredSearchViewController.swift */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -130,6 +131,7 @@
 		CB138D5C1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTAFeatureNewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		CB138D5F1C8566B10046CF12 /* VTASearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASearchViewController.swift; sourceTree = "<group>"; };
 		CB138D611C8568090046CF12 /* VTAStyleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAStyleClass.swift; sourceTree = "<group>"; };
+		CB138D631C857C7A0046CF12 /* VTAFilteredSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAFilteredSearchViewController.swift; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 			children = (
 				CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */,
 				CB138D5F1C8566B10046CF12 /* VTASearchViewController.swift */,
+				CB138D631C857C7A0046CF12 /* VTAFilteredSearchViewController.swift */,
 				CB138D461C82CA290046CF12 /* Login/Registration */,
 				CB138D471C8370F80046CF12 /* Timeline */,
 				CB138D481C83710A0046CF12 /* Profile */,
@@ -769,6 +772,7 @@
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 				CB138D591C841C470046CF12 /* VTAFeaturedNewsTableViewCell.swift in Sources */,
+				CB138D641C857C7A0046CF12 /* VTAFilteredSearchViewController.swift in Sources */,
 				CB96327F1B2EDC03009C240C /* BalltotCandidateStateTableViewController.m in Sources */,
 				CB138D601C8566B10046CF12 /* VTASearchViewController.swift in Sources */,
 				CB138D411C82BFD30046CF12 /* VTAPollController.swift in Sources */,

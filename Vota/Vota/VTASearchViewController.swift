@@ -70,15 +70,26 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "VTAFilteredSearchViewController" {
+            var issue = ""
+            if let text = selectedList[sender as! Int]["name"] as? String where text != "" {
+                issue = text
+            }
+            let controller = segue.destinationViewController as! VTAFilteredSearchViewController
+            controller.title = issue
+            controller.hidesBottomBarWhenPushed = true
+//            controller.navigationItem.hidesBackButton = true
+        }
     }
-    */
+    
     
     // MARK: - Table view data source
     
@@ -109,6 +120,13 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
             return 70
         }
         return 50
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        print("item \(indexPath.row)")
+        
+        performSegueWithIdentifier("VTAFilteredSearchViewController", sender: indexPath.row)
     }
 
 }

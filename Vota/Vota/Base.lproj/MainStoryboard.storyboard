@@ -1220,11 +1220,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9u-I8-HhU">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9u-I8-HhU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1A-gx-uuF">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W1A-gx-uuF">
                                 <rect key="frame" x="0.0" y="64" width="320" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-Lv-Hy6">
@@ -1329,7 +1329,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ZBQ-CH-LrV" secondAttribute="bottom" id="zjm-CZ-y4d"/>
                                 </constraints>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-Bg-u0J">
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-Bg-u0J">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1339,7 +1339,7 @@
                                 <color key="barTintColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkQ-dS-QkN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkQ-dS-QkN">
                                 <rect key="frame" x="0.0" y="114" width="320" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1385,17 +1385,62 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uft-Ff-h11"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="containerView" destination="W1A-gx-uuF" id="kGQ-qT-HpC"/>
                         <outlet property="issueView" destination="3rh-Dx-8fq" id="2X4-c0-8c2"/>
                         <outlet property="peopleView" destination="RBj-wC-IKy" id="f25-tT-WUT"/>
                         <outlet property="tableView" destination="zkQ-dS-QkN" id="h1G-LA-ZjR"/>
+                        <segue destination="Qqj-qP-v8H" kind="show" identifier="VTAFilteredSearchViewController" id="Sj8-FG-1P7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRE-5c-3EN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="1946"/>
+            <point key="canvasLocation" x="707" y="1958"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="d5F-D4-1iC">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Qqj-qP-v8H" customClass="VTAFilteredSearchViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rU2-ae-9Qm"/>
+                        <viewControllerLayoutGuide type="bottom" id="boM-vx-frS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hQW-FW-e6O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-Wn-U3l">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qqj-qP-v8H" id="KLz-qX-jqp"/>
+                                    <outlet property="delegate" destination="Qqj-qP-v8H" id="kzc-Rw-eGV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="boM-vx-frS" firstAttribute="top" secondItem="RZl-Wn-U3l" secondAttribute="bottom" id="Bfp-Tm-goX"/>
+                            <constraint firstItem="RZl-Wn-U3l" firstAttribute="top" secondItem="rU2-ae-9Qm" secondAttribute="bottom" id="Kfp-gT-GEY"/>
+                            <constraint firstItem="RZl-Wn-U3l" firstAttribute="leading" secondItem="hQW-FW-e6O" secondAttribute="leading" id="Ust-uU-VPp"/>
+                            <constraint firstAttribute="trailing" secondItem="RZl-Wn-U3l" secondAttribute="trailing" id="tz2-QL-anv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="6z3-xd-b5G">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="mLx-xB-IgV">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="Qqj-qP-v8H" id="ICo-QT-c6K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RZl-Wn-U3l" id="wHw-VS-S5j"/>
+                        <segue destination="nFK-cP-1Du" kind="show" identifier="VTAPollDetailViewController" id="FA7-dK-RWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKV-Eg-qTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="1958"/>
         </scene>
         <!--Info-->
         <scene sceneID="UIq-EE-vts">
@@ -1690,7 +1735,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Poll" id="yE2-pJ-Dgd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ox1-bc-NNr">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="ox1-bc-NNr">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="nFK-cP-1Du" id="MY7-k8-1RJ"/>
                             </connections>
@@ -1709,7 +1754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TS-mP-bgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="1238"/>
+            <point key="canvasLocation" x="1642" y="1238"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n2o-U9-Ih4">
@@ -1810,6 +1855,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="FA7-dK-RWe"/>
         <segue reference="MAL-ub-LCG"/>
     </inferredMetricsTieBreakers>
 </document>
