@@ -1193,7 +1193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-0k-clf">
-                                <rect key="frame" x="26" y="37" width="52" height="30"/>
+                                <rect key="frame" x="134" y="224" width="52" height="176"/>
                                 <state key="normal" title="Logout "/>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="KZu-cz-lzm" eventType="touchUpInside" id="W3V-oZ-cNx"/>
@@ -1202,11 +1202,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="Kvj-Z5-jtR"/>
+                    <navigationItem key="navigationItem" title="Profile" id="fd8-48-7MM">
+                        <barButtonItem key="leftBarButtonItem" title="Share" id="C5P-J3-riT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="7SE-dY-aPv"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNw-Kc-ORo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="3984"/>
+            <point key="canvasLocation" x="694" y="3984"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="efZ-yt-uDn">
@@ -1771,7 +1774,7 @@
                         <segue destination="jIe-jq-wSI" kind="relationship" relationship="viewControllers" id="74Q-j3-Ndf"/>
                         <segue destination="8z1-Te-Hbf" kind="relationship" relationship="viewControllers" id="rCe-VL-5XU"/>
                         <segue destination="qiG-hh-TsB" kind="relationship" relationship="viewControllers" id="X5g-1Q-4F3"/>
-                        <segue destination="KZu-cz-lzm" kind="relationship" relationship="viewControllers" id="aoU-zT-YFv"/>
+                        <segue destination="MOJ-bI-32Z" kind="relationship" relationship="viewControllers" id="aoU-zT-YFv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlK-Cn-emF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1852,6 +1855,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKV-ZI-xYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192" y="1893"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="w5f-ic-kxh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MOJ-bI-32Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="Kvj-Z5-jtR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G1P-SD-Jqw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0078431372550000003" green="0.20000000000000001" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KZu-cz-lzm" kind="relationship" relationship="rootViewController" id="2LR-iP-ZKh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVe-C1-IOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="3984"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

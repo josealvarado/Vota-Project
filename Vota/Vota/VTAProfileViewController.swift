@@ -21,6 +21,12 @@ class VTAProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+//        guard let currentUser = PFUser.currentUser() else { return }        
+    }
+    
+    // User interactions
+    
     @IBAction func logoutButtonPressed(sender: AnyObject) {
         PFUser.logOut()
         self.dismissViewControllerAnimated(true, completion: nil)
