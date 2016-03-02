@@ -19,12 +19,15 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     var selectedOption = 0
     
     var issues = [PFObject]()
+    var users = [PFObject]()
     var selectedList = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.registerNib(UINib(nibName: "VTAUserTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAUserTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,25 +51,31 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: - User Interactions
     @IBAction func issueButtonPressed(sender: AnyObject) {
         if selectedOption != 0 {
+            selectedOption = 0
+
             issueView.backgroundColor = VTAStyleClass.darkBlueColor()
             peopleView.backgroundColor = UIColor.grayColor()
             
             self.selectedList = issues
             self.tableView.reloadData()
-            
-            selectedOption = 0
         }
     }
 
     @IBAction func peopleButtonPressed(sender: AnyObject) {
         if selectedOption != 1 {
+            selectedOption = 1
+
             issueView.backgroundColor = UIColor.grayColor()
             peopleView.backgroundColor = VTAStyleClass.darkBlueColor()
             
-            self.selectedList = []
-            self.tableView.reloadData()
-
-            selectedOption = 1
+            VTAUserClient.userObjects({ (users) -> Void in
+                self.users = users
+                print("users found \(users.count)")
+                self.selectedList = users
+                self.tableView.reloadData()
+            }, failure: { (error) -> Void in
+                print("VTASearchViewController, peopleButtonPressed, getting users : \(error)")
+            })
         }
     }
     
@@ -75,9 +84,6 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        
         if segue.identifier == "VTAFilteredSearchViewController" {
             var issue = ""
             if let text = selectedList[sender as! Int]["name"] as? String where text != "" {
@@ -86,10 +92,8 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
             let controller = segue.destinationViewController as! VTAFilteredSearchViewController
             controller.title = issue
             controller.hidesBottomBarWhenPushed = true
-//            controller.navigationItem.hidesBackButton = true
         }
     }
-    
     
     // MARK: - Table view data source
     
@@ -103,6 +107,14 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {        
 
+        if selectedOption == 1 {
+            let user = selectedList[indexPath.row] as PFObject
+            
+            let userCell = tableView.dequeueReusableCellWithIdentifier("VTAUserTableViewCell", forIndexPath: indexPath) as! VTAUserTableViewCell
+            userCell.configureCellWithUser(user as! PFUser)
+            return userCell
+        }
+        
         var issue = ""
         if let text = selectedList[indexPath.row]["name"] as? String where text != "" {
             issue = text
@@ -123,9 +135,6 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        print("item \(indexPath.row)")
-        
         performSegueWithIdentifier("VTAFilteredSearchViewController", sender: indexPath.row)
     }
 

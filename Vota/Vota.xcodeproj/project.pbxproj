@@ -21,6 +21,10 @@
 		CB138D601C8566B10046CF12 /* VTASearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D5F1C8566B10046CF12 /* VTASearchViewController.swift */; };
 		CB138D621C8568090046CF12 /* VTAStyleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D611C8568090046CF12 /* VTAStyleClass.swift */; };
 		CB138D641C857C7A0046CF12 /* VTAFilteredSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D631C857C7A0046CF12 /* VTAFilteredSearchViewController.swift */; };
+		CB138D661C86ACEC0046CF12 /* VTAUserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D651C86ACEB0046CF12 /* VTAUserClient.swift */; };
+		CB138D6B1C86AE700046CF12 /* VTAUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D691C86AE700046CF12 /* VTAUserTableViewCell.swift */; };
+		CB138D6C1C86AE700046CF12 /* VTAUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB138D6A1C86AE700046CF12 /* VTAUserTableViewCell.xib */; };
+		CB138D6E1C86B40F0046CF12 /* defaultProfilePicture.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -132,6 +136,10 @@
 		CB138D5F1C8566B10046CF12 /* VTASearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASearchViewController.swift; sourceTree = "<group>"; };
 		CB138D611C8568090046CF12 /* VTAStyleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAStyleClass.swift; sourceTree = "<group>"; };
 		CB138D631C857C7A0046CF12 /* VTAFilteredSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAFilteredSearchViewController.swift; sourceTree = "<group>"; };
+		CB138D651C86ACEB0046CF12 /* VTAUserClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAUserClient.swift; sourceTree = "<group>"; };
+		CB138D691C86AE700046CF12 /* VTAUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAUserTableViewCell.swift; sourceTree = "<group>"; };
+		CB138D6A1C86AE700046CF12 /* VTAUserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTAUserTableViewCell.xib; sourceTree = "<group>"; };
+		CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultProfilePicture.png; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -358,6 +366,7 @@
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */,
 				CBBE9FD51C7700EB006B9FD4 /* votes.png */,
 				CBBE9FD31C77007B006B9FD4 /* comments.png */,
 				CB96326F1B2ED31C009C240C /* Register-Icon.png */,
@@ -571,6 +580,7 @@
 				CB138D571C841C470046CF12 /* VTAFeaturedNewsTableViewCell.swift */,
 				CB138D531C83E3D10046CF12 /* VTACommentTableViewCell.swift */,
 				CB138D5B1C842ADB0046CF12 /* VTAFeatureNewsCollectionViewCell.swift */,
+				CB138D691C86AE700046CF12 /* VTAUserTableViewCell.swift */,
 			);
 			name = UITableViewCells;
 			sourceTree = "<group>";
@@ -595,6 +605,7 @@
 				CB138D581C841C470046CF12 /* VTAFeaturedNewsTableViewCell.xib */,
 				CB138D5C1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.xib */,
 				CB138D541C83E3D10046CF12 /* VTACommentTableViewCell.xib */,
+				CB138D6A1C86AE700046CF12 /* VTAUserTableViewCell.xib */,
 			);
 			name = XIBs;
 			sourceTree = "<group>";
@@ -605,6 +616,7 @@
 				CB138D4B1C83781B0046CF12 /* VTACommentClient.swift */,
 				CBBE9FBA1C72A3FB006B9FD4 /* VTAPostClient.swift */,
 				CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */,
+				CB138D651C86ACEB0046CF12 /* VTAUserClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -712,6 +724,7 @@
 				CB4C07FC1972394B00F08D01 /* Icon-76.png in Resources */,
 				CB9632741B2ED337009C240C /* Ballots and Candidate.png in Resources */,
 				CB4C08051972394B00F08D01 /* iTunesArtwork@2x.png in Resources */,
+				CB138D6C1C86AE700046CF12 /* VTAUserTableViewCell.xib in Resources */,
 				CB4C08001972394B00F08D01 /* Icon-Small.png in Resources */,
 				CBAA21B81971F921008404F7 /* InfoPlist.strings in Resources */,
 				CB4C07FE1972394B00F08D01 /* Icon-Small-50.png in Resources */,
@@ -719,6 +732,7 @@
 				CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */,
 				CB4C08011972394B00F08D01 /* Icon-Small@2x.png in Resources */,
 				CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */,
+				CB138D6E1C86B40F0046CF12 /* defaultProfilePicture.png in Resources */,
 				CB4C07FD1972394B00F08D01 /* Icon-76@2x.png in Resources */,
 				CB4C07F91972394B00F08D01 /* Icon-60@2x.png in Resources */,
 			);
@@ -758,10 +772,12 @@
 				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
 				CB927D791C5552450069AE50 /* VTALoginViewController.swift in Sources */,
 				CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */,
+				CB138D661C86ACEC0046CF12 /* VTAUserClient.swift in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,
 				CB04513419B29DBF0096E904 /* VTSettings.m in Sources */,
 				CB138D4C1C83781B0046CF12 /* VTACommentClient.swift in Sources */,
 				CBB9F9AD1B23D0A40054D9E9 /* ZipCodeViewController.m in Sources */,
+				CB138D6B1C86AE700046CF12 /* VTAUserTableViewCell.swift in Sources */,
 				CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */,
 				CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
