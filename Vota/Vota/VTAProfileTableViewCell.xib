@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VTAProfileTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="VTAProfileTableViewCell" customModule="Vota" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VTAProfileTableViewCell" rowHeight="250" id="KGk-i7-Jjw" customClass="VTAProfileTableViewCell" customModule="Vota" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -50,7 +50,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-kI-3sj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emailIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nbp-kI-3sj">
                                 <rect key="frame" x="4" y="7" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="AN2-m5-jFm"/>
@@ -64,7 +64,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ioY-8W-dRi" firstAttribute="leading" secondItem="Nbp-kI-3sj" secondAttribute="trailing" constant="8" id="3f8-l6-FJL"/>
                             <constraint firstItem="th0-lt-Wdk" firstAttribute="top" secondItem="hfy-x2-TDZ" secondAttribute="top" id="DJ8-ml-QJg"/>
@@ -96,7 +95,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ocm-cr-DvT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ballotBox.png" translatesAutoresizingMaskIntoConstraints="NO" id="ocm-cr-DvT">
                                 <rect key="frame" x="4" y="7" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="Dc0-fx-pSb"/>
@@ -110,7 +109,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PaJ-YD-kfT" firstAttribute="top" secondItem="0WA-Ga-j9H" secondAttribute="top" id="BAj-hY-wy6"/>
                             <constraint firstItem="ocm-cr-DvT" firstAttribute="leading" secondItem="0WA-Ga-j9H" secondAttribute="leading" constant="4" id="Bo1-5o-xIS"/>
@@ -191,7 +189,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bwZ-nr-sqd" firstAttribute="leading" secondItem="7yn-nv-gbz" secondAttribute="leading" id="NPQ-Ww-3W3"/>
                                     <constraint firstItem="bwZ-nr-sqd" firstAttribute="top" secondItem="7yn-nv-gbz" secondAttribute="top" id="Owi-86-SVt"/>
@@ -215,7 +212,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="N5H-dH-naZ" secondAttribute="bottom" id="7Wh-VJ-ITW"/>
                                     <constraint firstAttribute="trailing" secondItem="N5H-dH-naZ" secondAttribute="trailing" id="Wcm-pJ-c8f"/>
@@ -243,7 +239,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="wiD-Hu-nxA" secondAttribute="trailing" id="3XB-8w-eMb"/>
                                     <constraint firstItem="pvC-IH-bgz" firstAttribute="top" secondItem="0aM-em-xHS" secondAttribute="top" id="3qx-Rn-br4"/>
@@ -297,9 +292,25 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="emailImageView" destination="Nbp-kI-3sj" id="sXt-Td-x1C"/>
+                <outlet property="emailLabel" destination="ioY-8W-dRi" id="K3E-60-AfZ"/>
+                <outlet property="emailView" destination="hfy-x2-TDZ" id="58G-yH-r9d"/>
+                <outlet property="followersLabel" destination="N5H-dH-naZ" id="oPo-SI-ucS"/>
+                <outlet property="followersView" destination="LrW-cm-DWE" id="zZf-QG-rA4"/>
+                <outlet property="followingLabel" destination="wiD-Hu-nxA" id="PA1-cm-iwj"/>
+                <outlet property="followingView" destination="0aM-em-xHS" id="gF3-Kl-gc6"/>
+                <outlet property="pollLabel" destination="bwZ-nr-sqd" id="1TD-tI-EFP"/>
+                <outlet property="pollView" destination="7yn-nv-gbz" id="IC4-9A-4xk"/>
                 <outlet property="profileImageView" destination="ish-C0-Wyi" id="gHb-6q-qab"/>
+                <outlet property="voteImageView" destination="ocm-cr-DvT" id="0Wd-9T-8P7"/>
+                <outlet property="voteLabel" destination="PaJ-YD-kfT" id="u7v-MD-roe"/>
+                <outlet property="voteView" destination="0WA-Ga-j9H" id="Nsd-Q1-hmh"/>
             </connections>
             <point key="canvasLocation" x="139" y="370"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ballotBox.png" width="200" height="200"/>
+        <image name="emailIcon.png" width="128" height="128"/>
+    </resources>
 </document>

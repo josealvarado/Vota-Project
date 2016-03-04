@@ -30,7 +30,7 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(animated: Bool) {
-        VTAPostClient.polls(
+        VTAPollClient.polls(
             { (polls) -> Void in
                 self.polls = polls
                 self.tableView.reloadData()

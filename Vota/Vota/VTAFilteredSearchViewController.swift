@@ -32,7 +32,7 @@ class VTAFilteredSearchViewController: UIViewController, UITableViewDataSource, 
         super.viewWillAppear(true);
         navigationController?.navigationBar.hidden = false
         
-        VTAPostClient.pollsWithIssue(self.title!, success: { (polls) -> Void in
+        VTAPollClient.pollsWithIssue(self.title!, success: { (polls) -> Void in
             self.polls = polls
             self.tableView.reloadData()
         }) { (error) -> Void in

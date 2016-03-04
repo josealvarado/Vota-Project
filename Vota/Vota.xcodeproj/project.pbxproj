@@ -27,6 +27,9 @@
 		CB138D6E1C86B40F0046CF12 /* defaultProfilePicture.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */; };
 		CB138D731C86BC650046CF12 /* VTAProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D711C86BC650046CF12 /* VTAProfileTableViewCell.swift */; };
 		CB138D741C86BC650046CF12 /* VTAProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB138D721C86BC650046CF12 /* VTAProfileTableViewCell.xib */; };
+		CB138D761C8957170046CF12 /* VTASettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D751C8957170046CF12 /* VTASettingsViewController.swift */; };
+		CB138D781C89600A0046CF12 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D771C89600A0046CF12 /* emailIcon.png */; };
+		CB138D7A1C8963410046CF12 /* ballotBox.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D791C8963410046CF12 /* ballotBox.png */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -144,6 +147,9 @@
 		CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultProfilePicture.png; sourceTree = "<group>"; };
 		CB138D711C86BC650046CF12 /* VTAProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAProfileTableViewCell.swift; sourceTree = "<group>"; };
 		CB138D721C86BC650046CF12 /* VTAProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTAProfileTableViewCell.xib; sourceTree = "<group>"; };
+		CB138D751C8957170046CF12 /* VTASettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASettingsViewController.swift; sourceTree = "<group>"; };
+		CB138D771C89600A0046CF12 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
+		CB138D791C8963410046CF12 /* ballotBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ballotBox.png; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +376,8 @@
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB138D791C8963410046CF12 /* ballotBox.png */,
+				CB138D771C89600A0046CF12 /* emailIcon.png */,
 				CB138D6D1C86B40F0046CF12 /* defaultProfilePicture.png */,
 				CBBE9FD51C7700EB006B9FD4 /* votes.png */,
 				CBBE9FD31C77007B006B9FD4 /* comments.png */,
@@ -599,6 +607,7 @@
 				CB138D461C82CA290046CF12 /* Login/Registration */,
 				CB138D471C8370F80046CF12 /* Timeline */,
 				CB138D481C83710A0046CF12 /* Profile */,
+				CB138D751C8957170046CF12 /* VTASettingsViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -718,10 +727,12 @@
 				CB4C07FB1972394B00F08D01 /* Icon-72@2x.png in Resources */,
 				CB138D5A1C841C470046CF12 /* VTAFeaturedNewsTableViewCell.xib in Resources */,
 				CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */,
+				CB138D781C89600A0046CF12 /* emailIcon.png in Resources */,
 				CB9632721B2ED32B009C240C /* Get Friends to Vote.png in Resources */,
 				CB4C07FA1972394B00F08D01 /* Icon-72.png in Resources */,
 				CB9632761B2ED343009C240C /* Settings.png in Resources */,
 				CB9632701B2ED31C009C240C /* Register-Icon.png in Resources */,
+				CB138D7A1C8963410046CF12 /* ballotBox.png in Resources */,
 				CBAA21C11971F921008404F7 /* MainStoryboard.storyboard in Resources */,
 				CB138D5E1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.xib in Resources */,
 				CB4C07F71972394B00F08D01 /* Icon-40@2x.png in Resources */,
@@ -793,6 +804,7 @@
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,
 				CB138D431C82C0600046CF12 /* VTAForgotPasswordViewController.swift in Sources */,
 				CB3417521B1C270E00CE74C1 /* GetFriendsToVoteViewController.m in Sources */,
+				CB138D761C8957170046CF12 /* VTASettingsViewController.swift in Sources */,
 				CB87395D1B1B56A600074C31 /* RegisterToVoteViewController.m in Sources */,
 				CB529B021AACDAF600C02E9F /* KeychainItemWrapper.m in Sources */,
 				CB138D591C841C470046CF12 /* VTAFeaturedNewsTableViewCell.swift in Sources */,

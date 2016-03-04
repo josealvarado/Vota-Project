@@ -1183,7 +1183,7 @@
         <!--Profile-->
         <scene sceneID="gFQ-wT-YO1">
             <objects>
-                <viewController id="KZu-cz-lzm" customClass="VTAProfileViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="KZu-cz-lzm" customClass="VTAProfileViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ho6-GD-UCe"/>
                         <viewControllerLayoutGuide type="bottom" id="dmz-9O-Rzm"/>
@@ -1192,24 +1192,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-0k-clf">
-                                <rect key="frame" x="134" y="224" width="52" height="176"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="USB-lt-DRW">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KZu-cz-lzm" id="nGc-To-Wld"/>
+                                    <outlet property="delegate" destination="KZu-cz-lzm" id="WGX-bP-da0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="USB-lt-DRW" firstAttribute="leading" secondItem="IOo-n8-EJc" secondAttribute="leading" id="Ucg-wY-SaF"/>
+                            <constraint firstAttribute="trailing" secondItem="USB-lt-DRW" secondAttribute="trailing" id="Udd-Q1-bmz"/>
+                            <constraint firstItem="USB-lt-DRW" firstAttribute="top" secondItem="Ho6-GD-UCe" secondAttribute="bottom" id="X0M-8d-wmg"/>
+                            <constraint firstItem="dmz-9O-Rzm" firstAttribute="top" secondItem="USB-lt-DRW" secondAttribute="bottom" id="o5S-z8-8bu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="fd8-48-7MM">
+                        <barButtonItem key="leftBarButtonItem" title="Share" id="C5P-J3-riT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="7SE-dY-aPv">
+                            <connections>
+                                <segue destination="U6N-sk-SeK" kind="show" id="lsT-6R-dDS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="USB-lt-DRW" id="UsS-Qf-qir"/>
+                        <segue destination="nFK-cP-1Du" kind="show" identifier="VTAPollDetailViewController" id="vDr-xz-M6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNw-Kc-ORo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="3984"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="2YF-xR-grN">
+            <objects>
+                <viewController id="U6N-sk-SeK" customClass="VTASettingsViewController" customModule="Vota" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8KG-bD-RpP"/>
+                        <viewControllerLayoutGuide type="bottom" id="71K-l1-3hj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="47x-j0-sQg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7kl-Fy-o0r">
+                                <rect key="frame" x="154" y="137" width="52" height="176"/>
                                 <state key="normal" title="Logout "/>
                                 <connections>
-                                    <action selector="logoutButtonPressed:" destination="KZu-cz-lzm" eventType="touchUpInside" id="W3V-oZ-cNx"/>
+                                    <action selector="logoutButtonPressed:" destination="U6N-sk-SeK" eventType="touchUpInside" id="6R8-Ec-IVj"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="fd8-48-7MM">
-                        <barButtonItem key="leftBarButtonItem" title="Share" id="C5P-J3-riT"/>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="7SE-dY-aPv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="h94-SJ-eMv"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WNw-Kc-ORo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOd-7g-Mzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="3984"/>
+            <point key="canvasLocation" x="1202" y="4010"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="efZ-yt-uDn">
@@ -1883,7 +1926,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FA7-dK-RWe"/>
         <segue reference="MAL-ub-LCG"/>
+        <segue reference="vDr-xz-M6z"/>
     </inferredMetricsTieBreakers>
 </document>

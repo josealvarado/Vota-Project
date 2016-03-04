@@ -23,4 +23,41 @@ class VTAUserClient: NSObject {
             }
         }
     }
+    
+    class func numberOfPollsForUser(user: PFUser, success: (count: Int) -> Void, failure: (error: NSError) -> Void) {
+        let query = PFQuery(className: "Poll")
+        query.whereKey("user", equalTo: user)
+        query.countObjectsInBackgroundWithBlock { (count, error) -> Void in
+            if let _ = error {
+                
+            } else {
+                success(count: Int(count))
+            }
+        }
+    }
+    
+    class func numberOfFollowersForUser(user: PFUser, success: (count: Int) -> Void, failure: (error: NSError) -> Void) {
+        let query = PFQuery(className: "Follow")
+        query.whereKey("toUser", equalTo: user)
+        query.countObjectsInBackgroundWithBlock { (count, error) -> Void in
+            if let _ = error {
+                
+            } else {
+                success(count: Int(count))
+            }
+        }
+    }
+    
+    class func numberOfFollowingForUser(user: PFUser, success: (count: Int) -> Void, failure: (error: NSError) -> Void) {
+        let query = PFQuery(className: "Follow")
+        query.whereKey("fromUser", equalTo: user)
+        query.countObjectsInBackgroundWithBlock { (count, error) -> Void in
+            if let _ = error {
+                
+            } else {
+                success(count: Int(count))
+            }
+        }
+    }
+    
 }
