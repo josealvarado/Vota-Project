@@ -36,6 +36,8 @@
 		CB138D8D1C8B91AD0046CF12 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D891C8B91AD0046CF12 /* info.png */; };
 		CB138D8E1C8B91AD0046CF12 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = CB138D8A1C8B91AD0046CF12 /* search.png */; };
 		CB138D901C8B97CE0046CF12 /* VTAInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D8F1C8B97CE0046CF12 /* VTAInfoViewController.swift */; };
+		CB138D921C8D49CD0046CF12 /* VTASettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D911C8D49CD0046CF12 /* VTASettingsTableViewController.swift */; };
+		CB138D941C8D542C0046CF12 /* VTAEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D931C8D542C0046CF12 /* VTAEmailViewController.swift */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
@@ -162,6 +164,8 @@
 		CB138D891C8B91AD0046CF12 /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
 		CB138D8A1C8B91AD0046CF12 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		CB138D8F1C8B97CE0046CF12 /* VTAInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAInfoViewController.swift; sourceTree = "<group>"; };
+		CB138D911C8D49CD0046CF12 /* VTASettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTASettingsTableViewController.swift; sourceTree = "<group>"; };
+		CB138D931C8D542C0046CF12 /* VTAEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAEmailViewController.swift; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +365,16 @@
 				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		CB138D951C8D543F0046CF12 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CB138D751C8957170046CF12 /* VTASettingsViewController.swift */,
+				CB138D911C8D49CD0046CF12 /* VTASettingsTableViewController.swift */,
+				CB138D931C8D542C0046CF12 /* VTAEmailViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		CB1DC90E197C9E89000DA1C4 /* Resources */ = {
@@ -624,7 +638,7 @@
 				CB138D461C82CA290046CF12 /* Login/Registration */,
 				CB138D471C8370F80046CF12 /* Timeline */,
 				CB138D481C83710A0046CF12 /* Profile */,
-				CB138D751C8957170046CF12 /* VTASettingsViewController.swift */,
+				CB138D951C8D543F0046CF12 /* Settings */,
 				CB138D8F1C8B97CE0046CF12 /* VTAInfoViewController.swift */,
 			);
 			name = UIViewControllers;
@@ -796,6 +810,7 @@
 			files = (
 				CB4438181C69CF520073D42E /* VTAOrganizationSignUpViewController.swift in Sources */,
 				CBB9F9B31B2405730054D9E9 /* RegisteredTableViewController.m in Sources */,
+				CB138D921C8D49CD0046CF12 /* VTASettingsTableViewController.swift in Sources */,
 				CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */,
 				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
 				CB138D5D1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.swift in Sources */,
@@ -822,6 +837,7 @@
 				CB138D6B1C86AE700046CF12 /* VTAUserTableViewCell.swift in Sources */,
 				CBBE9FCB1C7303C2006B9FD4 /* VTANewPollViewController.swift in Sources */,
 				CB138D4A1C8371300046CF12 /* VTAPollDetailViewController.swift in Sources */,
+				CB138D941C8D542C0046CF12 /* VTAEmailViewController.swift in Sources */,
 				CBAA21BA1971F921008404F7 /* main.m in Sources */,
 				CB138D551C83E3D10046CF12 /* VTACommentTableViewCell.swift in Sources */,
 				CBB9F9AA1B23CF870054D9E9 /* PhoneNumberViewController.m in Sources */,

@@ -29,6 +29,9 @@ class VTAProfileViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewWillAppear(animated: Bool) {
+        if PFUser.currentUser() == nil {
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }
         guard let currentUser = PFUser.currentUser() else { return }
         
         VTAPollClient.pollsByUser(currentUser, success: { (polls) -> Void in
