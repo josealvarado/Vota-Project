@@ -40,9 +40,7 @@ class VTASettingsTableViewController: UITableViewController {
         
         if section == 0 {
             
-        } else if section == 1 {
-            
-        } else if section == 2 {
+        } else if section == 1 {            
             if row == 0 {
                 performSegueWithIdentifier("VTAEmailViewController", sender: nil)
             } else if row == 1 {
