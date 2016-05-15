@@ -14,23 +14,27 @@ protocol VTAPollTableViewCellDelegate: class {
 
 class VTAPollTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var containerView: UIView!
+    
+    
     @IBOutlet weak var issueLabel: UILabel!
 
-    @IBOutlet weak var pollImageView: UIImageView!
-    @IBOutlet weak var pollImageHeightConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var pollImageView: UIImageView!
+//    @IBOutlet weak var pollImageHeightConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var numberOfVotesLabel: UILabel!
-    @IBOutlet weak var numberOfCommentsLabel: UILabel!
+//    @IBOutlet weak var numberOfVotesLabel: UILabel!
+//    @IBOutlet weak var numberOfCommentsLabel: UILabel!
     
-    @IBOutlet weak var agreeView: UIView!
-    @IBOutlet weak var disagreeView: UIView!
-    @IBOutlet weak var unsureView: UIView!
+//    @IBOutlet weak var agreeView: UIView!
+//    @IBOutlet weak var disagreeView: UIView!
+//    @IBOutlet weak var unsureView: UIView!
     
     
-    @IBOutlet weak var agreeLabel: UILabel!
-    @IBOutlet weak var disagreeLabel: UILabel!
-    @IBOutlet weak var unsureLabel: UILabel!
+//    @IBOutlet weak var agreeLabel: UILabel!
+//    @IBOutlet weak var disagreeLabel: UILabel!
+//    @IBOutlet weak var unsureLabel: UILabel!
     
     @IBOutlet weak var bottomView: UIView!
     
@@ -42,17 +46,19 @@ class VTAPollTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        bottomView.layer.borderWidth = 1.0
-        bottomView.layer.borderColor = UIColor.grayColor().CGColor
+        containerView.layer.cornerRadius = 5
         
-        agreeView.layer.borderWidth = 1.0
-        agreeView.layer.borderColor = UIColor.grayColor().CGColor
-        
-        disagreeView.layer.borderWidth = 1.0
-        disagreeView.layer.borderColor = UIColor.grayColor().CGColor
-        
-        unsureView.layer.borderWidth = 1.0
-        unsureView.layer.borderColor = UIColor.grayColor().CGColor
+//        bottomView.layer.borderWidth = 1.0
+//        bottomView.layer.borderColor = UIColor.grayColor().CGColor
+//        
+//        agreeView.layer.borderWidth = 1.0
+//        agreeView.layer.borderColor = UIColor.grayColor().CGColor
+//        
+//        disagreeView.layer.borderWidth = 1.0
+//        disagreeView.layer.borderColor = UIColor.grayColor().CGColor
+//        
+//        unsureView.layer.borderWidth = 1.0
+//        unsureView.layer.borderColor = UIColor.grayColor().CGColor
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -95,31 +101,31 @@ class VTAPollTableViewCell: UITableViewCell {
     }
     
     func configureWithPollObject(poll: PFObject) {
-        self.pollImageHeightConstraint.constant = 1
+//        self.pollImageHeightConstraint.constant = 1
         self.poll = poll
         
-        VTAPollController.votedOptionOnPoll(poll) { (option) -> Void in
-            if option == PollOption.Agreed {
-                self.agreeLabel.textColor = UIColor.blueColor()
-            } else if option == PollOption.Disagree {
-                self.disagreeLabel.textColor = UIColor.blueColor()
-            } else if option == PollOption.Unsure {
-                self.unsureLabel.textColor = UIColor.blueColor()
-            }
-        }
+//        VTAPollController.votedOptionOnPoll(poll) { (option) -> Void in
+//            if option == PollOption.Agreed {
+//                self.agreeLabel.textColor = UIColor.blueColor()
+//            } else if option == PollOption.Disagree {
+//                self.disagreeLabel.textColor = UIColor.blueColor()
+//            } else if option == PollOption.Unsure {
+//                self.unsureLabel.textColor = UIColor.blueColor()
+//            }
+//        }
         
-        if let imageFile = poll["image"] as? PFFile {
-            imageFile.getDataInBackgroundWithBlock({
-                (imageData: NSData?, error: NSError?) -> Void in
-                if (error == nil) {
-                    self.pollImageHeightConstraint.constant = 124
-                    let image = UIImage(data:imageData!)
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        self.pollImageView.image = image
-                    })
-                }
-            })
-        }
+//        if let imageFile = poll["image"] as? PFFile {
+//            imageFile.getDataInBackgroundWithBlock({
+//                (imageData: NSData?, error: NSError?) -> Void in
+//                if (error == nil) {
+//                    self.pollImageHeightConstraint.constant = 124
+//                    let image = UIImage(data:imageData!)
+//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                        self.pollImageView.image = image
+//                    })
+//                }
+//            })
+//        }
         
         if let issue = poll["issue_type"] as? String {
             issueLabel.text = issue
@@ -127,9 +133,9 @@ class VTAPollTableViewCell: UITableViewCell {
         if let question = poll["question"] as? String {
             questionLabel.text = question
         }
-        if let numberOfComments = poll["numberOfComments"] as? Int {
-            numberOfCommentsLabel.text = "\(numberOfComments)"
-        }
+//        if let numberOfComments = poll["numberOfComments"] as? Int {
+//            numberOfCommentsLabel.text = "\(numberOfComments)"
+//        }
         updateVotes()
     }
     
@@ -144,23 +150,23 @@ class VTAPollTableViewCell: UITableViewCell {
     }
     
     func updateVotes() {
-        if let numberOfVotes = poll["numberOfVotes"] as? Int where numberOfVotes != 0 {
-            numberOfVotesLabel.text = "\(numberOfVotes)"
-            
-            if let numberOfAgrees = poll["numberOfAgrees"] as? Int {
-                agreeLabel.text = "\(fixScore(numberOfAgrees, totalScore: numberOfVotes))%"
-            }
-            if let numberOfDisagrees = poll["numberOfDisagrees"] as? Int {
-                disagreeLabel.text = "\(fixScore(numberOfDisagrees, totalScore: numberOfVotes))%"
-            }
-            if let numberOfUnsures = poll["numberOfUnsures"] as? Int {
-                unsureLabel.text = "\(fixScore(numberOfUnsures, totalScore: numberOfVotes))%"
-            }
-        } else {
-            numberOfVotesLabel.text = "0"
-            agreeLabel.text = "0%"
-            disagreeLabel.text = "0%"
-            unsureLabel.text = "0%"
-        }
+//        if let numberOfVotes = poll["numberOfVotes"] as? Int where numberOfVotes != 0 {
+//            numberOfVotesLabel.text = "\(numberOfVotes)"
+//            
+//            if let numberOfAgrees = poll["numberOfAgrees"] as? Int {
+//                agreeLabel.text = "\(fixScore(numberOfAgrees, totalScore: numberOfVotes))%"
+//            }
+//            if let numberOfDisagrees = poll["numberOfDisagrees"] as? Int {
+//                disagreeLabel.text = "\(fixScore(numberOfDisagrees, totalScore: numberOfVotes))%"
+//            }
+//            if let numberOfUnsures = poll["numberOfUnsures"] as? Int {
+//                unsureLabel.text = "\(fixScore(numberOfUnsures, totalScore: numberOfVotes))%"
+//            }
+//        } else {
+//            numberOfVotesLabel.text = "0"
+//            agreeLabel.text = "0%"
+//            disagreeLabel.text = "0%"
+//            unsureLabel.text = "0%"
+//        }
     }
 }

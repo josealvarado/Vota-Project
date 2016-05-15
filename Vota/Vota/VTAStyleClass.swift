@@ -11,7 +11,7 @@ import UIKit
 class VTAStyleClass: NSObject {
 
     class func darkBlueColor() -> UIColor {
-        return UIColor(red: 2.0/255, green: 51.0/255, blue: 101.0/255, alpha: 1)
+        return UIColor(red: 13.0/255, green: 51.0/255, blue: 143.0/255, alpha: 1)
     }
     
     class func lightGrayColor() -> UIColor {

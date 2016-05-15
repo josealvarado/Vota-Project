@@ -39,6 +39,10 @@
 		CB138D921C8D49CD0046CF12 /* VTASettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D911C8D49CD0046CF12 /* VTASettingsTableViewController.swift */; };
 		CB138D941C8D542C0046CF12 /* VTAEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB138D931C8D542C0046CF12 /* VTAEmailViewController.swift */; };
 		CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */; };
+		CB26A1121CE83023001FF8F6 /* HomeTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB26A10E1CE83023001FF8F6 /* HomeTabIcon.png */; };
+		CB26A1131CE83023001FF8F6 /* LearnTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB26A10F1CE83023001FF8F6 /* LearnTabIcon.png */; };
+		CB26A1141CE83023001FF8F6 /* ProfileTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB26A1101CE83023001FF8F6 /* ProfileTabIcon.png */; };
+		CB26A1151CE83023001FF8F6 /* SearchTabIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB26A1111CE83023001FF8F6 /* SearchTabIcon.png */; };
 		CB27B7631C6C5B78001736A5 /* VTAParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */; };
 		CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */; };
 		CB27B76F1C6DBAB9001736A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB27B76E1C6DBAB9001736A5 /* Launch Screen.storyboard */; };
@@ -168,6 +172,10 @@
 		CB138D931C8D542C0046CF12 /* VTAEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAEmailViewController.swift; sourceTree = "<group>"; };
 		CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		CB26A10E1CE83023001FF8F6 /* HomeTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeTabIcon.png; sourceTree = "<group>"; };
+		CB26A10F1CE83023001FF8F6 /* LearnTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LearnTabIcon.png; sourceTree = "<group>"; };
+		CB26A1101CE83023001FF8F6 /* ProfileTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileTabIcon.png; sourceTree = "<group>"; };
+		CB26A1111CE83023001FF8F6 /* SearchTabIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchTabIcon.png; sourceTree = "<group>"; };
 		CB27B7621C6C5B78001736A5 /* VTAParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAParentViewController.swift; sourceTree = "<group>"; };
 		CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAProfileViewController.swift; sourceTree = "<group>"; };
 		CB27B76E1C6DBAB9001736A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -402,6 +410,10 @@
 		CB4C07E51972394B00F08D01 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB26A10E1CE83023001FF8F6 /* HomeTabIcon.png */,
+				CB26A10F1CE83023001FF8F6 /* LearnTabIcon.png */,
+				CB26A1101CE83023001FF8F6 /* ProfileTabIcon.png */,
+				CB26A1111CE83023001FF8F6 /* SearchTabIcon.png */,
 				CB138D871C8B91AD0046CF12 /* profile.png */,
 				CB138D881C8B91AD0046CF12 /* notifications.png */,
 				CB138D891C8B91AD0046CF12 /* info.png */,
@@ -762,7 +774,9 @@
 				CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */,
 				CB138D8B1C8B91AD0046CF12 /* profile.png in Resources */,
 				CB138D781C89600A0046CF12 /* emailIcon.png in Resources */,
+				CB26A1131CE83023001FF8F6 /* LearnTabIcon.png in Resources */,
 				CB9632721B2ED32B009C240C /* Get Friends to Vote.png in Resources */,
+				CB26A1151CE83023001FF8F6 /* SearchTabIcon.png in Resources */,
 				CB4C07FA1972394B00F08D01 /* Icon-72.png in Resources */,
 				CB9632761B2ED343009C240C /* Settings.png in Resources */,
 				CB9632701B2ED31C009C240C /* Register-Icon.png in Resources */,
@@ -784,8 +798,10 @@
 				CB4C07FE1972394B00F08D01 /* Icon-Small-50.png in Resources */,
 				CB138D8E1C8B91AD0046CF12 /* search.png in Resources */,
 				CB4C07F81972394B00F08D01 /* Icon-60.png in Resources */,
+				CB26A1141CE83023001FF8F6 /* ProfileTabIcon.png in Resources */,
 				CB4C07F61972394B00F08D01 /* Icon-40.png in Resources */,
 				CB4C08011972394B00F08D01 /* Icon-Small@2x.png in Resources */,
+				CB26A1121CE83023001FF8F6 /* HomeTabIcon.png in Resources */,
 				CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */,
 				CB138D6E1C86B40F0046CF12 /* defaultProfilePicture.png in Resources */,
 				CB4C07FD1972394B00F08D01 /* Icon-76@2x.png in Resources */,

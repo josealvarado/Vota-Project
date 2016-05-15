@@ -10,26 +10,33 @@ import UIKit
 
 class VTALoginViewController: UIViewController {
 
-    @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var emailAddressTextField: UITextField!
-    @IBOutlet weak var passwordView: UIView!
-    @IBOutlet weak var passwordTextField: UITextField!
+//    @IBOutlet weak var emailView: UIView!
+//    @IBOutlet weak var emailAddressTextField: UITextField!
+//    @IBOutlet weak var passwordView: UIView!
+//    @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailView.layer.borderColor = UIColor.grayColor().CGColor
-        emailView.layer.borderWidth = 1
-        
-        passwordView.layer.borderColor = UIColor.grayColor().CGColor
-        passwordView.layer.borderWidth = 1
+//        emailView.layer.borderColor = UIColor.grayColor().CGColor
+//        emailView.layer.borderWidth = 1
+//        
+//        passwordView.layer.borderColor = UIColor.grayColor().CGColor
+//        passwordView.layer.borderWidth = 1
         
         // Setup dissmiss keyboard tap getsture
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        self.view.addGestureRecognizer(tap)
-        tap.cancelsTouchesInView = false
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+//        self.view.addGestureRecognizer(tap)
+//        tap.cancelsTouchesInView = false
+        
+        signUpButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 5
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,37 +58,37 @@ class VTALoginViewController: UIViewController {
     @IBAction func signInButtonPressed(sender: AnyObject) {
         
         
-        if emailAddressTextField.text != "" && passwordTextField.text != "" {
-            activityIndicator.startAnimating()
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-            
-            VTAProfileController.parseLogin(emailAddressTextField.text!, password: passwordTextField.text!,
-                success: { () -> Void in
-                    print("login successful")
-                    self.activityIndicator.stopAnimating()
-                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                    
-                    
-                    let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
-                    self.presentViewController(tabViewController, animated: false, completion: nil)
-                    
-                }, failure: { (error) -> Void in
-                    print("login failed")
-                    self.activityIndicator.stopAnimating()
-                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                    
-                    let alertController = UIAlertController(title: "Error", message:
-                        "\(error.description)", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-            })
-        }
-        else {
-            let alertController = UIAlertController(title: "Error", message:
-                "Missing information", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-        }
+//        if emailAddressTextField.text != "" && passwordTextField.text != "" {
+//            activityIndicator.startAnimating()
+//            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+//            
+//            VTAProfileController.parseLogin(emailAddressTextField.text!, password: passwordTextField.text!,
+//                success: { () -> Void in
+//                    print("login successful")
+//                    self.activityIndicator.stopAnimating()
+//                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+//                    
+//                    
+//                    let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
+//                    self.presentViewController(tabViewController, animated: false, completion: nil)
+//                    
+//                }, failure: { (error) -> Void in
+//                    print("login failed")
+//                    self.activityIndicator.stopAnimating()
+//                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+//                    
+//                    let alertController = UIAlertController(title: "Error", message:
+//                        "\(error.description)", preferredStyle: UIAlertControllerStyle.Alert)
+//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+//                    self.presentViewController(alertController, animated: true, completion: nil)
+//            })
+//        }
+//        else {
+//            let alertController = UIAlertController(title: "Error", message:
+//                "Missing information", preferredStyle: UIAlertControllerStyle.Alert)
+//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+//            self.presentViewController(alertController, animated: true, completion: nil)
+//        }
     }
     
     // MARK: - Navigation
