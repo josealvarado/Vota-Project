@@ -17,20 +17,26 @@ class VTALoginViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var registrationView: UIView!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var loginViewEmailTextField: UITextField!
+    @IBOutlet weak var loginViewPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        emailView.layer.borderColor = UIColor.grayColor().CGColor
+        self.hideKeyboardWhenTappedAround()
+
+        //        emailView.layer.borderColor = UIColor.grayColor().CGColor
 //        emailView.layer.borderWidth = 1
 //        
 //        passwordView.layer.borderColor = UIColor.grayColor().CGColor
 //        passwordView.layer.borderWidth = 1
         
-        // Setup dissmiss keyboard tap getsture
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+//         Setup dissmiss keyboard tap getsture
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(VTALoginViewController.DismissKeyboard))
 //        self.view.addGestureRecognizer(tap)
 //        tap.cancelsTouchesInView = false
         
@@ -38,6 +44,8 @@ class VTALoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
         
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -55,45 +63,52 @@ class VTALoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func signInButtonPressed(sender: AnyObject) {
-        
-        
-//        if emailAddressTextField.text != "" && passwordTextField.text != "" {
-//            activityIndicator.startAnimating()
-//            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-//            
-//            VTAProfileController.parseLogin(emailAddressTextField.text!, password: passwordTextField.text!,
-//                success: { () -> Void in
-//                    print("login successful")
-//                    self.activityIndicator.stopAnimating()
-//                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
-//                    
-//                    
-//                    let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
-//                    self.presentViewController(tabViewController, animated: false, completion: nil)
-//                    
-//                }, failure: { (error) -> Void in
-//                    print("login failed")
-//                    self.activityIndicator.stopAnimating()
-//                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
-//                    
-//                    let alertController = UIAlertController(title: "Error", message:
-//                        "\(error.description)", preferredStyle: UIAlertControllerStyle.Alert)
-//                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-//                    self.presentViewController(alertController, animated: true, completion: nil)
-//            })
-//        }
-//        else {
-//            let alertController = UIAlertController(title: "Error", message:
-//                "Missing information", preferredStyle: UIAlertControllerStyle.Alert)
-//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-//            self.presentViewController(alertController, animated: true, completion: nil)
-//        }
-    }
-    
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
+    
+    // MARK: - Registration View Actions
+    
+    @IBAction func registrationViewSignUpButtonPressed(sender: AnyObject) {
+    }
+    @IBAction func registrationViewLoginButtonPressed(sender: AnyObject) {
+        registrationView.hidden = true;
+        loginView.hidden = false;
+    }
 
+    // MARK: - Login View Actions
+    @IBAction func loginViewBackButtonPressed(sender: AnyObject) {
+        registrationView.hidden = false;
+        loginView.hidden = true;
+    }
+    @IBAction func loginViewLoginButtonPressed(sender: AnyObject) {
+        guard let email = loginViewEmailTextField.text where email != "" else { return }
+        guard let password = loginViewPasswordTextField.text where password != "" else { return }
+        
+        activityIndicator.startAnimating()
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        
+        VTAProfileController.parseLogin(email, password: password, success: {
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            self.presentViewController(tabViewController, animated: false, completion: {
+                self.registrationView.hidden = false
+                self.loginView.hidden = true
+            })
+            
+            }) { (error) in
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
+                let alertController = UIAlertController(title: "Error", message:
+                    "\(error.description)", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+        }
+
+
+    }
 }
