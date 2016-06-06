@@ -30,6 +30,8 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewWillAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+
         VTAPollClient.polls(
             { (polls) -> Void in
                 self.polls = polls

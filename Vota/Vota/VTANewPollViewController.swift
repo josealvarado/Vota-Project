@@ -12,19 +12,16 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
 
     @IBOutlet weak var issueTextField: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
-    @IBOutlet weak var wordCountLabel: UILabel!
-
-    @IBOutlet weak var imageView: UIImageView!
     
     var issues = ["guns", "immigration"]
     
-    let placeHolderText = "Write a question ..."
+    let placeHolderText = "Poll text."
     let wordCount = 150
     
-    var imageSelected = false
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
         
@@ -35,7 +32,6 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
         issueTextField.inputView = picker
         
         VTAIssueClient.issuesStrings({ (issues) -> Void in
-            
             self.issues = issues
             }) { (error) -> Void in
                 print("ERROR, NewPollViewController, getting issues : \(error)")
@@ -48,21 +44,13 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     override func viewWillAppear(animated: Bool) {
-        imageSelected = false
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: - User Interactions
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
-    }
-    
-    @IBAction func includeImageButtonPressed(sender: AnyObject) {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        image.allowsEditing = false
-        self.presentViewController(image, animated: true, completion: nil)
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
@@ -79,13 +67,6 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
         post["numberOfAgrees"] = 0
         post["numberOfDisagrees"] = 0
         post["numberOfUnsures"] = 0
-        if imageSelected {
-            let imageOneData = UIImageJPEGRepresentation(imageView.image!, 0.5)
-            if let imageOneData = imageOneData {
-                let imageOneFile = PFFile(name: "imageOne.png", data: imageOneData)
-                post["image"] = imageOneFile
-            }
-        }
         post.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
             if success {
                 self.navigationController?.popViewControllerAnimated(true)
@@ -158,31 +139,7 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
             if newLength < 0 {
                 return false
             }
-            
-            wordCountLabel.text = "\(newLength)"
-            
-            if text == "" {
-                wordCountLabel.text = "\(wordCount)"
-            }
-        } else {
-            if range.length == 1 {
-                wordCountLabel.text = "\(wordCount - textView.text.characters.count + 1)"
-            } else {
-                wordCountLabel.text = "\(wordCount - textView.text.characters.count + range.length)"
-            }
         }
-        
         return true
-    }
-    
-    // MARK: - SelectImageViewControllerDelegate
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                self.imageView.image = image
-                self.imageSelected = true
-            }
-        })
     }
 }

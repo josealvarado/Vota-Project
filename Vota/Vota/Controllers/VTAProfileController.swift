@@ -107,6 +107,32 @@ class VTAProfileController: NSObject {
         }
     }
     
+    class func registerNewUser(name:String, email:String, password:String, zipCode: String, bio: String, success: () -> Void, failure: (error: String) -> Void) {
+        
+        if !isValidName(name) { return failure(error: "Invalid name") }
+        if !isValidEmail(email) { return failure(error: "Invalid email") }
+//        if !isValidPhoneNumber(zipCode) { return failure(error: "Invalid zip code") }
+
+        let user = PFUser()
+        user.username = email.lowercaseString
+        user.password = password
+        user.email = email.lowercaseString
+        user["name"] = name
+        user["zipCode"] = zipCode
+        user["type"] = ProfileType.Individual.rawValue
+        user["private"] = false
+        user["linkedFB"] = false
+        user.signUpInBackgroundWithBlock {
+            (successful: Bool, error: NSError?) -> Void in
+            if successful {
+                print("successfully created an individual Parse account")
+                return success()
+            } else if let error = error {
+                return failure(error: error.localizedDescription)
+            }
+        }
+    }
+    
     class func parseLogin(email: String, password: String, success: () -> Void, failure: (error: NSString) -> Void) {
         let query = PFUser.query()
         query?.whereKey("email", equalTo: email)
