@@ -50,7 +50,10 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
     // MARK: - User Interactions
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+//        self.navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true) {
+            
+        }
     }
     
     @IBAction func saveButtonPressed(sender: AnyObject) {
@@ -69,7 +72,10 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
         post["numberOfUnsures"] = 0
         post.saveInBackgroundWithBlock{(success: Bool, error: NSError?) -> Void in
             if success {
-                self.navigationController?.popViewControllerAnimated(true)
+//                self.navigationController?.popViewControllerAnimated(true)
+                self.dismissViewControllerAnimated(true, completion: {
+                    
+                })
             } else if let error = error {
                 print("ERROR, NewPollViewController: \(error)")
             }

@@ -12,6 +12,14 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var homeTabBarView: UIView!
+    
+    @IBOutlet weak var searchTabBarView: UIView!
+    
+    @IBOutlet weak var learnTabBarView: UIView!
+    
+    @IBOutlet weak var profileTabBarView: UIView!
+    
     var polls = [PFObject]()
     
     override func viewDidLoad() {
@@ -21,7 +29,7 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.registerNib(UINib(nibName: "VTAPollTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAPollTableViewCell")
 
-        
+//        self.hidesBottomBarWhenPushed = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +46,23 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 self.tableView.reloadData()
             }, failure: { (error) -> Void in
                 print("ERROR, HomeViewController, \(error)")
+        })
+    }
+    
+    // MARK: - User Interactions
+    
+    @IBAction func searchTabBarButtonPRessed(sender: UIButton) {
+    }
+    
+    
+    @IBAction func learnTabBarButtonPressed(sender: UIButton) {
+    }
+    
+    @IBAction func profileTabBarButtonPressed(sender: UIButton) {
+        let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTAProfileViewController")
+        tabViewController.hidesBottomBarWhenPushed = true
+        self.presentViewController(tabViewController, animated: false, completion: {
+          
         })
     }
     

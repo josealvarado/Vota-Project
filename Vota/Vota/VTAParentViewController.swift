@@ -37,7 +37,7 @@ class VTAParentViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         if let _ = PFUser.currentUser() {
             print("B Login the user in")
-            let controller = storyboard?.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            let controller = storyboard?.instantiateViewControllerWithIdentifier("VTAHomeViewController")
             self.presentViewController(controller!, animated: true, completion: nil)
             
         } else {

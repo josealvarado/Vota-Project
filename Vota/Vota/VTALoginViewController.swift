@@ -102,7 +102,8 @@ class VTALoginViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
-            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTAHomeViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
             self.presentViewController(tabViewController, animated: false, completion: {
                 self.registrationView.hidden = false
                 self.loginView.hidden = true
@@ -139,7 +140,8 @@ class VTALoginViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
-            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTAHomeViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
             self.presentViewController(tabViewController, animated: false, completion: {
                 self.registrationView.hidden = false
                 self.loginView.hidden = true
