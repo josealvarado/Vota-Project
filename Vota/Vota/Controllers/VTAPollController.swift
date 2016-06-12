@@ -15,7 +15,9 @@ public enum PollOption: Int {
 class VTAPollController: NSObject {
     
     class func votesOnPollWithOption(poll: PFObject, option:PollOption, success:() -> Void, failure: () -> Void) {
-        VTAPollController.alreadyVotedOnPoll(poll, voted: { () -> Void in
+        
+        
+        VTAPollController.alreadyVotedOnPoll(poll, voted: { (pollOption) in
             print("already voted on poll. Do nothing")
             }) { () -> Void in
                 if option == .Agreed {
@@ -48,13 +50,16 @@ class VTAPollController: NSObject {
         }
     }
     
-    class func alreadyVotedOnPoll(poll: PFObject, voted: () -> Void, notVoted: () -> Void) {
+    class func alreadyVotedOnPoll(poll: PFObject, voted: (pollOption: PollOption) -> Void, notVoted: () -> Void) {
         let query = PFQuery(className: "Vote")
         query.whereKey("user", equalTo: PFUser.currentUser())
         query.whereKey("poll", equalTo: poll)
         query.getFirstObjectInBackgroundWithBlock { (voteObject: PFObject?, error: NSError?) -> Void in
-            if let _ = voteObject {
-                voted()
+            if let voteObeject = voteObject {
+                guard let option = voteObeject["option"] as? Int else { return }
+                if let pollOption = PollOption(rawValue: option) {
+                    voted(pollOption: pollOption)
+                }
             } else if let error = error {
                 if error.code == 101 {
                     // no results matched the query, which means the user has not voted on this poll yet
@@ -66,7 +71,7 @@ class VTAPollController: NSObject {
         }
     }
     
-    class func votedOptionOnPoll(poll: PFObject, voted: (option: PollOption) -> Void) {
+    class func votedOptionOnPoll(poll: PFObject, voted: (option: PollOption) -> Void, notVoted: () -> Void) {
         let query = PFQuery(className: "Vote")
         query.whereKey("user", equalTo: PFUser.currentUser())
         query.whereKey("poll", equalTo: poll)
@@ -76,11 +81,78 @@ class VTAPollController: NSObject {
                     voted(option: .Agreed)
                 } else if option == 1 {
                     voted(option: .Disagree)
-                } else if option == 2 {
-                    voted(option: .Unsure)
+                }
+            } else {
+                notVoted()
+            }
+        }
+    }
+    
+    class func votesOnPoll(poll: PFObject, votes: (winner: PollOption, percentage: Int) -> Void) {
+//        let query = PFQuery(className: "Vote")
+//        query.whereKey("user", equalTo: PFUser.currentUser())
+//        query.whereKey("poll", equalTo: poll)
+//        query.findObjectsInBackgroundWithBlock {
+//            (voteObjects: [AnyObject]?, error: NSError?) -> Void in
+//            if let voteObjects = voteObjects {
+//
+//                var agrreCount = 0
+//                var disagreeCount = 0
+//                
+//            } else if let error = error {
+//
+//            }
+//        }
+        
+        let query = PFQuery(className:"Vote")
+        query.whereKey("user", equalTo: PFUser.currentUser())
+        query.whereKey("poll", equalTo: poll)
+        query.whereKey("option", equalTo: 0)
+        query.countObjectsInBackgroundWithBlock {
+            (agreeCount: Int32, error: NSError?) -> Void in
+            if error == nil {
+                print("Agree count \(agreeCount)")
+                
+                
+                
+                
+                
+                let query2 = PFQuery(className:"Vote")
+                query2.whereKey("user", equalTo: PFUser.currentUser())
+                query2.whereKey("poll", equalTo: poll)
+                query2.whereKey("option", equalTo: 1)
+                query2.countObjectsInBackgroundWithBlock {
+                    (disagreeCount: Int32, error: NSError?) -> Void in
+                    if error == nil {
+                        print("Disagree count \(disagreeCount)")
+                        let totalCount = agreeCount + disagreeCount
+                        if agreeCount > disagreeCount {
+//                            let percent = Double(agreeCount) / Double((agreeCount + disagreeCount))
+                            let percent = self.fixScore(Int(agreeCount), totalScore: Int(totalCount))
+//                            let percent = self.fixScore(
+
+                            print("Agree per \(percent)")
+                            
+                            votes(winner: .Agreed, percentage: percent)
+                        } else {
+                            let percent = self.fixScore(Int(disagreeCount), totalScore: Int(totalCount))
+                            print("Disagree per \(percent)")
+                            votes(winner: .Disagree, percentage: percent)
+                        }
+                    }
                 }
             }
         }
+    }
+    
+    class func fixScore(firstScore: Int, totalScore: Int) -> Int {
+        if firstScore == 0 {
+            return 0
+        } else if firstScore == totalScore {
+            return 100
+        }
+        
+        return Int(1.0 * Double(firstScore) / Double(totalScore) * 100)
     }
     
 }

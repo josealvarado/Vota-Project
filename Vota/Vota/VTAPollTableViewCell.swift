@@ -31,6 +31,11 @@ class VTAPollTableViewCell: UITableViewCell {
 //    @IBOutlet weak var disagreeView: UIView!
 //    @IBOutlet weak var unsureView: UIView!
     
+    @IBOutlet weak var resultsView: UIView!
+    @IBOutlet weak var resultsLabel: UILabel!
+    
+    @IBOutlet weak var agreeButton: UIButton!
+    @IBOutlet weak var disagreeButton: UIButton!
     
 //    @IBOutlet weak var agreeLabel: UILabel!
 //    @IBOutlet weak var disagreeLabel: UILabel!
@@ -38,9 +43,10 @@ class VTAPollTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bottomView: UIView!
     
+    @IBOutlet weak var percentageWidthConstraint: NSLayoutConstraint!
     weak var delegate: VTAPollTableViewCellDelegate?
     
-    var poll: PFObject!
+    var poll: PFObject?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,6 +65,8 @@ class VTAPollTableViewCell: UITableViewCell {
 //        
 //        unsureView.layer.borderWidth = 1.0
 //        unsureView.layer.borderColor = UIColor.grayColor().CGColor
+        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -69,74 +77,76 @@ class VTAPollTableViewCell: UITableViewCell {
     
     
     @IBAction func agreeButtonPressed(sender: AnyObject) {
+        guard let poll = self.poll else { return }
+
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Agreed, success: { () -> Void in
             print("Successfully voted disagree")
-            self.updateVotes()
+            self.updateVotes(PollOption.Agreed)
             }) { () -> Void in
                 print("Failed to vote disagree")
         }
     }
     
     @IBAction func disagreeButtonPressed(sender: AnyObject) {
+        guard let poll = self.poll else { return }
+
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Disagree, success: { () -> Void in
             print("Successfully voted disagree")
-            self.updateVotes()
+            self.updateVotes(PollOption.Disagree)
             }) { () -> Void in
                 print("Failed to vote disagree")
         }
     }
-    
-    @IBAction func unsureButtonPressed(sender: AnyObject) {
-        VTAPollController.votesOnPollWithOption(poll, option: PollOption.Unsure, success: { () -> Void in
-            print("Successfully voted disagree")
-            self.updateVotes()
-            }) { () -> Void in
-                print("Failed to vote disagree")
-        }
-    }
-    
+
     @IBAction func detailButtonPressed(sender: AnyObject) {
+        guard let poll = self.poll else { return }
+
         let dict = ["type": "detail", "poll": poll]
         delegate?.pollSelected(dict)
     }
     
     func configureWithPollObject(poll: PFObject) {
-//        self.pollImageHeightConstraint.constant = 1
+        resultsView.hidden = true
+        
         self.poll = poll
         
-//        VTAPollController.votedOptionOnPoll(poll) { (option) -> Void in
-//            if option == PollOption.Agreed {
-//                self.agreeLabel.textColor = UIColor.blueColor()
-//            } else if option == PollOption.Disagree {
-//                self.disagreeLabel.textColor = UIColor.blueColor()
-//            } else if option == PollOption.Unsure {
-//                self.unsureLabel.textColor = UIColor.blueColor()
-//            }
-//        }
-        
-//        if let imageFile = poll["image"] as? PFFile {
-//            imageFile.getDataInBackgroundWithBlock({
-//                (imageData: NSData?, error: NSError?) -> Void in
-//                if (error == nil) {
-//                    self.pollImageHeightConstraint.constant = 124
-//                    let image = UIImage(data:imageData!)
-//                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                        self.pollImageView.image = image
-//                    })
-//                }
-//            })
-//        }
-        
         if let issue = poll["issue_type"] as? String {
-            issueLabel.text = issue
+            issueLabel.text = issue.capatilizeEveryFirstCharacterOfEveryWord()
+            
+//            issueLabel.text = capatilizeEveryFirstCharacterOfEveryWord(issue)
         }
         if let question = poll["question"] as? String {
             questionLabel.text = question
         }
-//        if let numberOfComments = poll["numberOfComments"] as? Int {
-//            numberOfCommentsLabel.text = "\(numberOfComments)"
-//        }
-        updateVotes()
+        
+        VTAPollController.votedOptionOnPoll(poll, voted: { (option) in
+            VTAPollController.votesOnPoll(poll, votes: { (winner, percentage) in
+                if option == PollOption.Agreed {
+                    self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                } else if option == PollOption.Disagree {
+                    self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                }
+                
+                var text = ""
+                
+                if winner == .Agreed {
+                    text = "\(percentage)% Agreed"
+                } else {
+                    text = "\(percentage)% Disagreed"
+                }
+                
+                self.resultsLabel.text = text
+                
+                let width = self.frame.width - 46
+                
+                self.percentageWidthConstraint.constant = width * CGFloat(percentage) / 100
+                self.resultsView.hidden = false
+            })
+        }) {
+            self.resultsView.hidden = true
+        }
     }
     
     func fixScore(firstScore: Int, totalScore: Int) -> Int {
@@ -149,24 +159,47 @@ class VTAPollTableViewCell: UITableViewCell {
         return Int(1.0 * Double(firstScore) / Double(totalScore) * 100)
     }
     
-    func updateVotes() {
-//        if let numberOfVotes = poll["numberOfVotes"] as? Int where numberOfVotes != 0 {
-//            numberOfVotesLabel.text = "\(numberOfVotes)"
-//            
-//            if let numberOfAgrees = poll["numberOfAgrees"] as? Int {
-//                agreeLabel.text = "\(fixScore(numberOfAgrees, totalScore: numberOfVotes))%"
-//            }
-//            if let numberOfDisagrees = poll["numberOfDisagrees"] as? Int {
-//                disagreeLabel.text = "\(fixScore(numberOfDisagrees, totalScore: numberOfVotes))%"
-//            }
-//            if let numberOfUnsures = poll["numberOfUnsures"] as? Int {
-//                unsureLabel.text = "\(fixScore(numberOfUnsures, totalScore: numberOfVotes))%"
-//            }
-//        } else {
-//            numberOfVotesLabel.text = "0"
-//            agreeLabel.text = "0%"
-//            disagreeLabel.text = "0%"
-//            unsureLabel.text = "0%"
-//        }
+    func updateVotes(option: PollOption) {
+        guard let poll = self.poll else { return }
+
+        VTAPollController.votesOnPoll(poll, votes: { (winner, percentage) in
+            if option == PollOption.Agreed {
+                self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+            } else if option == PollOption.Disagree {
+                self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                self.disagreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+            }
+            
+            var text = ""
+            
+            if winner == .Agreed {
+                text = "\(percentage)% Agreed"
+            } else {
+                text = "\(percentage)% Disagreed"
+            }
+            
+            self.resultsLabel.text = text
+            
+            let width = self.frame.width - 46
+            
+            self.percentageWidthConstraint.constant = width * CGFloat(percentage) / 100
+            self.resultsView.hidden = false
+        })
     }
+    
+    func capatilizeEveryFirstCharacterOfEveryWord (text: String) -> String {
+        
+        let split = text.componentsSeparatedByString(" ")
+        var newWord = ""
+        
+        for var word in split {
+            word.replaceRange(word.startIndex...word.startIndex, with: String(word[word.startIndex]).capitalizedString)
+            newWord += word + " "
+        }
+        
+        
+        return newWord
+    }
+
 }

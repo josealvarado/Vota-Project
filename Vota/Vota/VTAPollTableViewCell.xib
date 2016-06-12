@@ -48,20 +48,20 @@
                                     <action selector="agreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oSu-gW-qAI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lp-mOt">
+                                <rect key="frame" x="99" y="175" width="91" height="30"/>
+                                <state key="normal" title="Disagree"/>
+                                <connections>
+                                    <action selector="disagreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbw-No-Jjw"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-Iv-HcD">
                                 <rect key="frame" x="190" y="175" width="91.5" height="30"/>
                                 <state key="normal" title="Discuss">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="unsureButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qlh-pc-O5P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lp-mOt">
-                                <rect key="frame" x="99" y="175" width="91" height="30"/>
-                                <state key="normal" title="Disagree"/>
-                                <connections>
-                                    <action selector="disagreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbw-No-Jjw"/>
+                                    <action selector="detailButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3gI-LR-F33"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G94-cm-xT4">
@@ -73,12 +73,50 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aef-tp-fhi">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="36"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAN-gi-TXh">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="36"/>
+                                                <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="274" id="kZ7-9d-ydk"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMC-BY-dQ8">
+                                                <rect key="frame" x="15" y="8" width="244" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kMC-BY-dQ8" secondAttribute="bottom" constant="7" id="4d9-KD-9Id"/>
+                                            <constraint firstAttribute="trailing" secondItem="TAN-gi-TXh" secondAttribute="trailing" id="6qE-DW-8Ot"/>
+                                            <constraint firstAttribute="trailing" secondItem="kMC-BY-dQ8" secondAttribute="trailing" constant="15" id="HPX-zb-2n1"/>
+                                            <constraint firstAttribute="bottom" secondItem="TAN-gi-TXh" secondAttribute="bottom" id="HaL-GV-gUy"/>
+                                            <constraint firstItem="kMC-BY-dQ8" firstAttribute="leading" secondItem="Aef-tp-fhi" secondAttribute="leading" constant="15" id="NXm-7G-f0l"/>
+                                            <constraint firstItem="TAN-gi-TXh" firstAttribute="leading" secondItem="Aef-tp-fhi" secondAttribute="leading" id="NtY-qn-x9j"/>
+                                            <constraint firstItem="kMC-BY-dQ8" firstAttribute="top" secondItem="Aef-tp-fhi" secondAttribute="top" constant="8" id="glc-K6-b2D"/>
+                                            <constraint firstItem="TAN-gi-TXh" firstAttribute="top" secondItem="Aef-tp-fhi" secondAttribute="top" id="yNl-gu-nrH"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6qE-DW-8Ot"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="F7i-uX-Z0h" secondAttribute="trailing" id="8zI-aX-XnC"/>
                                     <constraint firstItem="F7i-uX-Z0h" firstAttribute="top" secondItem="G94-cm-xT4" secondAttribute="top" id="B7z-jz-lWe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aef-tp-fhi" secondAttribute="trailing" id="GTd-Sx-XlR"/>
+                                    <constraint firstItem="Aef-tp-fhi" firstAttribute="top" secondItem="G94-cm-xT4" secondAttribute="top" id="RvG-Vj-Knt"/>
                                     <constraint firstItem="F7i-uX-Z0h" firstAttribute="leading" secondItem="G94-cm-xT4" secondAttribute="leading" id="SF8-9F-9CM"/>
+                                    <constraint firstItem="Aef-tp-fhi" firstAttribute="leading" secondItem="G94-cm-xT4" secondAttribute="leading" id="ceE-GV-WZq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aef-tp-fhi" secondAttribute="bottom" id="iU1-55-Vnc"/>
                                     <constraint firstAttribute="height" constant="36" id="nF6-6x-HgA"/>
                                     <constraint firstAttribute="bottom" secondItem="F7i-uX-Z0h" secondAttribute="bottom" id="ui7-SN-ooa"/>
                                 </constraints>
@@ -125,9 +163,14 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="agreeButton" destination="znq-9v-ROS" id="gXw-jL-Hse"/>
                 <outlet property="containerView" destination="GHZ-dB-oQM" id="1RV-E6-mrA"/>
+                <outlet property="disagreeButton" destination="aWm-lp-mOt" id="1Uv-NW-qmV"/>
                 <outlet property="issueLabel" destination="4Np-Xr-ac4" id="KKE-dr-rYC"/>
+                <outlet property="percentageWidthConstraint" destination="kZ7-9d-ydk" id="uUI-Sl-LyG"/>
                 <outlet property="questionLabel" destination="wIp-cH-pXY" id="mvU-BY-Xm6"/>
+                <outlet property="resultsLabel" destination="kMC-BY-dQ8" id="LWe-uO-Icb"/>
+                <outlet property="resultsView" destination="Aef-tp-fhi" id="1b9-VG-OQl"/>
             </connections>
             <point key="canvasLocation" x="312" y="312"/>
         </tableViewCell>

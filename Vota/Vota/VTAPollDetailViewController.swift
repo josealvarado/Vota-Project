@@ -32,6 +32,11 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
     
     // MARK: - User Interactions
     
+    
+    @IBAction func backButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func cancelButtonPressed(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
@@ -50,7 +55,13 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
             self.textField.text = ""
 
             if success {
-                self.tableView.reloadData()
+                VTACommentClient.commentObjectsForPoll(self.poll, success: { (comments) -> Void in
+                    print("number of comments \(comments.count)")
+                    self.comments = comments
+                    self.tableView.reloadData()
+                }) { (error) -> Void in
+                    print("ERROR, VTAPollDetailViewController, \(error)")
+                }
             } else if let error = error {
                 print("ERROR, VTAPollDetailViewController: \(error)")
             }

@@ -19,6 +19,21 @@ class VTAStyleClass: NSObject {
     }    
 }
 
+extension String {
+    func capatilizeEveryFirstCharacterOfEveryWord () -> String {
+        let split = self.componentsSeparatedByString(" ")
+        var newWord = ""
+        
+        for var word in split {
+            word.replaceRange(word.startIndex...word.startIndex, with: String(word[word.startIndex]).capitalizedString)
+            newWord += word + " "
+        }
+        
+        
+        return newWord
+    }
+}
+
 // Put this piece of code anywhere you like
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
