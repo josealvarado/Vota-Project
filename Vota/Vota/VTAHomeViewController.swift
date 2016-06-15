@@ -52,6 +52,11 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - User Interactions
     
     @IBAction func searchTabBarButtonPRessed(sender: UIButton) {
+        let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTASearchViewController")
+        tabViewController.hidesBottomBarWhenPushed = true
+        self.presentViewController(tabViewController, animated: false, completion: {
+            
+        })
     }
     
     

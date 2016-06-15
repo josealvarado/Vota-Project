@@ -11,8 +11,8 @@ import UIKit
 class VTASearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var issueView: UIView!
-    @IBOutlet weak var peopleView: UIView!
+    @IBOutlet weak var politicsButton: UIButton!
+    @IBOutlet weak var peopleButton: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,6 +28,20 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         
         tableView.registerNib(UINib(nibName: "VTAUserTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAUserTableViewCell")
+        
+        VTAIssueClient.issuesObjects({ (issues) -> Void in
+            self.issues = issues
+            self.selectedList = issues
+            self.tableView.reloadData()
+            }, failure: { (error) -> Void in
+                print("VTASearchViewController, issueButtonPressed, getting issues : \(error)")
+        })
+        
+        VTAUserClient.userObjects({ (users) -> Void in
+            self.users = users
+            }, failure: { (error) -> Void in
+                print("VTASearchViewController, peopleButtonPressed, getting users : \(error)")
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,25 +53,38 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewWillAppear(true);
         navigationController?.navigationBar.hidden = true
         
-        VTAIssueClient.issuesObjects({ (issues) -> Void in
-            self.issues = issues
+        if selectedOption == 0 {
             self.selectedList = issues
-            self.tableView.reloadData()
-            }, failure: { (error) -> Void in
-                print("VTASearchViewController, issueButtonPressed, getting issues : \(error)")
-        })
+        } else {
+            self.selectedList = users
+        }
+        self.tableView.reloadData()
     }
     
     // MARK: - User Interactions
+    
+    @IBAction func homeTabrBarButtonPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(false) {
+        }
+    }
+    
     @IBAction func issueButtonPressed(sender: AnyObject) {
         if selectedOption != 0 {
             selectedOption = 0
 
-            issueView.backgroundColor = VTAStyleClass.darkBlueColor()
-            peopleView.backgroundColor = UIColor.grayColor()
+            politicsButton.setTitleColor(VTAStyleClass.darkBlueColor(), forState: .Normal)
+            peopleButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
             
             self.selectedList = issues
             self.tableView.reloadData()
+            
+            VTAIssueClient.issuesObjects({ (issues) -> Void in
+                self.issues = issues
+                self.selectedList = issues
+                self.tableView.reloadData()
+                }, failure: { (error) -> Void in
+                    print("VTASearchViewController, issueButtonPressed, getting issues : \(error)")
+            })
         }
     }
 
@@ -65,9 +92,12 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
         if selectedOption != 1 {
             selectedOption = 1
 
-            issueView.backgroundColor = UIColor.grayColor()
-            peopleView.backgroundColor = VTAStyleClass.darkBlueColor()
+            politicsButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
+            peopleButton.setTitleColor(VTAStyleClass.darkBlueColor(), forState: .Normal)
             
+            self.selectedList = users
+            self.tableView.reloadData()
+
             VTAUserClient.userObjects({ (users) -> Void in
                 self.users = users
                 print("users found \(users.count)")
@@ -78,7 +108,6 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
             })
         }
     }
-    
     
     // MARK: - Navigation
 
@@ -122,7 +151,7 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCellWithIdentifier( "IssueCell", forIndexPath: indexPath)
         let label = cell.viewWithTag(100) as! UILabel
-        label.text = issue
+        label.text = issue.capatilizeEveryFirstCharacterOfEveryWord()
 
         return cell
     }
@@ -135,7 +164,19 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("VTAFilteredSearchViewController", sender: indexPath.row)
+        if selectedOption == 0 {
+            performSegueWithIdentifier("VTAFilteredSearchViewController", sender: indexPath.row)
+        } else {
+            guard let user = selectedList[indexPath.row] as? PFUser else { return }            
+            guard let profileVC = self.storyboard!.instantiateViewControllerWithIdentifier("VTAProfileViewController") as? VTAProfileViewController else { return }
+            
+            profileVC.hidesBottomBarWhenPushed = true
+            profileVC.viewingOtherUser = true
+            profileVC.otherUser = user
+            self.presentViewController(profileVC, animated: false, completion: {
+                
+            })
+        }
     }
 
 }

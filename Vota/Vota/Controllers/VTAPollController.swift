@@ -88,22 +88,21 @@ class VTAPollController: NSObject {
         }
     }
     
+    class func numberOfPollsVotedOnByUser(user: PFUser, results: (count: Int) -> Void) {
+        let query = PFQuery(className: "Vote")
+        query.whereKey("user", equalTo: PFUser.currentUser())
+        query.countObjectsInBackgroundWithBlock {
+            (pollCount: Int32, error: NSError?) -> Void in
+
+            if let _ = error {
+                results(count: 0)
+            } else {
+                results(count: Int(pollCount))
+            }
+        }
+    }
+    
     class func votesOnPoll(poll: PFObject, votes: (winner: PollOption, percentage: Int) -> Void) {
-//        let query = PFQuery(className: "Vote")
-//        query.whereKey("user", equalTo: PFUser.currentUser())
-//        query.whereKey("poll", equalTo: poll)
-//        query.findObjectsInBackgroundWithBlock {
-//            (voteObjects: [AnyObject]?, error: NSError?) -> Void in
-//            if let voteObjects = voteObjects {
-//
-//                var agrreCount = 0
-//                var disagreeCount = 0
-//                
-//            } else if let error = error {
-//
-//            }
-//        }
-        
         let query = PFQuery(className:"Vote")
         query.whereKey("user", equalTo: PFUser.currentUser())
         query.whereKey("poll", equalTo: poll)
@@ -154,5 +153,22 @@ class VTAPollController: NSObject {
         
         return Int(1.0 * Double(firstScore) / Double(totalScore) * 100)
     }
+    
+    class func numberOfPollsByUser(user: PFUser, pollCOunt: (count: Int) -> Void) {
+        let query = PFQuery(className:"Vote")
+        query.whereKey("user", equalTo: user)
+        query.countObjectsInBackgroundWithBlock {
+            (pollCount: Int32, error: NSError?) -> Void in
+            if error == nil {
+                print("numberOfPollsMade \(pollCount)")
+                
+                pollCOunt(count: Int(pollCount))
+            } else {
+                pollCOunt(count: 0)
+            }
+        }
+    }
+    
+    
     
 }

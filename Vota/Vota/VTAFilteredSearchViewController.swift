@@ -20,7 +20,9 @@ class VTAFilteredSearchViewController: UIViewController, UITableViewDataSource, 
         // Do any additional setup after loading the view.
         
         tableView.registerNib(UINib(nibName: "VTAPollTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAPollTableViewCell")
-
+        
+        
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +43,13 @@ class VTAFilteredSearchViewController: UIViewController, UITableViewDataSource, 
     }
     
     @IBAction func backButtonPressed(sender: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+//        navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        
+        
+        
+        print("here")
     }
 
     // MARK: - Navigation

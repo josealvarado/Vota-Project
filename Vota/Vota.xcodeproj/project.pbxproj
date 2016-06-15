@@ -123,6 +123,8 @@
 		CBBE9FCD1C74544C006B9FD4 /* VTAIssueClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */; };
 		CBBE9FD41C77007B006B9FD4 /* comments.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9FD31C77007B006B9FD4 /* comments.png */; };
 		CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9FD51C7700EB006B9FD4 /* votes.png */; };
+		CBCB7A8B1D0FF6FF00596DAD /* VTAPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB7A8A1D0FF6FF00596DAD /* VTAPollViewController.swift */; };
+		CBCB7A8D1D1109F400596DAD /* VTAVotaSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB7A8C1D1109F400596DAD /* VTAVotaSettings.swift */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -280,6 +282,8 @@
 		CBBE9FCC1C74544C006B9FD4 /* VTAIssueClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAIssueClient.swift; sourceTree = "<group>"; };
 		CBBE9FD31C77007B006B9FD4 /* comments.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comments.png; sourceTree = "<group>"; };
 		CBBE9FD51C7700EB006B9FD4 /* votes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votes.png; sourceTree = "<group>"; };
+		CBCB7A8A1D0FF6FF00596DAD /* VTAPollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollViewController.swift; sourceTree = "<group>"; };
+		CBCB7A8C1D1109F400596DAD /* VTAVotaSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAVotaSettings.swift; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
 		CBF3707A19780D8F00157BBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -371,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				CB27B7641C6C77CD001736A5 /* VTAProfileViewController.swift */,
+				CBCB7A8A1D0FF6FF00596DAD /* VTAPollViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 				CBAA21BC1971F921008404F7 /* XYZAppDelegate.h */,
 				CBAA21BD1971F921008404F7 /* XYZAppDelegate.m */,
 				CB138D611C8568090046CF12 /* VTAStyleClass.swift */,
+				CBCB7A8C1D1109F400596DAD /* VTAVotaSettings.swift */,
 				CB927D971C58A3FC0069AE50 /* Views */,
 				CB927D9A1C58A4BF0069AE50 /* Controllers */,
 				CB87395E1B1B56AF00074C31 /* Old App */,
@@ -830,6 +836,7 @@
 				CBB9F9A71B23CD700054D9E9 /* PartyViewController.m in Sources */,
 				CBB9F9B61B24057E0054D9E9 /* VotedTableViewController.m in Sources */,
 				CB138D5D1C842ADC0046CF12 /* VTAFeatureNewsCollectionViewCell.swift in Sources */,
+				CBCB7A8B1D0FF6FF00596DAD /* VTAPollViewController.swift in Sources */,
 				CB1DC90D197C9E84000DA1C4 /* ProgressHUD.m in Sources */,
 				CBBE9FBB1C72A3FB006B9FD4 /* VTAPostClient.swift in Sources */,
 				CBB9F9A11B239A7E0054D9E9 /* GenderViewController.m in Sources */,
@@ -843,6 +850,7 @@
 				CB9632861B2EE2C3009C240C /* NotificationsTableViewController.m in Sources */,
 				CBB9F99D1B2397D90054D9E9 /* EditProfileViewController.m in Sources */,
 				CB927D791C5552450069AE50 /* VTALoginViewController.swift in Sources */,
+				CBCB7A8D1D1109F400596DAD /* VTAVotaSettings.swift in Sources */,
 				CB27B7651C6C77CD001736A5 /* VTAProfileViewController.swift in Sources */,
 				CB138D661C86ACEC0046CF12 /* VTAUserClient.swift in Sources */,
 				CBAA21BE1971F921008404F7 /* XYZAppDelegate.m in Sources */,

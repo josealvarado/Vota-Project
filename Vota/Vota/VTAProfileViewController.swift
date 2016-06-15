@@ -8,22 +8,25 @@
 
 import UIKit
 
-class VTAProfileViewController: UIViewController
-//    ,UITableViewDelegate, UITableViewDataSource,
-//VTAPollTableViewCellDelegate
-{
+class VTAProfileViewController: UIViewController {
 
-//    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UITextView!
+    @IBOutlet weak var bottomContainerView: UIView!
+    @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var follwersButton: UIButton!
+    @IBOutlet weak var pollsMadeButton: UIButton!
+    @IBOutlet weak var pollsVotedButton: UIButton!
     
     var polls = [PFObject]()
+    var viewingOtherUser = false
+    var otherUser: PFUser?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-//        tableView.registerNib(UINib(nibName: "VTAProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAProfileTableViewCell")
-//        tableView.registerNib(UINib(nibName: "VTAPollTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAPollTableViewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,75 +35,66 @@ class VTAProfileViewController: UIViewController
     }
     
     override func viewWillAppear(animated: Bool) {
-        if PFUser.currentUser() == nil {
+        guard let currentUser = PFUser.currentUser() else {
             self.dismissViewControllerAnimated(false, completion: nil)
+            return
         }
-        guard let currentUser = PFUser.currentUser() else { return }
         
-//        VTAPollClient.pollsByUser(currentUser, success: { (polls) -> Void in
-//            self.polls = polls
-//            self.tableView.reloadData()
-//            }) { (error) -> Void in
-//                print("VTAProfileViewController, viewWillAppear, pollsByUser: \(error)")
-//        }
+        if let otherUser = otherUser where otherUser.email != currentUser.email {
+            setupUser(otherUser)
+            bottomContainerView.hidden = true
+            backButton.hidden = false
+        } else {
+            bottomContainerView.hidden = false
+            backButton.hidden = true
+            
+            setupUser(currentUser)
+        }
+    }
+    
+    func setupUser(user : PFUser) {
+        usernameLabel.text = user.username ?? ""
+        bioLabel.text = user["bio"] as? String ?? ""
+        
+        VTAUserClient.numberOfFollowingForUser(user, success: { (count) in
+            self.followingButton.setTitle("\(count) Following", forState: .Normal)
+        }) { (error) in
+            self.followingButton.setTitle("0 Following", forState: .Normal)
+        }
+        
+        VTAUserClient.numberOfFollowersForUser(user, success: { (count) in
+            self.follwersButton.setTitle("\(count) Followers", forState: .Normal)
+        }) { (error) in
+            self.follwersButton.setTitle("0 Followers", forState: .Normal)
+        }
+        
+        VTAPollController.numberOfPollsByUser(user) { (count) in
+            self.pollsMadeButton.setTitle("\(count) Polls Made", forState: .Normal)
+        }
+        
+        VTAPollController.numberOfPollsVotedOnByUser(user) { (count) in
+            self.pollsVotedButton.setTitle("\(count) Polls Voted", forState: .Normal)
+        }
     }
     
     // MARK: - User Interactions
+    
+    @IBAction func backButtonPressed(sender: UIButton) {
+        if sender.hidden == true {
+            return
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func homeTabrBarButtonPressed(sender: UIButton) {
         self.dismissViewControllerAnimated(false) { 
             
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func pollsMadeButtonPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("pollsViewController", sender: nil)
     }
-    */
-//    
-//    // MARK: - Table view data source
-//    
-//    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return polls.count + 1
-//    }
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//        if indexPath.row == 0 {
-//            let profileCell = tableView.dequeueReusableCellWithIdentifier("VTAProfileTableViewCell", forIndexPath: indexPath) as! VTAProfileTableViewCell
-//            profileCell.configureCellWithProfile(PFUser.currentUser())
-//            //        pollCell.delegate = self
-//            return profileCell
-//        }
-//        
-//        let poll = polls[indexPath.row - 1] as PFObject
-//        
-//        let pollCell = tableView.dequeueReusableCellWithIdentifier("VTAPollTableViewCell", forIndexPath: indexPath) as! VTAPollTableViewCell
-//        pollCell.configureWithPollObject(poll)
-//        pollCell.delegate = self
-//        return pollCell
-//    }
-//    
-//    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        if indexPath.row == 0 {
-//            return 250
-//        }
-//        
-//        let poll = polls[indexPath.row - 1] as PFObject
-//        
-//        if let _ = poll["image"] as? PFFile {
-//            return 294
-//        }
-//        return 170.0
-//    }
 
     // MARK: - Navigation
     

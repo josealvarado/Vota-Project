@@ -131,7 +131,7 @@ class VTALoginViewController: UIViewController {
         guard let password = signUpViewPasswordTextField.text where password != "" else { return }
         guard let name = signUpViewNameTextField.text where name != "" else { return }
         guard let zipCode = signUpViewZipCodeTextField.text where zipCode != "" else { return }
-        let bio = signUpViewZipCodeTextField.text ?? ""
+        let bio = signUpViewBioTextView.text ?? ""
         
         activityIndicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()

@@ -118,6 +118,7 @@ class VTAProfileController: NSObject {
         user.password = password
         user.email = email.lowercaseString
         user["name"] = name
+        user["bio"] = bio
         user["zipCode"] = zipCode
         user["type"] = ProfileType.Individual.rawValue
         user["private"] = false
