@@ -53,4 +53,26 @@ class VTAPollClient: NSObject {
             }
         }
     }
+    
+    class func pollsVotedByUser(user: PFUser, success: (polls: [PFObject]) -> Void, failure: (error: NSError) -> Void) {
+        let query = PFQuery(className:"Vote")
+        query.orderByDescending("createdAt")
+        query.whereKey("user", equalTo: user)
+        query.findObjectsInBackgroundWithBlock {
+            (postObjects: [AnyObject]?, error: NSError?) -> Void in
+            if let postObjects = postObjects, polls = postObjects as? [PFObject] {
+                
+                var items = [PFObject]()
+                for item in polls {
+                    if let poll = item["poll"] as? PFObject {
+                        items.append(poll)
+                    }
+                }
+                
+                success(polls: items)
+            } else if let error = error {
+                failure(error: error)
+            }
+        }
+    }
 }

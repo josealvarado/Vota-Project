@@ -3,6 +3,12 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
+      "filename" : "Icon-Small.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
       "filename" : "Icon-Small@2x.png",
       "scale" : "2x"
     },
@@ -39,13 +45,13 @@
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "iPhone_6-29-1.png",
+      "filename" : "Icon-Small-1.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "iPhone_6-58.png",
+      "filename" : "Icon-Small@2x-1.png",
       "scale" : "2x"
     },
     {
@@ -75,8 +81,21 @@
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "itunesartwork.png",
+      "filename" : "Icon-83.5@2x.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "Icon-60@2x-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "filename" : "Icon-Small@3x-1.png",
+      "role" : "companionSettings",
+      "scale" : "3x"
     }
   ],
   "info" : {

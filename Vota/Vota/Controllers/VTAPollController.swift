@@ -154,20 +154,20 @@ class VTAPollController: NSObject {
         return Int(1.0 * Double(firstScore) / Double(totalScore) * 100)
     }
     
-    class func numberOfPollsByUser(user: PFUser, pollCOunt: (count: Int) -> Void) {
-        let query = PFQuery(className:"Vote")
-        query.whereKey("user", equalTo: user)
-        query.countObjectsInBackgroundWithBlock {
-            (pollCount: Int32, error: NSError?) -> Void in
-            if error == nil {
-                print("numberOfPollsMade \(pollCount)")
-                
-                pollCOunt(count: Int(pollCount))
-            } else {
-                pollCOunt(count: 0)
-            }
-        }
-    }
+//    class func numberOfPollsByUser(user: PFUser, pollCOunt: (count: Int) -> Void) {
+//        let query = PFQuery(className:"Vote")
+//        query.whereKey("user", equalTo: user)
+//        query.countObjectsInBackgroundWithBlock {
+//            (pollCount: Int32, error: NSError?) -> Void in
+//            if error == nil {
+//                print("numberOfPollsMade \(pollCount)")
+//                
+//                pollCOunt(count: Int(pollCount))
+//            } else {
+//                pollCOunt(count: 0)
+//            }
+//        }
+//    }
     
     
     

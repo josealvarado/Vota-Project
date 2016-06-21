@@ -8,8 +8,9 @@
 
 import UIKit
 
-class VTAVotaSettings: NSObject {
+class VTAVotaSettings {
 
+    static let sharedInstance = VTAVotaSettings()
     
     enum TargetView {
         case Home

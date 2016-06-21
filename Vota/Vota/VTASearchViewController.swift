@@ -63,8 +63,46 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: - User Interactions
     
+    
+    
     @IBAction func homeTabrBarButtonPressed(sender: UIButton) {
+        VTAVotaSettings.sharedInstance.targetView = .Home
         self.dismissViewControllerAnimated(false) {
+        }
+    }
+    
+    @IBAction func searchTabBarButtonPressed(sender: UIButton) {
+        VTAVotaSettings.sharedInstance.targetView = .Search
+        self.dismissViewControllerAnimated(false) {
+        }
+    }
+    @IBAction func infoTabBarButtonPressed(sender: UIButton) {
+        VTAVotaSettings.sharedInstance.targetView = .Info
+        self.dismissViewControllerAnimated(false) {
+        }
+    }
+    @IBAction func profileTabBarButtonPressed(sender: UIButton) {
+        VTAVotaSettings.sharedInstance.targetView = .Profile
+        self.dismissViewControllerAnimated(false) {
+        }
+    }
+    func openTHisController() {
+        if VTAVotaSettings.sharedInstance.targetView == .Home {
+            
+        } else if VTAVotaSettings.sharedInstance.targetView == .Search  {
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTASearchViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
+            self.presentViewController(tabViewController, animated: false, completion: {
+                
+            })
+        } else if VTAVotaSettings.sharedInstance.targetView == .Info  {
+            
+        } else if VTAVotaSettings.sharedInstance.targetView == .Profile  {
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTAProfileViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
+            self.presentViewController(tabViewController, animated: false, completion: {
+                
+            })
         }
     }
     
@@ -87,6 +125,8 @@ class VTASearchViewController: UIViewController, UITableViewDelegate, UITableVie
             })
         }
     }
+    
+   
 
     @IBAction func peopleButtonPressed(sender: AnyObject) {
         if selectedOption != 1 {

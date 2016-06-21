@@ -21,6 +21,9 @@ class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableView
     var polls = [PFObject]()
     var pollViewType = PollViewType.PollsMade
     
+    var viewingOtherUser = false
+    var otherUser: PFUser?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +38,14 @@ class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableView
     }
     
     override func viewWillAppear(animated: Bool) {
-        guard let currentUser = PFUser.currentUser() else { return }
+        var currentUser:PFUser!
+        
+        if viewingOtherUser {
+            currentUser = otherUser
+        } else {
+            currentUser = PFUser.currentUser()
+        }
+        
         
         switch pollViewType {
         case .PollsMade:
@@ -49,6 +59,13 @@ class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableView
             })
         case .PollsVoted:
             print("polls voted")
+            
+//            VTAPollClient.pollsVotedByUser(currentUser, success: { (polls) in
+//                self.polls = polls
+//                self.tableView.reloadData()
+//                }, failure: { (error) in
+//                    
+//            })
         case .Followers:
             print("followers")
         case .Following:

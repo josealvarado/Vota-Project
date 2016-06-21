@@ -39,6 +39,10 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        if VTAVotaSettings.sharedInstance.targetView != .Home {
+            openTHisController()
+        }
 
         VTAPollClient.polls(
             { (polls) -> Void in
@@ -47,6 +51,26 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
             }, failure: { (error) -> Void in
                 print("ERROR, HomeViewController, \(error)")
         })
+    }
+    
+    func openTHisController() {
+        if VTAVotaSettings.sharedInstance.targetView == .Home {
+            
+        } else if VTAVotaSettings.sharedInstance.targetView == .Search  {
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTASearchViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
+            self.presentViewController(tabViewController, animated: false, completion: {
+                
+            })
+        } else if VTAVotaSettings.sharedInstance.targetView == .Info  {
+            
+        } else if VTAVotaSettings.sharedInstance.targetView == .Profile  {
+            let tabViewController = self.storyboard!.instantiateViewControllerWithIdentifier("VTAProfileViewController")
+            tabViewController.hidesBottomBarWhenPushed = true
+            self.presentViewController(tabViewController, animated: false, completion: {
+                
+            })
+        }
     }
     
     // MARK: - User Interactions

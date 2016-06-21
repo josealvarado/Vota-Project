@@ -125,6 +125,7 @@
 		CBBE9FD61C7700EB006B9FD4 /* votes.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBE9FD51C7700EB006B9FD4 /* votes.png */; };
 		CBCB7A8B1D0FF6FF00596DAD /* VTAPollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB7A8A1D0FF6FF00596DAD /* VTAPollViewController.swift */; };
 		CBCB7A8D1D1109F400596DAD /* VTAVotaSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB7A8C1D1109F400596DAD /* VTAVotaSettings.swift */; };
+		CBCB7A8F1D13E5C900596DAD /* Cubano-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CBCB7A8E1D13E44E00596DAD /* Cubano-Regular.otf */; };
 		CBD18A261B17F59D00E1911A /* Vota.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD18A251B17F59D00E1911A /* Vota.storyboard */; };
 		CBF3707B19780D8F00157BBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF3707A19780D8F00157BBD /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -284,6 +285,8 @@
 		CBBE9FD51C7700EB006B9FD4 /* votes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = votes.png; sourceTree = "<group>"; };
 		CBCB7A8A1D0FF6FF00596DAD /* VTAPollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAPollViewController.swift; sourceTree = "<group>"; };
 		CBCB7A8C1D1109F400596DAD /* VTAVotaSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VTAVotaSettings.swift; sourceTree = "<group>"; };
+		CBCB7A8E1D13E44E00596DAD /* Cubano-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cubano-Regular.otf"; sourceTree = "<group>"; };
+		CBCB7A901D13E66700596DAD /* FiraSans-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FiraSans-Book.otf"; sourceTree = "<group>"; };
 		CBD18A251B17F59D00E1911A /* Vota.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vota.storyboard; sourceTree = "<group>"; };
 		CBF3707A19780D8F00157BBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -393,6 +396,8 @@
 		CB1DC90E197C9E89000DA1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CBCB7A901D13E66700596DAD /* FiraSans-Book.otf */,
+				CBCB7A8E1D13E44E00596DAD /* Cubano-Regular.otf */,
 				CB1DC90B197C9E84000DA1C4 /* ProgressHUD.h */,
 				CB1DC90C197C9E84000DA1C4 /* ProgressHUD.m */,
 			);
@@ -767,6 +772,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBCB7A8F1D13E5C900596DAD /* Cubano-Regular.otf in Resources */,
 				CB4C08021972394B00F08D01 /* Icon.png in Resources */,
 				CB4C08031972394B00F08D01 /* Icon@2x.png in Resources */,
 				CBAA21C91971F921008404F7 /* Images.xcassets in Resources */,

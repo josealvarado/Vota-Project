@@ -5,6 +5,73 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Cubano-Regular.otf">
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+            <string>Cubano-Regular</string>
+        </mutableArray>
+        <mutableArray key="FiraSans-Book.otf">
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+            <string>FiraSans-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Parent View Controller-->
         <scene sceneID="K3Y-bt-OwS">
@@ -42,7 +109,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOTA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVS-hP-geQ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                        <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="100"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -71,7 +138,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="kc2-II-Os7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -80,7 +147,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="QbO-MF-Qgw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -89,7 +156,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="CSI-AR-TqF"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -98,7 +165,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Bba-MU-D1n"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -107,7 +174,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="n0C-cw-LDS"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -116,7 +183,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1MV-et-MQB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -125,7 +192,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dTb-Pu-Tqv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -135,7 +202,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eP1-Ia-8U9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -149,7 +216,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="x1R-nq-8qX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -162,7 +229,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="0V8-RT-Dg7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -210,7 +277,7 @@
                                             <constraint firstAttribute="height" constant="25" id="3m4-7g-Oz2"/>
                                             <constraint firstAttribute="width" constant="100" id="vK4-7G-DFB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -220,7 +287,7 @@
                                             <constraint firstAttribute="width" constant="100" id="HO9-DE-LXj"/>
                                             <constraint firstAttribute="height" constant="25" id="yFM-va-aJC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -229,7 +296,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="GQm-NQ-Svx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wFz-mx-KmL">
@@ -237,7 +304,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="4Qk-hT-kt3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44k-kf-vOG">
@@ -246,7 +313,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bVR-bc-1fn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -261,7 +328,7 @@
                                             <constraint firstAttribute="height" constant="50" id="8jf-iP-Oqe"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qdb-1E-wNZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -295,7 +362,7 @@
                                     <constraint firstItem="t1d-jp-VDw" firstAttribute="top" secondItem="xBO-2z-PwC" secondAttribute="top" constant="50" id="yfN-ay-roK"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sir-cc-PeD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sir-cc-PeD">
                                 <rect key="frame" x="0.0" y="150" width="320" height="418"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsE-3c-KAW">
@@ -310,7 +377,7 @@
                                                             <constraint firstAttribute="width" constant="100" id="NfK-G1-vje"/>
                                                             <constraint firstAttribute="height" constant="25" id="Ykz-Qk-Pko"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -319,7 +386,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Xo5-64-tnc"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15M-Ah-buT">
@@ -328,7 +395,7 @@
                                                             <constraint firstAttribute="height" constant="25" id="bQh-U5-FJS"/>
                                                             <constraint firstAttribute="width" constant="100" id="cEu-s9-ZNT"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -337,7 +404,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="4L2-Xy-4zB"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZIP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwE-zT-zrY">
@@ -346,7 +413,7 @@
                                                             <constraint firstAttribute="height" constant="25" id="iBH-T0-ybT"/>
                                                             <constraint firstAttribute="width" constant="100" id="jce-kJ-jyl"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -355,7 +422,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="kfj-Mw-gHg"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzM-uS-Ume">
@@ -364,7 +431,7 @@
                                                             <constraint firstAttribute="height" constant="25" id="LzR-MQ-7vg"/>
                                                             <constraint firstAttribute="width" constant="100" id="Y3q-hC-y1T"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -373,7 +440,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="HMi-3W-NKE"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio (150 Characters):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-Wx-02F">
@@ -382,7 +449,7 @@
                                                             <constraint firstAttribute="height" constant="25" id="lj5-8T-Bhg"/>
                                                             <constraint firstAttribute="width" constant="100" id="oTH-Rf-lj8"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
@@ -397,7 +464,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="1t1-FX-G9f"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSY-Ii-Ixy">
@@ -406,7 +473,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="ByV-a1-s9d"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <state key="normal" title="Create">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -421,7 +488,7 @@
                                                             <constraint firstAttribute="height" constant="50" id="0Zy-mS-giK"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="g2A-lT-dZj"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                                         <state key="normal" title="Back">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -434,11 +501,27 @@
                                                             <action selector="signUpViewBackButtonPressed:" destination="6fU-XZ-K5A" eventType="touchUpInside" id="wxu-fF-wxx"/>
                                                         </connections>
                                                     </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSx-X2-PGR">
+                                                        <rect key="frame" x="30" y="307" width="260" height="50"/>
+                                                        <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="dhs-vp-oPk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="22"/>
+                                                        <state key="normal" title="Save">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="saveButtonPressed:" destination="6fU-XZ-K5A" eventType="touchUpInside" id="ri6-hS-EAW"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="bSx-X2-PGR" firstAttribute="top" secondItem="MI9-JL-IAj" secondAttribute="bottom" constant="30" id="2z2-nv-axG"/>
                                                     <constraint firstAttribute="trailing" secondItem="ePF-l0-fZP" secondAttribute="trailing" constant="10" id="3US-NC-NDB"/>
                                                     <constraint firstItem="5UB-Cy-9Ax" firstAttribute="top" secondItem="K10-ZV-8EY" secondAttribute="bottom" constant="4" id="4hU-4o-j6b"/>
+                                                    <constraint firstItem="bSx-X2-PGR" firstAttribute="leading" secondItem="nZl-aY-4OU" secondAttribute="leading" constant="30" id="64S-B0-qqw"/>
                                                     <constraint firstAttribute="trailing" secondItem="MI9-JL-IAj" secondAttribute="trailing" constant="25" id="66y-bT-tEv"/>
                                                     <constraint firstItem="CzM-uS-Ume" firstAttribute="top" secondItem="Gxo-Nk-L9U" secondAttribute="bottom" constant="8" id="7Gt-gy-gZS"/>
                                                     <constraint firstAttribute="trailing" secondItem="Sf4-u5-Zoc" secondAttribute="trailing" constant="10" id="7mI-x9-ck1"/>
@@ -454,6 +537,7 @@
                                                     <constraint firstItem="K10-ZV-8EY" firstAttribute="leading" secondItem="Gxo-Nk-L9U" secondAttribute="trailing" constant="10" id="He7-vf-vOe"/>
                                                     <constraint firstItem="K10-ZV-8EY" firstAttribute="top" secondItem="Sf4-u5-Zoc" secondAttribute="bottom" constant="4" id="J6B-0g-Xbr"/>
                                                     <constraint firstItem="MI9-JL-IAj" firstAttribute="leading" secondItem="nZl-aY-4OU" secondAttribute="leading" constant="25" id="JOP-tn-snU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bSx-X2-PGR" secondAttribute="trailing" constant="30" id="M2t-P4-gbR"/>
                                                     <constraint firstItem="Sf4-u5-Zoc" firstAttribute="leading" secondItem="15M-Ah-buT" secondAttribute="trailing" constant="10" id="OQH-MY-sRF"/>
                                                     <constraint firstItem="15M-Ah-buT" firstAttribute="leading" secondItem="nZl-aY-4OU" secondAttribute="leading" constant="25" id="OiF-dZ-ECK"/>
                                                     <constraint firstItem="15M-Ah-buT" firstAttribute="top" secondItem="nZl-aY-4OU" secondAttribute="top" constant="52" id="OxP-eS-Ezk"/>
@@ -533,11 +617,14 @@
                         <outlet property="loginViewEmailTextField" destination="YNH-XE-5jW" id="kef-l2-aX3"/>
                         <outlet property="loginViewPasswordTextField" destination="wFz-mx-KmL" id="Qhq-ad-WSO"/>
                         <outlet property="registrationView" destination="kFy-jY-WTg" id="QWZ-Sl-Y2T"/>
+                        <outlet property="saveButton" destination="bSx-X2-PGR" id="hXN-vj-fu9"/>
                         <outlet property="signUpButton" destination="das-Sk-Osm" id="1DA-S1-V6N"/>
                         <outlet property="signUpView" destination="sir-cc-PeD" id="8kM-rO-4eQ"/>
-                        <outlet property="signUpViewBioTextView" destination="Xgk-Wx-02F" id="21H-Zy-s9A"/>
+                        <outlet property="signUpViewBioTextView" destination="MI9-JL-IAj" id="XHS-pU-DWK"/>
+                        <outlet property="signUpViewEmailLabel" destination="15M-Ah-buT" id="Bgv-96-FR0"/>
                         <outlet property="signUpViewEmailTextField" destination="Sf4-u5-Zoc" id="i8j-RZ-IUv"/>
                         <outlet property="signUpViewNameTextField" destination="5UB-Cy-9Ax" id="cpa-qy-wrn"/>
+                        <outlet property="signUpViewPasswordLabel" destination="Gxo-Nk-L9U" id="ZQ0-2I-yU7"/>
                         <outlet property="signUpViewPasswordTextField" destination="K10-ZV-8EY" id="KhV-dz-z1H"/>
                         <outlet property="signUpViewZipCodeTextField" destination="ePF-l0-fZP" id="bX8-Sh-LTf"/>
                     </connections>
@@ -1481,16 +1568,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-bP-FL9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.20000000000000001" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QzK-e4-u9U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="251" image="defaultProfilePicture.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epU-c4-xFD">
                                 <rect key="frame" x="20" y="110" width="100" height="100"/>
                                 <constraints>
@@ -1498,17 +1575,27 @@
                                     <constraint firstAttribute="width" constant="100" id="JEY-6B-5ce"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rey Goicochea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93f-C5-c0H">
-                                <rect key="frame" x="135" y="125" width="170" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZR-wp-9C9">
+                                <rect key="frame" x="20" y="110" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="RhC-G3-qJZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="AZ0-1U-eCU"/>
+                                    <constraint firstAttribute="width" constant="100" id="roS-ag-JW9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <connections>
+                                    <action selector="profileImageButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="zBI-ez-lZD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rey Goicochea" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93f-C5-c0H">
+                                <rect key="frame" x="135" y="125" width="170" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="RhC-G3-qJZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not yet registered to vote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbj-j0-Po4">
-                                <rect key="frame" x="135" y="154" width="170" height="17"/>
+                                <rect key="frame" x="135" y="161" width="170" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1519,7 +1606,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Sd0-cH-mlM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEC-cO-xuP">
@@ -1529,6 +1616,7 @@
                                     <constraint firstAttribute="width" constant="200" id="1Js-yI-WPR"/>
                                     <constraint firstAttribute="height" constant="30" id="c0K-Lc-lyD"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Register to vote">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1540,13 +1628,18 @@
                                     <constraint firstAttribute="height" constant="30" id="5Iw-s8-lY4"/>
                                     <constraint firstAttribute="width" constant="200" id="ykL-gi-S0C"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Edit my profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editProfileButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="GQk-Jz-Dwc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="r7L-Mf-jGL">
                                 <rect key="frame" x="30" y="433" width="122.5" height="30"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Following">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1554,6 +1647,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFW-Ba-c97">
                                 <rect key="frame" x="167" y="433" width="122.5" height="30"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Followers">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1561,6 +1655,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYo-Ng-cuz">
                                 <rect key="frame" x="30" y="478" width="122.5" height="30"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Polls Made">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1571,9 +1666,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gq0-0k-KsM">
                                 <rect key="frame" x="167" y="478" width="122.5" height="30"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Polls Voted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pollsVotedButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="weG-b2-Zgh"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEc-XI-yeh">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
@@ -1619,6 +1718,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
                                                     <action selector="searchTabBarButtonPRessed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="aNG-au-Hua"/>
+                                                    <action selector="searchTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="2je-rP-6X0"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1645,6 +1745,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5O-rf-U5V">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
+                                                    <action selector="infoTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="IfX-cP-J8r"/>
                                                     <action selector="learnTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="o5J-g7-Lz1"/>
                                                 </connections>
                                             </button>
@@ -1673,6 +1774,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
                                                     <action selector="profileTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="T2W-Vt-ZYA"/>
+                                                    <action selector="profileTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="XpR-3i-jbc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1721,12 +1823,33 @@
                                     <action selector="backButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="fGK-yM-nxf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTl-e6-KId">
+                                <rect key="frame" x="135" y="154" width="170" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5IG-Ub-Ocx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
+                                <connections>
+                                    <action selector="registeredToVoteButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="ulr-bY-Brw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-bP-FL9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <color key="backgroundColor" red="0.050980392156862744" green="0.20000000000000001" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QzK-e4-u9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ez5-bP-FL9" firstAttribute="top" secondItem="VBb-nr-qzn" secondAttribute="top" id="0aa-hA-u4W"/>
                             <constraint firstAttribute="trailing" secondItem="gq0-0k-KsM" secondAttribute="trailing" constant="30" id="13J-0i-276"/>
                             <constraint firstAttribute="trailing" secondItem="jEc-XI-yeh" secondAttribute="trailing" id="2Py-pu-xeb"/>
+                            <constraint firstItem="MZR-wp-9C9" firstAttribute="top" secondItem="ez5-bP-FL9" secondAttribute="bottom" constant="30" id="3HA-NG-mo0"/>
                             <constraint firstItem="BFW-Ba-c97" firstAttribute="top" secondItem="oYR-Cz-lz4" secondAttribute="bottom" constant="15" id="3rj-AW-xU5"/>
                             <constraint firstItem="r7L-Mf-jGL" firstAttribute="height" secondItem="BFW-Ba-c97" secondAttribute="height" id="5bO-DD-HlK"/>
                             <constraint firstItem="r7L-Mf-jGL" firstAttribute="height" secondItem="gq0-0k-KsM" secondAttribute="height" id="7Vp-Eu-9xA"/>
@@ -1736,6 +1859,7 @@
                             <constraint firstItem="NYo-Ng-cuz" firstAttribute="top" secondItem="r7L-Mf-jGL" secondAttribute="bottom" constant="15" id="Ft1-bv-kdC"/>
                             <constraint firstItem="ez5-bP-FL9" firstAttribute="leading" secondItem="VBb-nr-qzn" secondAttribute="leading" id="GhP-8P-1vA"/>
                             <constraint firstItem="BFW-Ba-c97" firstAttribute="leading" secondItem="r7L-Mf-jGL" secondAttribute="trailing" constant="15" id="HBE-vQ-btq"/>
+                            <constraint firstAttribute="trailing" secondItem="tTl-e6-KId" secondAttribute="trailing" constant="15" id="HXi-92-CFW"/>
                             <constraint firstItem="lNJ-VP-I9M" firstAttribute="top" secondItem="jEc-XI-yeh" secondAttribute="bottom" id="Ik8-2l-c9d"/>
                             <constraint firstItem="93f-C5-c0H" firstAttribute="leading" secondItem="epU-c4-xFD" secondAttribute="trailing" constant="15" id="IkF-Hf-Qan"/>
                             <constraint firstItem="GEC-cO-xuP" firstAttribute="top" secondItem="Z37-1e-13N" secondAttribute="bottom" constant="8" id="LTe-Zb-O1j"/>
@@ -1754,7 +1878,10 @@
                             <constraint firstItem="oYR-Cz-lz4" firstAttribute="top" secondItem="GEC-cO-xuP" secondAttribute="bottom" constant="15" id="dge-hr-Lkz"/>
                             <constraint firstItem="r7L-Mf-jGL" firstAttribute="top" secondItem="oYR-Cz-lz4" secondAttribute="bottom" constant="15" id="eyI-pv-lM8"/>
                             <constraint firstItem="gq0-0k-KsM" firstAttribute="top" secondItem="BFW-Ba-c97" secondAttribute="bottom" constant="15" id="g75-Nm-ari"/>
+                            <constraint firstItem="tTl-e6-KId" firstAttribute="leading" secondItem="epU-c4-xFD" secondAttribute="trailing" constant="15" id="gL8-b3-8F6"/>
                             <constraint firstItem="gq0-0k-KsM" firstAttribute="leading" secondItem="NYo-Ng-cuz" secondAttribute="trailing" constant="15" id="h4E-js-Baw"/>
+                            <constraint firstItem="MZR-wp-9C9" firstAttribute="leading" secondItem="VBb-nr-qzn" secondAttribute="leading" constant="20" id="iEx-Mb-so0"/>
+                            <constraint firstItem="tTl-e6-KId" firstAttribute="top" secondItem="93f-C5-c0H" secondAttribute="bottom" constant="1" id="jJ8-UL-aCV"/>
                             <constraint firstItem="jEc-XI-yeh" firstAttribute="leading" secondItem="VBb-nr-qzn" secondAttribute="leading" id="lnT-yT-jZG"/>
                             <constraint firstItem="Qbj-j0-Po4" firstAttribute="top" secondItem="93f-C5-c0H" secondAttribute="bottom" constant="8" id="m3y-ZE-bne"/>
                             <constraint firstItem="dCZ-ZS-ZnA" firstAttribute="leading" secondItem="VBb-nr-qzn" secondAttribute="leading" constant="10" id="mg4-l5-1al"/>
@@ -1778,10 +1905,14 @@
                         <outlet property="backButton" destination="dCZ-ZS-ZnA" id="dRs-rh-OF8"/>
                         <outlet property="bioLabel" destination="Z37-1e-13N" id="5vF-ho-sQH"/>
                         <outlet property="bottomContainerView" destination="jEc-XI-yeh" id="vni-EU-4g3"/>
+                        <outlet property="editProfileButton" destination="oYR-Cz-lz4" id="AxA-FL-h5H"/>
                         <outlet property="followingButton" destination="r7L-Mf-jGL" id="JGb-Fb-B8c"/>
                         <outlet property="follwersButton" destination="BFW-Ba-c97" id="Uyd-W2-rfn"/>
                         <outlet property="pollsMadeButton" destination="NYo-Ng-cuz" id="QeM-NE-0Qe"/>
                         <outlet property="pollsVotedButton" destination="gq0-0k-KsM" id="FKl-mP-dNd"/>
+                        <outlet property="profileImageView" destination="epU-c4-xFD" id="MbG-Tj-uzw"/>
+                        <outlet property="registerToVoteButton" destination="tTl-e6-KId" id="Cel-LU-ETQ"/>
+                        <outlet property="registeredToVoteLabel" destination="Qbj-j0-Po4" id="LPO-tN-Ykz"/>
                         <outlet property="usernameLabel" destination="93f-C5-c0H" id="2Fg-5o-tIf"/>
                         <segue destination="Yh5-3U-yuk" kind="show" identifier="pollsViewController" id="hWL-ex-0Hh"/>
                     </connections>
@@ -1808,7 +1939,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="h5n-o4-3l8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1818,6 +1949,7 @@
                                     <constraint firstAttribute="width" constant="46" id="Cs4-wH-gKZ"/>
                                     <constraint firstAttribute="height" constant="30" id="SyC-Y2-uVf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2203,6 +2335,7 @@
                                             <constraint firstAttribute="width" constant="75" id="FvR-H3-ZCQ"/>
                                             <constraint firstAttribute="height" constant="34" id="PvR-uq-2kT"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                         <state key="normal" title="Politics">
                                             <color key="titleColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -2216,6 +2349,7 @@
                                             <constraint firstAttribute="height" constant="34" id="Zff-B3-6nv"/>
                                             <constraint firstAttribute="width" constant="75" id="i17-Va-Zig"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                         <state key="normal" title="People">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2249,7 +2383,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wu0-5t-69Y">
                                                     <rect key="frame" x="20" y="14" width="222" height="21"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -2306,6 +2440,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
                                                     <action selector="searchTabBarButtonPRessed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="3d8-zl-Fsr"/>
+                                                    <action selector="searchTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="Myb-7v-8ps"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -2332,6 +2467,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-t6-NH1">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
+                                                    <action selector="infoTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="dLp-Er-UXt"/>
                                                     <action selector="learnTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="42P-G8-YJh"/>
                                                 </connections>
                                             </button>
@@ -2360,6 +2496,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                                 <connections>
                                                     <action selector="profileTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="4Ol-Yz-AvT"/>
+                                                    <action selector="profileTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="bm1-v7-Eak"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -2401,7 +2538,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="vhH-1q-sLW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2469,7 +2606,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Xlb-HT-ovf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2479,6 +2616,7 @@
                                     <constraint firstAttribute="height" constant="30" id="99D-n0-2Jr"/>
                                     <constraint firstAttribute="width" constant="46" id="SKq-0p-mB3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2865,7 +3003,7 @@
                                             <constraint firstAttribute="height" constant="33" id="BnS-4V-GVm"/>
                                             <constraint firstAttribute="width" constant="101" id="Flw-w1-gSj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2952,7 +3090,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="mIo-ts-nWL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2961,7 +3099,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dgq-nR-TgE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2971,7 +3109,7 @@
                                     <constraint firstAttribute="height" constant="21" id="qaW-Z1-fX5"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="yW1-g4-eny"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2981,7 +3119,7 @@
                                     <constraint firstAttribute="height" constant="21" id="co3-aU-WCn"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="lm8-hw-F1v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2995,7 +3133,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="akU-Ki-1Cm"/>
                                             <constraint firstAttribute="height" constant="30" id="dpQ-ny-gKv"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -3011,7 +3149,7 @@
                                             <constraint firstAttribute="height" constant="60" id="A7E-2i-ikJ"/>
                                         </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -3042,7 +3180,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Zga-en-YZL"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="m7U-XX-VYh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3061,7 +3199,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="tOf-Nw-pp6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="20"/>
                                 <state key="normal" title="Create Poll">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3135,8 +3273,8 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter comment here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hso-XR-4zc">
                                         <rect key="frame" x="8" y="8" width="243" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbk-LJ-Eci">
                                         <rect key="frame" x="259" y="8" width="53" height="34"/>
@@ -3144,7 +3282,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sbk-LJ-Eci" secondAttribute="height" multiplier="23:15" id="SHr-dF-gCb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                         <state key="normal" title="Send">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -3183,7 +3321,7 @@
                                             <constraint firstAttribute="height" constant="33" id="06K-E0-HkR"/>
                                             <constraint firstAttribute="width" constant="101" id="Gn3-MA-4bl"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3193,6 +3331,7 @@
                                             <constraint firstAttribute="width" constant="46" id="FRA-97-Sd9"/>
                                             <constraint firstAttribute="height" constant="30" id="xJi-iV-JXj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -3246,6 +3385,8 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="containerView" destination="iOU-uo-kz6" id="y5y-55-2Z8"/>
+                        <outlet property="containerViewBottomConstraint" destination="8gD-8f-jH7" id="lrQ-wT-Tfs"/>
                         <outlet property="tableView" destination="7cs-tH-h4o" id="mbv-gz-d6f"/>
                         <outlet property="textField" destination="hso-XR-4zc" id="5w5-5G-dCG"/>
                     </connections>
@@ -3385,7 +3526,7 @@
         <image name="notifications.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FA7-dK-RWe"/>
+        <segue reference="2qt-mj-KEU"/>
         <segue reference="Efg-sg-Gme"/>
     </inferredMetricsTieBreakers>
 </document>

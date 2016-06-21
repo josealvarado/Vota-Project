@@ -27,10 +27,15 @@ class VTALoginViewController: UIViewController {
     
     @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var signUpViewEmailTextField: UITextField!
+    @IBOutlet weak var signUpViewEmailLabel: UILabel!
     @IBOutlet weak var signUpViewPasswordTextField: UITextField!
+    @IBOutlet weak var signUpViewPasswordLabel: UILabel!
     @IBOutlet weak var signUpViewNameTextField: UITextField!
     @IBOutlet weak var signUpViewZipCodeTextField: UITextField!
-    @IBOutlet weak var signUpViewBioTextView: UILabel!
+    @IBOutlet weak var signUpViewBioTextView: UITextView!
+    
+    @IBOutlet weak var saveButton: UIButton!
+    var editProfile = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +64,18 @@ class VTALoginViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        if editProfile {
+            loginView.hidden = true
+            registrationView.hidden = true
+            signUpView.hidden = false
+            saveButton.hidden = false
+            
+            signUpViewEmailTextField.hidden = true
+            signUpViewEmailLabel.hidden = true
+            signUpViewPasswordTextField.hidden = true
+            signUpViewPasswordLabel.hidden = true
+        }
     }
     
     //Calls this function when the tap is recognized.
@@ -153,6 +170,26 @@ class VTALoginViewController: UIViewController {
                 let alertController = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    }
+    @IBAction func saveButtonPressed(sender: UIButton) {
+        
+        guard let currentUser = PFUser.currentUser() else { return }
+        
+        if let name = signUpViewNameTextField.text where name != "" {
+            currentUser["name"] = name
+        }
+        
+        if let zipCode = signUpViewZipCodeTextField.text where zipCode != "" {
+            currentUser["zipCode"] = zipCode
+        }
+        
+        if let bio = signUpViewBioTextView.text where bio != "" && bio != "Hi! I have a huge passion for politics, social action, and empoering the Latino community." {
+            currentUser["bio"] = bio
+        }
+
+        currentUser.saveInBackgroundWithBlock { (saved, error) in
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
 }

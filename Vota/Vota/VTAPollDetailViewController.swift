@@ -12,6 +12,8 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var containerViewBottomConstraint: NSLayoutConstraint!
     
     var poll: PFObject!
     var comments = [PFObject]()
@@ -23,6 +25,11 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
         
         tableView.registerNib(UINib(nibName: "VTAPollTableViewCell", bundle: nil), forCellReuseIdentifier: "VTAPollTableViewCell")
         tableView.registerNib(UINib(nibName: "VTACommentTableViewCell", bundle: nil), forCellReuseIdentifier: "VTACommentTableViewCell")
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VTAPollDetailViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VTAPollDetailViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,11 +110,13 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
         if indexPath.row == 0 {
-            if let _ = poll["image"] as? PFFile {
-                return 294
-            }
-            return 170.0
+//            if let _ = poll["image"] as? PFFile {
+//                return 294
+//            }
+//            return 170.0
+            return 228.0
         }
         
         let comment = self.comments[indexPath.row - 1]
@@ -132,6 +141,26 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
         label.text = text
         label.sizeToFit()
         return label.frame.height
+    }
+    
+    // MARK: - Notifications
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            self.containerView.frame.origin.y -= keyboardSize.height - 200
+            
+            containerViewBottomConstraint.constant = keyboardSize.height
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        containerViewBottomConstraint.constant = 0
+
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+//            self.containerView.frame.origin.y += keyboardSize.height
+            
+
+//        }
     }
 
 }
