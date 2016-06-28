@@ -1981,6 +1981,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="44S-xR-Kp8" id="CHQ-WW-SYR"/>
+                        <segue destination="nFK-cP-1Du" kind="show" identifier="VTAPollDetailViewController" id="igt-gU-Lcp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EdS-nS-Qkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3303,7 +3304,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Sbk-LJ-Eci" secondAttribute="trailing" constant="8" id="z6W-9X-5bx"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7cs-tH-h4o">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7cs-tH-h4o">
                                 <rect key="frame" x="0.0" y="60" width="320" height="458"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

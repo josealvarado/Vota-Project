@@ -30,12 +30,22 @@ class VTACommentTableViewCell: UITableViewCell {
     func configureCellWithCommentObject(comment: PFObject) {
         self.comment = comment
         
-        if let user = comment["user"] as? PFUser {
-            usernameLabel.text = user.username
+        if let user = comment["user"] as? PFUser, name = user["name"] as? String {
+            usernameLabel.text = name
+            
+            if let image = user["image"] as? PFFile {
+                image.getDataInBackgroundWithBlock({
+                    (imageData: NSData?, error: NSError?) -> Void in
+                    if let imageData = imageData, image = UIImage(data: imageData) {
+                        self.userImageView.image = image
+                    }
+                })
+            }
         }
         
         if let text = comment["text"] as? String {
             commentTextView.text = text
         }
+        
     }
 }

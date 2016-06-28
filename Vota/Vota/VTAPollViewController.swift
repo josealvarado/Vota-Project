@@ -1,4 +1,4 @@
-//
+
 //  VTAPollViewController.swift
 //  Vota
 //
@@ -13,8 +13,7 @@ public enum PollViewType: Int {
     case PollsMade = 0, PollsVoted, Followers, Following
 }
 
-
-class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource {
+class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource, VTAPollTableViewCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -60,12 +59,12 @@ class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableView
         case .PollsVoted:
             print("polls voted")
             
-//            VTAPollClient.pollsVotedByUser(currentUser, success: { (polls) in
-//                self.polls = polls
-//                self.tableView.reloadData()
-//                }, failure: { (error) in
-//                    
-//            })
+            VTAPollClient.pollsVotedByUser(currentUser, success: { (polls) in
+                self.polls = polls
+                self.tableView.reloadData()
+                }, failure: { (error) in
+                    
+            })
         case .Followers:
             print("followers")
         case .Following:
@@ -92,28 +91,34 @@ class VTAPollViewController: UIViewController,  UITableViewDelegate, UITableView
         
         let pollCell = tableView.dequeueReusableCellWithIdentifier("VTAPollTableViewCell", forIndexPath: indexPath) as! VTAPollTableViewCell
         pollCell.configureWithPollObject(poll)
-//        pollCell.delegate = self
+        pollCell.delegate = self
         return pollCell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        //        if indexPath.section == 0 {
-        //            return 150
-        //        }
-        
         return 228.0
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "VTANewPollViewController" {
+            let bottomBar = segue.destinationViewController as! VTANewPollViewController
+            bottomBar.hidesBottomBarWhenPushed = true
+            bottomBar.navigationItem.hidesBackButton = true
+        } else if segue.identifier == "VTAPollDetailViewController" {
+            let controller = segue.destinationViewController as! VTAPollDetailViewController
+            controller.hidesBottomBarWhenPushed = true
+            controller.navigationItem.hidesBackButton = true
+            controller.poll = sender as! PFObject
+        }
+    }
+
+    // MARK: - VTAPollTableViewCellDelegate
+    
+    func pollSelected(dict: [String: AnyObject]) {
+        if let type = dict["type"] as? String where type == "detail", let poll = dict["poll"] as? PFObject {
+            performSegueWithIdentifier("VTAPollDetailViewController", sender: poll)
+        }
+    }
 }

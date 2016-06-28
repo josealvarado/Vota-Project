@@ -30,6 +30,8 @@ class VTAPollDetailViewController: UIViewController, UITableViewDataSource, UITa
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(VTAPollDetailViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
         self.hideKeyboardWhenTappedAround()
+        
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {

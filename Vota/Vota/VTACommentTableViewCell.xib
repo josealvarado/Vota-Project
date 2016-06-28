@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-F6-aDJ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfilePicture.png" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-F6-aDJ">
                         <rect key="frame" x="8" y="8" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="jTv-Mp-oH8"/>
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="315" y="302"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="defaultProfilePicture.png" width="128" height="128"/>
+    </resources>
 </document>
