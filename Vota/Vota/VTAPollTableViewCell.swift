@@ -75,21 +75,26 @@ class VTAPollTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     @IBAction func agreeButtonPressed(sender: AnyObject) {
         guard let poll = self.poll else { return }
 
+        self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+        
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Agreed, success: { () -> Void in
-            print("Successfully voted disagree")
+            print("Successfully voted agree")
             self.updateVotes(PollOption.Agreed)
             }) { () -> Void in
-                print("Failed to vote disagree")
+                print("Failed to vote agree")
         }
     }
     
     @IBAction func disagreeButtonPressed(sender: AnyObject) {
         guard let poll = self.poll else { return }
 
+        self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+        self.disagreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+        
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Disagree, success: { () -> Void in
             print("Successfully voted disagree")
             self.updateVotes(PollOption.Disagree)
@@ -112,8 +117,6 @@ class VTAPollTableViewCell: UITableViewCell {
         
         if let issue = poll["issue_type"] as? String {
             issueLabel.text = issue.capatilizeEveryFirstCharacterOfEveryWord()
-            
-//            issueLabel.text = capatilizeEveryFirstCharacterOfEveryWord(issue)
         }
         if let question = poll["question"] as? String {
             questionLabel.text = question

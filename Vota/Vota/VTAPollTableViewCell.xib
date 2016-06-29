@@ -42,21 +42,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znq-9v-ROS">
-                                <rect key="frame" x="8" y="175" width="91.5" height="30"/>
+                                <rect key="frame" x="8" y="171" width="91.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Agree"/>
                                 <connections>
                                     <action selector="agreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oSu-gW-qAI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lp-mOt">
-                                <rect key="frame" x="99" y="175" width="91" height="30"/>
+                                <rect key="frame" x="99" y="171" width="91" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Disagree"/>
                                 <connections>
                                     <action selector="disagreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbw-No-Jjw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-Iv-HcD">
-                                <rect key="frame" x="190" y="175" width="91.5" height="30"/>
+                                <rect key="frame" x="190" y="171" width="91.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Discuss">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -65,7 +68,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G94-cm-xT4">
-                                <rect key="frame" x="8" y="131" width="274" height="36"/>
+                                <rect key="frame" x="8" y="127" width="274" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-uX-Z0h">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="36"/>
