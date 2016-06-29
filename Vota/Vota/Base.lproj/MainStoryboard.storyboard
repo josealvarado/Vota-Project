@@ -1620,6 +1620,9 @@
                                 <state key="normal" title="Register to vote">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="registeredToVoteButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="Myw-Cx-yRn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-Cz-lz4">
                                 <rect key="frame" x="60" y="388" width="200" height="30"/>
@@ -1810,7 +1813,17 @@
                                     <constraint firstAttribute="trailing" secondItem="fQr-Ul-dXm" secondAttribute="trailing" id="x6p-Xo-Ysp"/>
                                 </constraints>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCZ-ZS-ZnA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-bP-FL9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                <color key="backgroundColor" red="0.050980392156862744" green="0.20000000000000001" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="QzK-e4-u9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCZ-ZS-ZnA">
                                 <rect key="frame" x="10" y="20" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DSN-w7-Luh"/>
@@ -1830,19 +1843,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FiraSans-Book" family="Fira Sans" pointSize="15"/>
                                 <connections>
-                                    <action selector="registeredToVoteButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="ulr-bY-Brw"/>
+                                    <action selector="profileRegisteredToVoteButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="1x5-Pl-RDL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-bP-FL9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                <color key="backgroundColor" red="0.050980392156862744" green="0.20000000000000001" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QzK-e4-u9U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Cubano-Regular" family="Cubano" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1911,7 +1914,6 @@
                         <outlet property="pollsMadeButton" destination="NYo-Ng-cuz" id="QeM-NE-0Qe"/>
                         <outlet property="pollsVotedButton" destination="gq0-0k-KsM" id="FKl-mP-dNd"/>
                         <outlet property="profileImageView" destination="epU-c4-xFD" id="MbG-Tj-uzw"/>
-                        <outlet property="registerToVoteButton" destination="tTl-e6-KId" id="Cel-LU-ETQ"/>
                         <outlet property="registeredToVoteLabel" destination="Qbj-j0-Po4" id="LPO-tN-Ykz"/>
                         <outlet property="usernameLabel" destination="93f-C5-c0H" id="2Fg-5o-tIf"/>
                         <segue destination="Yh5-3U-yuk" kind="show" identifier="pollsViewController" id="hWL-ex-0Hh"/>

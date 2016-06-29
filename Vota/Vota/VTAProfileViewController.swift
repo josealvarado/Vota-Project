@@ -14,7 +14,6 @@ class VTAProfileViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var registeredToVoteLabel: UILabel!
-    @IBOutlet weak var registerToVoteButton: UIButton!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var bioLabel: UITextView!
     @IBOutlet weak var bottomContainerView: UIView!
@@ -60,7 +59,7 @@ class VTAProfileViewController: UIViewController, UINavigationControllerDelegate
     }
     
     func setupUser(user : PFUser) {
-        usernameLabel.text = user.username ?? ""
+        usernameLabel.text = user["name"] as? String ?? ""
         bioLabel.text = user["bio"] as? String ?? ""
         
         if let image = user["image"] as? PFFile {
@@ -70,6 +69,12 @@ class VTAProfileViewController: UIViewController, UINavigationControllerDelegate
                     self.profileImageView.image = image
                 }
             })
+        }
+        
+        if let registeredToVote = user["registeredToVote"] as? Bool where registeredToVote == true {
+            registeredToVoteLabel.text = "Registered to vote"
+        } else {
+            registeredToVoteLabel.text = "Not yet registered to vote"
         }
         
         VTAUserClient.numberOfFollowingForUser(user, success: { (count) in
@@ -111,6 +116,27 @@ class VTAProfileViewController: UIViewController, UINavigationControllerDelegate
         imagePickerController.allowsEditing = false
         
         self.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func profileRegisteredToVoteButtonPressed(sender: UIButton) {
+        guard let currentUser = PFUser.currentUser() else {
+            self.dismissViewControllerAnimated(false, completion: nil)
+            return
+        }
+        
+        if let otherUser = otherUser where otherUser.email != currentUser.email {
+
+        } else {
+            if let registeredToVote = currentUser["registeredToVote"] as? Bool where registeredToVote == true {
+                registeredToVoteLabel.text = "Not yet registered to vote"
+                currentUser["registeredToVote"] = false
+            } else {
+                registeredToVoteLabel.text = "Registered to vote"
+                currentUser["registeredToVote"] = true
+            }
+            currentUser.saveInBackgroundWithBlock({ (savedSuccessfully, error) in
+            })
+        }
     }
     
     @IBAction func registeredToVoteButtonPressed(sender: UIButton) {
