@@ -7,20 +7,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VTAPollTableViewCell" rowHeight="228" id="KGk-i7-Jjw" customClass="VTAPollTableViewCell" customModule="Vota" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VTAPollTableViewCell" rowHeight="240" id="KGk-i7-Jjw" customClass="VTAPollTableViewCell" customModule="Vota" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="227.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="239.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHZ-dB-oQM">
-                        <rect key="frame" x="15" y="7" width="290" height="213.5"/>
+                        <rect key="frame" x="15" y="7" width="290" height="225.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-Xr-ac4">
-                                <rect key="frame" x="15" y="15" width="260" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Np-Xr-ac4">
+                                <rect key="frame" x="15" y="15" width="260" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="QSD-qF-EDD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="sD3-XZ-Wv6"/>
                                     <constraint firstAttribute="height" constant="30" id="y5R-JV-fTO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
@@ -29,46 +30,21 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="QSD-qF-EDD"/>
+                                        <exclude reference="y5R-JV-fTO"/>
                                     </mask>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIp-cH-pXY">
-                                <rect key="frame" x="8" y="53" width="274" height="64"/>
+                                <rect key="frame" x="8" y="58" width="274" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="apP-Ir-3QC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="apP-Ir-3QC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znq-9v-ROS">
-                                <rect key="frame" x="8" y="171" width="91.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Agree"/>
-                                <connections>
-                                    <action selector="agreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oSu-gW-qAI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lp-mOt">
-                                <rect key="frame" x="99" y="171" width="91" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Disagree"/>
-                                <connections>
-                                    <action selector="disagreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbw-No-Jjw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-Iv-HcD">
-                                <rect key="frame" x="190" y="171" width="91.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Discuss">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="detailButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3gI-LR-F33"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G94-cm-xT4">
-                                <rect key="frame" x="8" y="127" width="274" height="36"/>
+                                <rect key="frame" x="8" y="132" width="274" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-uX-Z0h">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="36"/>
@@ -124,11 +100,39 @@
                                     <constraint firstAttribute="bottom" secondItem="F7i-uX-Z0h" secondAttribute="bottom" id="ui7-SN-ooa"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znq-9v-ROS">
+                                <rect key="frame" x="8" y="176" width="91.5" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Agree"/>
+                                <connections>
+                                    <action selector="agreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oSu-gW-qAI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWm-lp-mOt">
+                                <rect key="frame" x="99" y="176" width="91" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Disagree"/>
+                                <connections>
+                                    <action selector="disagreeButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Nbw-No-Jjw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC4-Iv-HcD">
+                                <rect key="frame" x="190" y="176" width="91.5" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Discuss">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="detailButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3gI-LR-F33"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G94-cm-xT4" firstAttribute="top" secondItem="wIp-cH-pXY" secondAttribute="bottom" constant="8" id="0BU-UG-4vg"/>
                             <constraint firstAttribute="bottom" secondItem="wC4-Iv-HcD" secondAttribute="bottom" constant="8" id="1j0-bf-1Tt"/>
+                            <constraint firstItem="znq-9v-ROS" firstAttribute="top" secondItem="G94-cm-xT4" secondAttribute="bottom" constant="8" id="2y5-4I-OaY"/>
+                            <constraint firstItem="wC4-Iv-HcD" firstAttribute="top" secondItem="G94-cm-xT4" secondAttribute="bottom" constant="8" id="3Zv-bx-2s2"/>
                             <constraint firstAttribute="bottom" secondItem="znq-9v-ROS" secondAttribute="bottom" constant="8" id="65r-cq-0Jw"/>
                             <constraint firstItem="wC4-Iv-HcD" firstAttribute="leading" secondItem="aWm-lp-mOt" secondAttribute="trailing" id="8sg-oh-9tU"/>
                             <constraint firstAttribute="trailing" secondItem="wIp-cH-pXY" secondAttribute="trailing" constant="8" id="G92-i6-uEG"/>
@@ -141,10 +145,15 @@
                             <constraint firstAttribute="bottom" secondItem="aWm-lp-mOt" secondAttribute="bottom" constant="8" id="Xjg-KC-ljW"/>
                             <constraint firstAttribute="trailing" secondItem="4Np-Xr-ac4" secondAttribute="trailing" constant="15" id="YIl-RW-x9H"/>
                             <constraint firstItem="aWm-lp-mOt" firstAttribute="leading" secondItem="znq-9v-ROS" secondAttribute="trailing" id="Zoc-80-eqA"/>
+                            <constraint firstAttribute="bottom" secondItem="znq-9v-ROS" secondAttribute="bottom" constant="4" id="a9X-MJ-0j4"/>
+                            <constraint firstAttribute="bottom" secondItem="wC4-Iv-HcD" secondAttribute="bottom" constant="4" id="cfo-OC-7m9"/>
                             <constraint firstItem="znq-9v-ROS" firstAttribute="leading" secondItem="GHZ-dB-oQM" secondAttribute="leading" constant="8" id="drP-ev-a0e"/>
+                            <constraint firstItem="G94-cm-xT4" firstAttribute="top" secondItem="wIp-cH-pXY" secondAttribute="bottom" constant="10" id="fW7-I8-OlJ"/>
                             <constraint firstItem="wIp-cH-pXY" firstAttribute="leading" secondItem="GHZ-dB-oQM" secondAttribute="leading" constant="8" id="gxk-qT-K4e"/>
                             <constraint firstItem="aWm-lp-mOt" firstAttribute="width" secondItem="wC4-Iv-HcD" secondAttribute="width" id="hPo-bp-3Bj"/>
                             <constraint firstItem="4Np-Xr-ac4" firstAttribute="top" secondItem="GHZ-dB-oQM" secondAttribute="top" constant="15" id="ldG-Ax-mDb"/>
+                            <constraint firstItem="aWm-lp-mOt" firstAttribute="top" secondItem="G94-cm-xT4" secondAttribute="bottom" constant="8" id="pOR-H7-gcE"/>
+                            <constraint firstAttribute="bottom" secondItem="aWm-lp-mOt" secondAttribute="bottom" constant="4" id="uXH-Wd-2sx"/>
                             <constraint firstAttribute="trailing" secondItem="G94-cm-xT4" secondAttribute="trailing" constant="8" id="w1Z-Rq-vdi"/>
                             <constraint firstItem="4Np-Xr-ac4" firstAttribute="leading" secondItem="GHZ-dB-oQM" secondAttribute="leading" constant="15" id="zz2-7o-PU3"/>
                         </constraints>
@@ -152,6 +161,10 @@
                             <mask key="constraints">
                                 <exclude reference="0BU-UG-4vg"/>
                                 <exclude reference="Nom-y0-23G"/>
+                                <exclude reference="65r-cq-0Jw"/>
+                                <exclude reference="H9W-rh-lxg"/>
+                                <exclude reference="Xjg-KC-ljW"/>
+                                <exclude reference="1j0-bf-1Tt"/>
                             </mask>
                         </variation>
                     </view>

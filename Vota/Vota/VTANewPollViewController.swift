@@ -16,7 +16,7 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
     var issues = ["guns", "immigration"]
     
     let placeHolderText = "Poll text."
-    let wordCount = 150
+    let wordCount = 200
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,12 +96,12 @@ class VTANewPollViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        return issues[row]
+        return issues[row].capatilizeEveryFirstCharacterOfEveryWord()
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        issueTextField.text = issues[row];
+        issueTextField.text = issues[row].capatilizeEveryFirstCharacterOfEveryWord();
         issueTextField.endEditing(true)
     }
 

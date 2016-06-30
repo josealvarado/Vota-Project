@@ -129,7 +129,13 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
 //            return 150
 //        }
         
-        return 228.0
+        
+        // make this dynmaic
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 240.0
     }
     
     // MARK: - Navigation
