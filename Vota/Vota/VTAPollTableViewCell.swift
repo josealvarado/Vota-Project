@@ -47,6 +47,7 @@ class VTAPollTableViewCell: UITableViewCell {
     weak var delegate: VTAPollTableViewCellDelegate?
     
     var poll: PFObject?
+    var pollOption: PollOption?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -83,9 +84,23 @@ class VTAPollTableViewCell: UITableViewCell {
         
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Agreed, success: { () -> Void in
             print("Successfully voted agree")
+            
+            // backup
+            self.pollOption = PollOption.Agreed
             self.updateVotes(PollOption.Agreed)
             }) { () -> Void in
                 print("Failed to vote agree")
+                
+                if let pollOption = self.pollOption where pollOption == PollOption.Agreed{
+                    self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                } else if let pollOption = self.pollOption where pollOption == PollOption.Disagree{
+                    self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                } else {
+                    self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                }
         }
     }
     
@@ -97,9 +112,22 @@ class VTAPollTableViewCell: UITableViewCell {
         
         VTAPollController.votesOnPollWithOption(poll, option: PollOption.Disagree, success: { () -> Void in
             print("Successfully voted disagree")
+            
+            // backup
+            self.pollOption = PollOption.Disagree
             self.updateVotes(PollOption.Disagree)
             }) { () -> Void in
                 print("Failed to vote disagree")
+                if let pollOption = self.pollOption where pollOption == PollOption.Agreed{
+                    self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                } else if let pollOption = self.pollOption where pollOption == PollOption.Disagree{
+                    self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
+                } else {
+                    self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                    self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                }
         }
     }
 
@@ -130,7 +158,7 @@ class VTAPollTableViewCell: UITableViewCell {
             self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
             self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
             self.resultsView.hidden = true
-
+            self.pollOption = option
             VTAPollController.votesOnPoll(poll, votes: { (winner, percentage) in
                 if option == PollOption.Agreed {
                     self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)

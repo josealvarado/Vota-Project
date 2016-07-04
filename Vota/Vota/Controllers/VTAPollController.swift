@@ -15,35 +15,29 @@ public enum PollOption: Int {
 class VTAPollController: NSObject {
     
     class func votesOnPollWithOption(poll: PFObject, option:PollOption, success:() -> Void, failure: () -> Void) {
-        
-        
         VTAPollController.alreadyVotedOnPoll(poll, voted: { (pollOption) in
             print("already voted on poll. Do nothing")
+            failure()
             }) { () -> Void in
-                if option == .Agreed {
-                    poll.incrementKey("numberOfAgrees")
-                } else if option == .Disagree {
-                    poll.incrementKey("numberOfDisagrees")
-                } else if option == .Unsure {
-                    poll.incrementKey("numberOfUnsures")
-                }
-                poll.incrementKey("numberOfVotes")
-                poll.saveInBackgroundWithBlock { (successful: Bool?, error: NSError?) -> Void in
+                let vote = PFObject(className: "Vote")
+                vote["user"] = PFUser.currentUser()
+                vote["poll"] = poll
+                vote["option"] = option.rawValue
+                vote.saveInBackgroundWithBlock { (successful: Bool?, error: NSError?) -> Void in
                     if let _ = successful {
-                        let vote = PFObject(className: "Vote")
-                        vote["user"] = PFUser.currentUser()
-                        vote["poll"] = poll
-                        vote["option"] = option.rawValue
-                        vote.saveInBackgroundWithBlock { (successful: Bool?, error: NSError?) -> Void in
-                            if let _ = successful {
-                                success()
-                            } else if let error = error {
-                                print("ERROR, PollViewModel: \(error)")
-                                failure()
-                            }
+                        if option == .Agreed {
+                            poll.incrementKey("numberOfAgrees")
+                        } else if option == .Disagree {
+                            poll.incrementKey("numberOfDisagrees")
+                        } else if option == .Unsure {
+                            poll.incrementKey("numberOfUnsures")
+                        }
+                        poll.incrementKey("numberOfVotes")
+                        poll.saveInBackgroundWithBlock { (successful: Bool?, error: NSError?) -> Void in
+                            success()
                         }
                     } else if let error = error {
-                        print("ERROR, PollViewModel: \(error)")
+                        print("ERROR, votesOnPollWithOption: \(error)")
                         failure()
                     }
                 }
@@ -104,7 +98,7 @@ class VTAPollController: NSObject {
     
     class func votesOnPoll(poll: PFObject, votes: (winner: PollOption, percentage: Int) -> Void) {
         let query = PFQuery(className:"Vote")
-        query.whereKey("user", equalTo: PFUser.currentUser())
+//        query.whereKey("user", equalTo: PFUser.currentUser())
         query.whereKey("poll", equalTo: poll)
         query.whereKey("option", equalTo: 0)
         query.countObjectsInBackgroundWithBlock {
@@ -112,12 +106,8 @@ class VTAPollController: NSObject {
             if error == nil {
                 print("Agree count \(agreeCount)")
                 
-                
-                
-                
-                
                 let query2 = PFQuery(className:"Vote")
-                query2.whereKey("user", equalTo: PFUser.currentUser())
+//                query2.whereKey("user", equalTo: PFUser.currentUser())
                 query2.whereKey("poll", equalTo: poll)
                 query2.whereKey("option", equalTo: 1)
                 query2.countObjectsInBackgroundWithBlock {
@@ -125,7 +115,7 @@ class VTAPollController: NSObject {
                     if error == nil {
                         print("Disagree count \(disagreeCount)")
                         let totalCount = agreeCount + disagreeCount
-                        if agreeCount > disagreeCount {
+                        if agreeCount >= disagreeCount {
 //                            let percent = Double(agreeCount) / Double((agreeCount + disagreeCount))
                             let percent = self.fixScore(Int(agreeCount), totalScore: Int(totalCount))
 //                            let percent = self.fixScore(
