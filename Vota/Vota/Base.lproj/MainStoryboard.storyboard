@@ -1681,17 +1681,17 @@
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qx-s1-Q5y">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="PNy-DG-yIZ">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="B53-bk-nYe"/>
                                                     <constraint firstAttribute="width" constant="30" id="lN4-e0-rw8"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xik-Bp-94B">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                                 <connections>
                                                     <action selector="homeTabrBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="KkF-rZ-frM"/>
                                                 </connections>
@@ -1708,17 +1708,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-4S-qBE">
-                                        <rect key="frame" x="80" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="IVe-X4-tYd">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="4Ca-Or-dQg"/>
                                                     <constraint firstAttribute="height" constant="30" id="dEd-KB-Ekh"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30a-dE-Fzv">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="50"/>
                                                 <connections>
                                                     <action selector="searchTabBarButtonPRessed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="aNG-au-Hua"/>
                                                     <action selector="searchTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="2je-rP-6X0"/>
@@ -1735,46 +1735,18 @@
                                             <constraint firstItem="IVe-X4-tYd" firstAttribute="centerY" secondItem="1cf-4S-qBE" secondAttribute="centerY" id="t0S-8c-eFw"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-6B-ekZ">
-                                        <rect key="frame" x="160" y="0.0" width="80" height="50"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LearnTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="EvU-GP-KQb">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="0gq-Ja-CgE"/>
-                                                    <constraint firstAttribute="width" constant="30" id="1Ha-AP-Dsb"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5O-rf-U5V">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
-                                                <connections>
-                                                    <action selector="infoTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="IfX-cP-J8r"/>
-                                                    <action selector="learnTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="o5J-g7-Lz1"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="q5O-rf-U5V" firstAttribute="leading" secondItem="pXQ-6B-ekZ" secondAttribute="leading" id="1og-s4-QF5"/>
-                                            <constraint firstAttribute="trailing" secondItem="q5O-rf-U5V" secondAttribute="trailing" id="A6o-am-14f"/>
-                                            <constraint firstAttribute="bottom" secondItem="q5O-rf-U5V" secondAttribute="bottom" id="YIf-F6-TS0"/>
-                                            <constraint firstItem="EvU-GP-KQb" firstAttribute="centerX" secondItem="pXQ-6B-ekZ" secondAttribute="centerX" id="iZe-iq-qc9"/>
-                                            <constraint firstItem="q5O-rf-U5V" firstAttribute="top" secondItem="pXQ-6B-ekZ" secondAttribute="top" id="jUJ-aV-UsC"/>
-                                            <constraint firstItem="EvU-GP-KQb" firstAttribute="centerY" secondItem="pXQ-6B-ekZ" secondAttribute="centerY" id="rel-UC-dwG"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQr-Ul-dXm">
-                                        <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bZF-ht-hud">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="RPy-bk-e30"/>
                                                     <constraint firstAttribute="width" constant="30" id="ep0-a6-89z"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvt-0u-Ko2">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                                 <connections>
                                                     <action selector="profileTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="T2W-Vt-ZYA"/>
                                                     <action selector="profileTabBarButtonPressed:" destination="QUr-CU-mca" eventType="touchUpInside" id="XpR-3i-jbc"/>
@@ -1797,18 +1769,14 @@
                                     <constraint firstItem="1cf-4S-qBE" firstAttribute="leading" secondItem="6qx-s1-Q5y" secondAttribute="trailing" id="5CK-5U-jNv"/>
                                     <constraint firstItem="6qx-s1-Q5y" firstAttribute="width" secondItem="fQr-Ul-dXm" secondAttribute="width" id="7mD-aA-uUc"/>
                                     <constraint firstItem="6qx-s1-Q5y" firstAttribute="width" secondItem="1cf-4S-qBE" secondAttribute="width" id="92c-ar-xPI"/>
-                                    <constraint firstItem="pXQ-6B-ekZ" firstAttribute="leading" secondItem="1cf-4S-qBE" secondAttribute="trailing" id="9tk-4h-Kfr"/>
                                     <constraint firstAttribute="bottom" secondItem="1cf-4S-qBE" secondAttribute="bottom" id="Ai5-w9-G00"/>
                                     <constraint firstItem="fQr-Ul-dXm" firstAttribute="top" secondItem="jEc-XI-yeh" secondAttribute="top" id="Cg0-Bi-6AQ"/>
                                     <constraint firstAttribute="height" constant="50" id="Fie-nH-Dr9"/>
-                                    <constraint firstAttribute="bottom" secondItem="pXQ-6B-ekZ" secondAttribute="bottom" id="ID0-If-H4Q"/>
-                                    <constraint firstItem="pXQ-6B-ekZ" firstAttribute="top" secondItem="jEc-XI-yeh" secondAttribute="top" id="S52-Ah-gJr"/>
+                                    <constraint firstItem="fQr-Ul-dXm" firstAttribute="leading" secondItem="1cf-4S-qBE" secondAttribute="trailing" id="J4W-rw-zRc"/>
                                     <constraint firstAttribute="bottom" secondItem="fQr-Ul-dXm" secondAttribute="bottom" id="Y6q-kr-51u"/>
                                     <constraint firstItem="1cf-4S-qBE" firstAttribute="top" secondItem="jEc-XI-yeh" secondAttribute="top" id="bFc-DZ-Gzg"/>
-                                    <constraint firstItem="fQr-Ul-dXm" firstAttribute="leading" secondItem="pXQ-6B-ekZ" secondAttribute="trailing" id="bhg-B1-Q84"/>
                                     <constraint firstItem="6qx-s1-Q5y" firstAttribute="top" secondItem="jEc-XI-yeh" secondAttribute="top" id="ey6-1l-bu7"/>
                                     <constraint firstItem="6qx-s1-Q5y" firstAttribute="leading" secondItem="jEc-XI-yeh" secondAttribute="leading" id="hTf-Yw-2Pw"/>
-                                    <constraint firstItem="6qx-s1-Q5y" firstAttribute="width" secondItem="pXQ-6B-ekZ" secondAttribute="width" id="ioU-88-2o9"/>
                                     <constraint firstAttribute="bottom" secondItem="6qx-s1-Q5y" secondAttribute="bottom" id="wgD-Mw-2ow"/>
                                     <constraint firstAttribute="trailing" secondItem="fQr-Ul-dXm" secondAttribute="trailing" id="x6p-Xo-Ysp"/>
                                 </constraints>
@@ -2403,17 +2371,17 @@
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2p-In-Mv1">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="gsV-oZ-33j">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="3Gd-cJ-Lwz"/>
                                                     <constraint firstAttribute="height" constant="30" id="W1X-2G-ZQb"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yja-hp-T5L">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                                 <connections>
                                                     <action selector="homeTabrBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="3iB-lz-seR"/>
                                                 </connections>
@@ -2430,17 +2398,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwI-ax-whL">
-                                        <rect key="frame" x="80" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="f1F-Vr-LaS">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xnM-FE-a7w"/>
                                                     <constraint firstAttribute="width" constant="30" id="yl0-XS-R7G"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UR4-GW-WvR">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="50"/>
                                                 <connections>
                                                     <action selector="searchTabBarButtonPRessed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="3d8-zl-Fsr"/>
                                                     <action selector="searchTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="Myb-7v-8ps"/>
@@ -2457,46 +2425,18 @@
                                             <constraint firstAttribute="trailing" secondItem="UR4-GW-WvR" secondAttribute="trailing" id="vyn-Zl-JDm"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOD-cT-Sf0">
-                                        <rect key="frame" x="160" y="0.0" width="80" height="50"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LearnTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="6qZ-Y7-SXB">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="JaE-p0-2Hl"/>
-                                                    <constraint firstAttribute="width" constant="30" id="OKF-Dc-fYg"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBT-t6-NH1">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
-                                                <connections>
-                                                    <action selector="infoTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="dLp-Er-UXt"/>
-                                                    <action selector="learnTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="42P-G8-YJh"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="6qZ-Y7-SXB" firstAttribute="centerX" secondItem="VOD-cT-Sf0" secondAttribute="centerX" id="GGa-HL-iHE"/>
-                                            <constraint firstAttribute="trailing" secondItem="vBT-t6-NH1" secondAttribute="trailing" id="iyO-EN-bFM"/>
-                                            <constraint firstItem="vBT-t6-NH1" firstAttribute="leading" secondItem="VOD-cT-Sf0" secondAttribute="leading" id="kaC-w7-6J1"/>
-                                            <constraint firstAttribute="bottom" secondItem="vBT-t6-NH1" secondAttribute="bottom" id="tb2-QO-8A6"/>
-                                            <constraint firstItem="6qZ-Y7-SXB" firstAttribute="centerY" secondItem="VOD-cT-Sf0" secondAttribute="centerY" id="wSz-jr-kIt"/>
-                                            <constraint firstItem="vBT-t6-NH1" firstAttribute="top" secondItem="VOD-cT-Sf0" secondAttribute="top" id="xEc-R2-omD"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ7-hO-kBo">
-                                        <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ln-5f-Qbq">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="I6E-Kn-4xU"/>
                                                     <constraint firstAttribute="width" constant="30" id="XnI-Eq-15l"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgG-3e-Cie">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                                 <connections>
                                                     <action selector="profileTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="4Ol-Yz-AvT"/>
                                                     <action selector="profileTabBarButtonPressed:" destination="5jz-WF-HJX" eventType="touchUpInside" id="bm1-v7-Eak"/>
@@ -2516,23 +2456,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="kZ7-hO-kBo" firstAttribute="leading" secondItem="VOD-cT-Sf0" secondAttribute="trailing" id="4Os-xg-EH4"/>
                                     <constraint firstAttribute="height" constant="50" id="4pG-f1-NdF"/>
                                     <constraint firstAttribute="bottom" secondItem="ZwI-ax-whL" secondAttribute="bottom" id="5qO-mC-M0D"/>
-                                    <constraint firstAttribute="bottom" secondItem="VOD-cT-Sf0" secondAttribute="bottom" id="8AB-PV-Pyc"/>
                                     <constraint firstItem="g2p-In-Mv1" firstAttribute="width" secondItem="kZ7-hO-kBo" secondAttribute="width" id="8kc-WU-fxj"/>
                                     <constraint firstItem="kZ7-hO-kBo" firstAttribute="top" secondItem="i5E-m6-RGV" secondAttribute="top" id="9Ee-oH-cxU"/>
-                                    <constraint firstItem="VOD-cT-Sf0" firstAttribute="top" secondItem="i5E-m6-RGV" secondAttribute="top" id="J3v-XU-bMG"/>
+                                    <constraint firstItem="kZ7-hO-kBo" firstAttribute="leading" secondItem="ZwI-ax-whL" secondAttribute="trailing" id="GIv-zC-Ias"/>
                                     <constraint firstAttribute="trailing" secondItem="kZ7-hO-kBo" secondAttribute="trailing" id="KpP-ku-RMQ"/>
                                     <constraint firstItem="g2p-In-Mv1" firstAttribute="top" secondItem="i5E-m6-RGV" secondAttribute="top" id="PKv-Yb-fed"/>
                                     <constraint firstItem="g2p-In-Mv1" firstAttribute="leading" secondItem="i5E-m6-RGV" secondAttribute="leading" id="PgD-We-qer"/>
                                     <constraint firstAttribute="bottom" secondItem="g2p-In-Mv1" secondAttribute="bottom" id="Rhj-dv-w3d"/>
                                     <constraint firstItem="ZwI-ax-whL" firstAttribute="top" secondItem="i5E-m6-RGV" secondAttribute="top" id="W8D-jI-X1C"/>
                                     <constraint firstAttribute="bottom" secondItem="kZ7-hO-kBo" secondAttribute="bottom" id="c6i-t2-67S"/>
-                                    <constraint firstItem="VOD-cT-Sf0" firstAttribute="leading" secondItem="ZwI-ax-whL" secondAttribute="trailing" id="gjA-kR-v14"/>
                                     <constraint firstItem="ZwI-ax-whL" firstAttribute="leading" secondItem="g2p-In-Mv1" secondAttribute="trailing" id="ifn-22-uf0"/>
                                     <constraint firstItem="g2p-In-Mv1" firstAttribute="width" secondItem="ZwI-ax-whL" secondAttribute="width" id="yWe-4q-CTr"/>
-                                    <constraint firstItem="g2p-In-Mv1" firstAttribute="width" secondItem="VOD-cT-Sf0" secondAttribute="width" id="yf3-fJ-ycD"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBd-2z-vU3">
@@ -2871,17 +2807,17 @@
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-F3-RFj">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-ZB-aFs">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="cW8-b8-VCp"/>
                                                     <constraint firstAttribute="width" constant="30" id="dn6-bm-peE"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbs-Sb-tmW">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.10980392160000001" green="0.14901960780000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2895,17 +2831,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yd2-sJ-FPJ">
-                                        <rect key="frame" x="80" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="106.5" y="0.0" width="107" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cc0-cp-S70">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38.5" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="5rv-Di-K5y"/>
                                                     <constraint firstAttribute="width" constant="30" id="qXa-sj-9AC"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-A6-EqG">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="50"/>
                                                 <connections>
                                                     <action selector="searchTabBarButtonPRessed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="klG-2R-nE9"/>
                                                 </connections>
@@ -2921,45 +2857,18 @@
                                             <constraint firstItem="Cc0-cp-S70" firstAttribute="centerX" secondItem="Yd2-sJ-FPJ" secondAttribute="centerX" id="tbG-zG-y1L"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8p-3Y-DQI">
-                                        <rect key="frame" x="160" y="0.0" width="80" height="50"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LearnTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-ya-R3Y">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="7xf-Bm-rLF"/>
-                                                    <constraint firstAttribute="height" constant="30" id="8BO-bQ-p57"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7v-XL-eX6">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
-                                                <connections>
-                                                    <action selector="learnTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="9ED-dV-6Un"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.050980392159999999" green="0.20000000000000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="w7v-XL-eX6" secondAttribute="bottom" id="6Pf-fC-wzg"/>
-                                            <constraint firstItem="Gh6-ya-R3Y" firstAttribute="centerX" secondItem="Q8p-3Y-DQI" secondAttribute="centerX" id="6SY-Yg-EQv"/>
-                                            <constraint firstAttribute="trailing" secondItem="w7v-XL-eX6" secondAttribute="trailing" id="BBe-Gb-LDt"/>
-                                            <constraint firstItem="w7v-XL-eX6" firstAttribute="leading" secondItem="Q8p-3Y-DQI" secondAttribute="leading" id="MFF-Oc-rH8"/>
-                                            <constraint firstItem="Gh6-ya-R3Y" firstAttribute="centerY" secondItem="Q8p-3Y-DQI" secondAttribute="centerY" id="vLQ-PV-lXw"/>
-                                            <constraint firstItem="w7v-XL-eX6" firstAttribute="top" secondItem="Q8p-3Y-DQI" secondAttribute="top" id="z0V-Zd-cg4"/>
-                                        </constraints>
-                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xH-hx-jiA">
-                                        <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                                        <rect key="frame" x="213.5" y="0.0" width="106.5" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileTabIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dvs-Pt-KhB">
-                                                <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="38" y="10" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="14d-tb-BOY"/>
                                                     <constraint firstAttribute="width" constant="30" id="Mdb-ai-YKg"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4a-cf-pou">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
                                                 <connections>
                                                     <action selector="profileTabBarButtonPressed:" destination="bR2-vA-ru5" eventType="touchUpInside" id="CWY-C0-BVK"/>
                                                 </connections>
@@ -2982,19 +2891,15 @@
                                     <constraint firstAttribute="bottom" secondItem="f2r-F3-RFj" secondAttribute="bottom" id="8Nx-lP-7Ol"/>
                                     <constraint firstAttribute="height" constant="50" id="AY2-yR-LJ2"/>
                                     <constraint firstItem="Yd2-sJ-FPJ" firstAttribute="leading" secondItem="f2r-F3-RFj" secondAttribute="trailing" id="Emj-Cw-Rqr"/>
+                                    <constraint firstItem="1xH-hx-jiA" firstAttribute="leading" secondItem="Yd2-sJ-FPJ" secondAttribute="trailing" id="OIx-2j-pUu"/>
                                     <constraint firstAttribute="trailing" secondItem="1xH-hx-jiA" secondAttribute="trailing" id="alT-EH-5KU"/>
-                                    <constraint firstItem="Q8p-3Y-DQI" firstAttribute="leading" secondItem="Yd2-sJ-FPJ" secondAttribute="trailing" id="cW9-Jo-WHa"/>
                                     <constraint firstItem="1xH-hx-jiA" firstAttribute="top" secondItem="hm0-0I-fCt" secondAttribute="top" id="fUd-R4-hMk"/>
                                     <constraint firstAttribute="bottom" secondItem="Yd2-sJ-FPJ" secondAttribute="bottom" id="ggI-Sd-4kj"/>
                                     <constraint firstItem="f2r-F3-RFj" firstAttribute="leading" secondItem="hm0-0I-fCt" secondAttribute="leading" id="jfD-vg-NGB"/>
-                                    <constraint firstItem="Q8p-3Y-DQI" firstAttribute="top" secondItem="hm0-0I-fCt" secondAttribute="top" id="nse-r7-xgp"/>
-                                    <constraint firstItem="1xH-hx-jiA" firstAttribute="leading" secondItem="Q8p-3Y-DQI" secondAttribute="trailing" id="omD-W9-J1u"/>
                                     <constraint firstAttribute="bottom" secondItem="1xH-hx-jiA" secondAttribute="bottom" id="p07-z8-MZV"/>
                                     <constraint firstItem="f2r-F3-RFj" firstAttribute="width" secondItem="Yd2-sJ-FPJ" secondAttribute="width" id="pJU-bF-UEZ"/>
                                     <constraint firstItem="f2r-F3-RFj" firstAttribute="width" secondItem="1xH-hx-jiA" secondAttribute="width" id="qqW-0w-Ygq"/>
                                     <constraint firstItem="Yd2-sJ-FPJ" firstAttribute="top" secondItem="hm0-0I-fCt" secondAttribute="top" id="uw4-OB-pFL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Q8p-3Y-DQI" secondAttribute="bottom" id="whV-re-KHT"/>
-                                    <constraint firstItem="f2r-F3-RFj" firstAttribute="width" secondItem="Q8p-3Y-DQI" secondAttribute="width" id="zdD-cW-MPG"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHm-S9-8YH">
@@ -3065,7 +2970,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="homeTabBarView" destination="f2r-F3-RFj" id="i4B-RN-3wj"/>
-                        <outlet property="learnTabBarView" destination="Q8p-3Y-DQI" id="4K9-qj-nmi"/>
                         <outlet property="profileTabBarView" destination="1xH-hx-jiA" id="ADu-hc-QSs"/>
                         <outlet property="searchTabBarView" destination="Yd2-sJ-FPJ" id="sFx-zf-qqH"/>
                         <outlet property="tableView" destination="VKf-M1-Gmg" id="bYU-Wc-7mD"/>
@@ -3521,7 +3425,6 @@
     </scenes>
     <resources>
         <image name="HomeTabIcon.png" width="30" height="30"/>
-        <image name="LearnTabIcon.png" width="30" height="30"/>
         <image name="ProfileTabIcon.png" width="30" height="30"/>
         <image name="SearchTabIcon.png" width="30" height="30"/>
         <image name="defaultProfilePicture.png" width="128" height="128"/>
@@ -3529,7 +3432,7 @@
         <image name="notifications.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2qt-mj-KEU"/>
+        <segue reference="FA7-dK-RWe"/>
         <segue reference="Efg-sg-Gme"/>
     </inferredMetricsTieBreakers>
 </document>

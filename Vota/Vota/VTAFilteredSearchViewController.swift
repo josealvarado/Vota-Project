@@ -90,12 +90,11 @@ class VTAFilteredSearchViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let poll = polls[indexPath.row] as PFObject
-        
-        if let _ = poll["image"] as? PFFile {
-            return 294
-        }
-        return 170.0
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 240.0
     }
 
 }

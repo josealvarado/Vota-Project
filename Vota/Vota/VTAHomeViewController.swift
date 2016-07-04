@@ -125,12 +125,6 @@ class VTAHomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        if indexPath.section == 0 {
-//            return 150
-//        }
-        
-        
-        // make this dynmaic
         return UITableViewAutomaticDimension
     }
     
