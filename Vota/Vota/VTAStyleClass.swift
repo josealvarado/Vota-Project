@@ -21,14 +21,17 @@ class VTAStyleClass: NSObject {
 
 extension String {
     func capatilizeEveryFirstCharacterOfEveryWord () -> String {
-        let split = self.componentsSeparatedByString(" ")
+        let trimmedString = self.stringByTrimmingCharactersInSet(
+            NSCharacterSet.whitespaceAndNewlineCharacterSet()
+        )
+        
+        let split = trimmedString.componentsSeparatedByString(" ")
         var newWord = ""
         
         for var word in split {
             word.replaceRange(word.startIndex...word.startIndex, with: String(word[word.startIndex]).capitalizedString)
             newWord += word + " "
         }
-        
         
         return newWord
     }

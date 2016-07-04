@@ -66,6 +66,12 @@ class VTALoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         if editProfile {
+            guard let user = PFUser.currentUser() else { return self.dismissViewControllerAnimated(false, completion: nil) }
+            
+            signUpViewNameTextField.text = user["name"] as? String ?? ""
+            signUpViewZipCodeTextField.text = user["zipCode"] as? String ?? ""
+            signUpViewBioTextView.text = user["bio"] as? String ?? ""
+            
             loginView.hidden = true
             registrationView.hidden = true
             signUpView.hidden = false

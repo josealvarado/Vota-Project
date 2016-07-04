@@ -122,7 +122,15 @@ class VTAPollTableViewCell: UITableViewCell {
             questionLabel.text = question
         }
         
+        self.resultsView.hidden = true
+        self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+        self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+        
         VTAPollController.votedOptionOnPoll(poll, voted: { (option) in
+            self.agreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+            self.disagreeButton.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+            self.resultsView.hidden = true
+
             VTAPollController.votesOnPoll(poll, votes: { (winner, percentage) in
                 if option == PollOption.Agreed {
                     self.agreeButton.setTitleColor(UIColor.yellowColor(), forState: UIControlState.Normal)
